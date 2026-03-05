@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Quicksand } from 'next/font/google';
+import { Inter, Quicksand } from 'next/font/google';
 import './globals.css';
 import { NextIntlClientProvider } from 'next-intl';
 import {
@@ -11,13 +11,17 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import DiscountBanner from '@/components/common/DiscountBanner';
 import QueryProvider from '@/providers/QueryProvider';
-import { getQueryClient } from '@/lib/getQueryClient';
 import { SETTINGS_QUERY_KEY } from '@/constants/query-keys';
 import { fetchSettings } from '@/queries/settings';
 import { SettingProvider } from '@/providers/SettingProvider';
 
 const quickSand = Quicksand({
   variable: '--font-quick-sand',
+  subsets: ['latin'],
+});
+
+const inter = Inter({
+  variable: '--font-inter',
   subsets: ['latin'],
 });
 
@@ -42,14 +46,14 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
-      <body className={`${quickSand.variable} antialiased`}>
+      <body className={`${quickSand.variable} ${inter.variable} antialiased`}>
         <QueryProvider>
           <HydrationBoundary state={dehydratedState}>
             <NextIntlClientProvider>
               <SettingProvider>
                 <DiscountBanner />
                 <Header />
-                {children}
+                <main>{children}</main>
                 <Footer />
               </SettingProvider>
             </NextIntlClientProvider>
