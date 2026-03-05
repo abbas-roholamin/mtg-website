@@ -3,6 +3,7 @@ import { ApiResponse } from './response';
 export interface Setting {
   name: string;
   email: string;
+  phone: string;
   facebook: string;
   instagram: string;
   tiktok: string;
