@@ -14,6 +14,7 @@ export interface Setting {
   meta_title: string;
   meta_description: string;
   logo: string;
+  locales: Record<string, string>;
 }
 
 export type SettingsResponse = ApiResponse<Setting>;

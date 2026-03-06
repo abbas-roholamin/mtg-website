@@ -1,12 +1,14 @@
 import type { Metadata } from 'next';
 import { Inter, Quicksand } from 'next/font/google';
-import './globals.css';
-import { NextIntlClientProvider } from 'next-intl';
+import './../globals.css';
 import {
   dehydrate,
   HydrationBoundary,
   QueryClient,
 } from '@tanstack/react-query';
+import { Locale, NextIntlClientProvider, hasLocale } from 'next-intl';
+import { notFound } from 'next/navigation';
+import { setRequestLocale } from 'next-intl/server';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import DiscountBanner from '@/components/common/DiscountBanner';
@@ -14,6 +16,7 @@ import QueryProvider from '@/providers/QueryProvider';
 import { SETTINGS_QUERY_KEY } from '@/constants/query-keys';
 import { fetchSettings } from '@/queries/settings';
 import { SettingProvider } from '@/providers/SettingProvider';
+import { routing } from '@/i18n/routing';
 
 const quickSand = Quicksand({
   variable: '--font-quick-sand',
@@ -32,10 +35,17 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: Promise<{ locale: Locale }>;
 }>) {
   const queryClient = new QueryClient();
+  const { locale } = await params;
+
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
 
   await queryClient.prefetchQuery({
     queryKey: [SETTINGS_QUERY_KEY],
@@ -43,9 +53,10 @@ export default async function RootLayout({
   });
 
   const dehydratedState = dehydrate(queryClient);
+  setRequestLocale(locale);
 
   return (
-    <html lang="en">
+    <html lang={locale}>
       <body className={`${quickSand.variable} ${inter.variable} antialiased`}>
         <QueryProvider>
           <HydrationBoundary state={dehydratedState}>

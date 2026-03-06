@@ -1,0 +1,8 @@
+{
+  "layout": {
+    "discount": "Έκπτωση {precent}% στην πρώτη σας παραγγελία"
+  },
+  "HomePage": {
+    "title": "Hello world!"
+  }
+}
