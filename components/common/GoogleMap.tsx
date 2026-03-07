@@ -5,13 +5,9 @@ interface GoogleMapProps {
 }
 export default function GoogleMap({ code }: GoogleMapProps) {
   return (
-    <div>
-      <iframe
-        src={code}
-        style={{ border: 0, width: '100%', height: '100%' }}
-        loading="lazy"
-        referrerPolicy="no-referrer-when-downgrade"
-      ></iframe>
-    </div>
+    <div
+      dangerouslySetInnerHTML={{ __html: code }}
+      className="h-60 lg:h-full [&>iframe]:size-full [&>iframe]:border-none"
+    ></div>
   );
 }
