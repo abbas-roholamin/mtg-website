@@ -11,7 +11,7 @@ import { notFound } from 'next/navigation';
 import { setRequestLocale } from 'next-intl/server';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
-import DiscountBanner from '@/components/common/DiscountBanner';
+import Banner from '@/components/layout/Banner';
 import QueryProvider from '@/providers/QueryProvider';
 import { SETTINGS_QUERY_KEY } from '@/constants/query-keys';
 import { fetchSettings } from '@/queries/settings';
@@ -56,15 +56,19 @@ export default async function RootLayout({
   setRequestLocale(locale);
 
   return (
-    <html lang={locale}>
-      <body className={`${quickSand.variable} ${inter.variable} antialiased`}>
+    <html lang={locale} className="h-full">
+      <body
+        className={`${quickSand.variable} ${inter.variable} flex min-h-screen flex-col antialiased`}
+      >
         <QueryProvider>
           <HydrationBoundary state={dehydratedState}>
             <NextIntlClientProvider>
               <SettingProvider>
-                <DiscountBanner />
+                <Banner />
                 <Header />
-                <main>{children}</main>
+                <main className="flex flex-1 flex-col [&>*]:flex-1">
+                  {children}
+                </main>
                 <Footer />
               </SettingProvider>
             </NextIntlClientProvider>

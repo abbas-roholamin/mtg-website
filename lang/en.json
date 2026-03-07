@@ -1,8 +1,31 @@
 {
   "layout": {
-    "discount": "{precent}% Off Your First Order"
+    "delivery": "Delivery across Cyprus in under 24 hours.",
+    "businesses": " For Businesses",
+    "footer": {
+      "legal": "Legal",
+      "quick_links": "Quick Links",
+      "support": "Customer Support"
+    }
+  },
+  "navigation": {
+    "home": "Home",
+    "shop": "Shop",
+    "gallery": "Gallery",
+    "blog": "Blog",
+    "about": "About",
+    "contact": "Contact",
+    "terms": "Terms and Conditions",
+    "privacy": "Privacy Policy",
+    "imprint": "Imprint",
+    "faqs": "FAQs"
   },
   "HomePage": {
     "title": "Hello world!"
+  },
+  "404": {
+    "title": "404 Not Found",
+    "description": "Your visited page not found. You may go home page.",
+    "cta": "Back to Home"
   }
 }

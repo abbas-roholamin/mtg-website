@@ -2,10 +2,10 @@
 
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
-import LocaleSwitcher from './LocaleSwticher';
+import LocaleSwitcher from '../common/LocaleSwticher';
 import { useSetting } from '@/providers/SettingProvider';
 
-export default function DiscountBanner() {
+export default function Banner() {
   const setting = useSetting();
   const t = useTranslations('layout');
 
@@ -21,10 +21,10 @@ export default function DiscountBanner() {
           >
             {setting.phone}
           </a>
-          <p>{t('discount', { precent: 10 })}</p>
+          <p>{t('delivery')}</p>
           <div className="flex items-center gap-8">
-            <Link href="/" className="underline underline-offset-2">
-              For Businesses
+            <Link href="/contact" className="underline underline-offset-2">
+              {t('businesses')}
             </Link>
             <LocaleSwitcher />
           </div>

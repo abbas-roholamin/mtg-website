@@ -1,8 +1,31 @@
 {
   "layout": {
-    "discount": "{precent}% Rabatt auf Ihre erste Bestellung"
+    "delivery": "Lieferung in ganz Zypern in weniger als 24 Stunden.",
+    "businesses": "Für Unternehmen",
+    "footer": {
+      "legal": "Rechtliches",
+      "quick_links": "Schnellzugriffe",
+      "support": "Kundensupport"
+    }
+  },
+  "navigation": {
+    "home": "Home",
+    "shop": "Shop",
+    "gallery": "Galerie",
+    "blog": "Blog",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "terms": "Allgemeine Geschäftsbedingungen",
+    "privacy": "Datenschutzerklärung",
+    "imprint": "Impressum",
+    "faqs": "Häufig gestellte Fragen"
   },
   "HomePage": {
     "title": "Hello world!"
+  },
+  "404": {
+    "title": "404 Nicht gefunden",
+    "description": "Die von Ihnen aufgerufene Seite wurde nicht gefunden. Sie können zur Startseite zurückkehren.",
+    "cta": "Zurück zur Startseite"
   }
 }
