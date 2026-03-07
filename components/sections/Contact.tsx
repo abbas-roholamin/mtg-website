@@ -34,7 +34,7 @@ export default function Contact() {
               </ul>
             </div>
 
-            <div>
+            {/* <div>
               <div className="mb-2 flex items-center gap-3">
                 <PhoneIcon className="size-5" />
                 <p className="font-semibold md:font-bold">
@@ -49,7 +49,7 @@ export default function Contact() {
               >
                 {setting.phone}
               </a>
-            </div>
+            </div> */}
             <div>
               <div className="mb-2 flex items-center gap-3">
                 <MailIcon className="size-5" />
