@@ -23,6 +23,32 @@
   "HomePage": {
     "title": "Hello world!"
   },
+  "pages": {
+    "about": {
+      "title": "  Your reliable partner for travel-ready classic games",
+      "description": "  We design and curate compact versions of timeless games made for life on the move. Our collections combine portability, durability, and classic design — so you can play anywhere your journey takes you.",
+      "highlights": {
+        "design": {
+          "title": "Travel-Ready Design",
+          "description": "Our games are compact, lightweight, and easy to pack — perfect for road trips, flights, and weekend escapes."
+        },
+        "craftsmanship": {
+          "title": "Timeless Craftsmanship",
+          "description": "We focus on durable materials and classic aesthetics that feel just as good at home as they do abroad."
+        },
+        "connection": {
+          "title": "Made for Connection",
+          "description": "From quiet chess matches to lively domino nights, our games bring people together wherever you are."
+        }
+      },
+      "stats": {
+        "delivered": "Gamges Delivered",
+        "satisfaction": "Customer Satisfaction",
+        "shipped": "Countries Shipped To",
+        "secure": "Secure Online Ordering"
+      }
+    }
+  },
   "sections": {
     "faq": {
       "title": "FAQs",

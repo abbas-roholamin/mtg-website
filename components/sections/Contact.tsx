@@ -1,6 +1,6 @@
 'use client';
 import { useTranslations } from 'next-intl';
-import { Clock10Icon, MailIcon, PhoneIcon } from 'lucide-react';
+import { Clock10Icon, MailIcon } from 'lucide-react';
 import ContactForm from '../contact/ContactForm';
 import { useSetting } from '@/providers/SettingProvider';
 

@@ -23,6 +23,32 @@
   "HomePage": {
     "title": "Hello world!"
   },
+  "pages": {
+    "about": {
+      "title": "Ihr zuverlässiger Partner für reisefertige klassische Spiele",
+      "description": "Wir entwerfen und kuratieren kompakte Versionen zeitloser Spiele, die für das Leben unterwegs gemacht sind. Unsere Kollektionen verbinden Mobilität, Langlebigkeit und klassisches Design — damit Sie überall spielen können, wohin Ihre Reise Sie führt.",
+      "highlights": {
+        "design": {
+          "title": "Reisetaugliches Design",
+          "description": "Unsere Spiele sind kompakt, leicht und einfach zu verstauen — perfekt für Roadtrips, Flüge und Wochenendausflüge."
+        },
+        "craftsmanship": {
+          "title": "Zeitlose Handwerkskunst",
+          "description": "Wir legen Wert auf langlebige Materialien und klassische Ästhetik, die sich zu Hause genauso gut anfühlen wie im Ausland."
+        },
+        "connection": {
+          "title": "Für Verbindung gemacht",
+          "description": "Von ruhigen Schachpartien bis zu lebhaften Domino-Abenden – unsere Spiele bringen Menschen zusammen, egal wo Sie sind."
+        }
+      },
+      "stats": {
+        "delivered": "Gelieferte Spiele",
+        "satisfaction": "Kundenzufriedenheit",
+        "shipped": "Belieferte Länder",
+        "secure": "Sichere Online-Bestellung"
+      }
+    }
+  },
   "sections": {
     "faq": {
       "title": "Häufig gestellte Fragen",
