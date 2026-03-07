@@ -11,6 +11,10 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'my-travel-game-main-yj1gwr.laravel.cloud',
       },
+      {
+        protocol: 'http',
+        hostname: '127.0.0.1',
+      },
     ],
   },
 };

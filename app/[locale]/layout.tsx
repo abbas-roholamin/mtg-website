@@ -9,14 +9,16 @@ import {
 import { Locale, NextIntlClientProvider, hasLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { setRequestLocale } from 'next-intl/server';
+import { Toaster } from 'sonner';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import Banner from '@/components/layout/Banner';
 import QueryProvider from '@/providers/QueryProvider';
-import { SETTINGS_QUERY_KEY } from '@/constants/query-keys';
+import { FAQS_QUERY_KEY, SETTINGS_QUERY_KEY } from '@/constants/query-keys';
 import { fetchSettings } from '@/queries/settings';
 import { SettingProvider } from '@/providers/SettingProvider';
 import { routing } from '@/i18n/routing';
+import { fetchFaqs } from '@/queries/faq';
 
 const quickSand = Quicksand({
   variable: '--font-quick-sand',
@@ -52,6 +54,11 @@ export default async function RootLayout({
     queryFn: fetchSettings,
   });
 
+  await queryClient.prefetchQuery({
+    queryKey: [FAQS_QUERY_KEY, locale],
+    queryFn: () => fetchFaqs(locale),
+  });
+
   const dehydratedState = dehydrate(queryClient);
   setRequestLocale(locale);
 
@@ -71,6 +78,7 @@ export default async function RootLayout({
                 </main>
                 <Footer />
               </SettingProvider>
+              <Toaster />
             </NextIntlClientProvider>
           </HydrationBoundary>
         </QueryProvider>

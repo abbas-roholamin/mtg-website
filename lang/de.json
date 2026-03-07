@@ -23,6 +23,67 @@
   "HomePage": {
     "title": "Hello world!"
   },
+  "sections": {
+    "faq": {
+      "title": "Häufig gestellte Fragen",
+      "description": "Häufig gestellte Fragen"
+    },
+    "branch": {
+      "location": "Unser Standort in {country}",
+      "address": "Adresse",
+      "phone": "Telefon"
+    },
+    "contact": {
+      "title": "Kontakt aufnehmen",
+      "working_hours": {
+        "label": "Öffnungszeiten",
+        "monday": "Montag",
+        "tuesday": "Dienstag",
+        "wednesday": "Mittwoch",
+        "thursday": "Donnerstag",
+        "friday": "Freitag",
+        "saturday": "Samstag",
+        "sunday": "Sonntag"
+      },
+      "write_to_us": "Schreiben Sie uns"
+    }
+  },
+
+  "form": {
+    "first_name": {
+      "label": "Vorname",
+      "placeholder": "Geben Sie Ihren Vornamen ein",
+      "required": "Vorname ist erforderlich"
+    },
+    "last_name": {
+      "label": "Nachname",
+      "placeholder": "Geben Sie Ihren Nachnamen ein",
+      "required": "Nachname ist erforderlich"
+    },
+    "email": {
+      "label": "E-Mail",
+      "placeholder": "Geben Sie Ihre E-Mail-Adresse ein",
+      "required": "E-Mail ist erforderlich",
+      "invalid": "Ungültige E-Mail-Adresse"
+    },
+    "phone": {
+      "label": "Telefon",
+      "placeholder": "Geben Sie Ihre Telefonnummer ein",
+      "required": "Telefonnummer ist erforderlich",
+      "invalid": "Ungültige Telefonnummer"
+    },
+    "message": {
+      "label": "Nachricht",
+      "placeholder": "Geben Sie Ihre Nachricht ein",
+      "required": "Nachricht ist erforderlich"
+    },
+    "too_many_requests": "Zu viele Anfragen, bitte versuchen Sie es erneut.",
+    "submit_faild": "Die Nachricht konnte nicht verschickt werden, bitte versuchen Sie es erneut.",
+    "submit_success": "Die Nachricht wurde erfolgreich verschickt.",
+    "error_occured": "Ein Fehler ist aufgetreten, bitte versuchen Sie es erneut.",
+    "btn": "Absenden",
+    "processing": "Wird gesendet..."
+  },
   "404": {
     "title": "404 Nicht gefunden",
     "description": "Die von Ihnen aufgerufene Seite wurde nicht gefunden. Sie können zur Startseite zurückkehren.",

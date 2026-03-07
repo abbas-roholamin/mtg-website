@@ -14,7 +14,13 @@ export interface Setting {
   meta_title: string;
   meta_description: string;
   logo: string;
+  working_hours: Array<WorkingHours>;
   locales: Record<string, string>;
 }
+
+type WorkingHours = {
+  day: string;
+  hours: string;
+};
 
 export type SettingsResponse = ApiResponse<Setting>;

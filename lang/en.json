@@ -23,6 +23,66 @@
   "HomePage": {
     "title": "Hello world!"
   },
+  "sections": {
+    "faq": {
+      "title": "FAQs",
+      "description": "Frequently asked questions"
+    },
+    "branch": {
+      "location": "Our Location in {country}",
+      "address": "Address",
+      "phone": "Phone"
+    },
+    "contact": {
+      "title": "Get in touch",
+      "working_hours": {
+        "label": "Opeining Hours",
+        "monday": "Monday",
+        "tuesday": "Tuesday",
+        "wednesday": "Wednesday",
+        "thursday": "Thursday",
+        "friday": "Friday",
+        "saturday": "Saturday",
+        "sunday": "Sunday"
+      },
+      "write_to_us": "Write To Us"
+    }
+  },
+  "form": {
+    "first_name": {
+      "label": "First Name",
+      "placeholder": "Enter your first name",
+      "required": "First name is required"
+    },
+    "last_name": {
+      "label": "Last Name",
+      "placeholder": "Enter your last name",
+      "required": "Last name is required"
+    },
+    "email": {
+      "label": "Email",
+      "placeholder": "Enter your email",
+      "required": "Email is required",
+      "invalid": "Invalid email address"
+    },
+    "phone": {
+      "label": "Phone",
+      "placeholder": "Enter your phone",
+      "required": "Phone is required",
+      "invalid": "Invalid phone number"
+    },
+    "message": {
+      "label": "Message",
+      "placeholder": "Enter your message",
+      "required": "Message is required"
+    },
+    "too_many_requests": "Too many requests, please try again later",
+    "submit_faild": "Submit failed, please try again later",
+    "submit_success": "Submit success",
+    "error_occured": "Error occured, please try again later",
+    "btn": "Submit",
+    "processing": "Submitting..."
+  },
   "404": {
     "title": "404 Not Found",
     "description": "Your visited page not found. You may go home page.",
