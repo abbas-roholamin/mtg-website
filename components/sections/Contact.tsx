@@ -10,7 +10,7 @@ export default function Contact() {
   return (
     <section>
       <div className="wrapper">
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 xl:gap-10">
           <div className="space-y-8">
             <h2 className="text-primary font-quick-sand mb-4 text-4xl font-bold md:text-5xl lg:mb-9 lg:text-7xl">
               {t('contact.title')}
