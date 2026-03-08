@@ -47,6 +47,49 @@
         "shipped": "Countries Shipped To",
         "secure": "Secure Online Ordering"
       }
+    },
+    "home": {
+      "title": "Portable classic games for every adventure.",
+      "description": "Take your favorite classic games anywhere. Compact, portable, and ready for every journey.",
+      "button": "Explore Games",
+      "play_anywhere": "Play Anywhere",
+      "anytime": "Anytime",
+      "falling": "Our collection from the world of play and joy"
+    }
+  },
+  "whoWeAre": {
+    "title": "Who We Are?",
+    "description": "We are passionate about reimagining timeless board game classics. Our goal is to unite the world's most beautiful board games in a modern, mobile format – without losing their original charm.",
+    "button": "Read More",
+    "services": {
+      "title1": "Game Lovers",
+      "desc1": "We are passionate players who believe classic games bring people closer together.",
+      "title2": "Travel Inspired",
+      "desc2": "Born from a love of adventure, we create games made to move with you.",
+      "title3": "Thoughtful Design",
+      "desc3": "We focus on simplicity, elegance, and smart details in every product we create.",
+      "title4": "Meaningful Moments",
+      "desc4": "Our mission is to turn ordinary trips into unforgettable memories through play."
+    }
+  },
+  "waysToShop": {
+    "title": "Ways To Shop",
+    "description": "Pick the perfect travel game for yourself or your business, with easy ordering and great deals.",
+    "for_individuals": {
+      "title": "For Individuals",
+      "description": "Compact travel games for your next adventure.",
+      "feature1": "Lightweight & travel-friendly",
+      "feature2": "Premium quality materials",
+      "feature3": "Perfect for solo or group play",
+      "button": "Explore Collection"
+    },
+    "for_businesses": {
+      "title": "For Businesses",
+      "description": "Bulk orders for hotels, airlines, events, and retailers.",
+      "feature1": "Wholesale pricing",
+      "feature2": "Large quantity orders",
+      "feature3": "Dedicated support",
+      "button": "Contact Now"
     }
   },
   "sections": {
