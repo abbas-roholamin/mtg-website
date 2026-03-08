@@ -47,6 +47,49 @@
         "shipped": "Belieferte Länder",
         "secure": "Sichere Online-Bestellung"
       }
+    },
+    "home": {
+      "title": "Tragbare klassische Spiele für jedes Abenteuer.",
+      "description": "Nehmen Sie Ihre Lieblingsklassiker überall hin mit. Kompakt, tragbar und bereit für jede Reise.",
+      "button": "Εξερευνήστε Παιχνίδια",
+      "play_anywhere": "Überall Spielen",
+      "anytime": "Jederzeit",
+      "falling": "Unsere Sammlung aus der Welt des Spiels und der Freude"
+    }
+  },
+  "whoWeAre": {
+    "title": "Wer Wir Sind?",
+    "description": "Wir sind leidenschaftlich daran interessiert, zeitlose klassische Brettspiele neu zu gestalten. Unser Ziel ist es, die schönsten Brettspiele der Welt in einem modernen, mobilen Format zu vereinen – ohne ihren ursprünglichen Charme zu verlieren.",
+    "button": "Mehr Lesen",
+    "services": {
+      "title1": "Spielbegeisterte",
+      "desc1": "Wir sind leidenschaftliche Spieler, die glauben, dass klassische Spiele Menschen näher zusammenbringen.",
+      "title2": "Von Reisen Inspiriert",
+      "desc2": "Aus Liebe zum Abenteuer entstanden, erstellen wir Spiele, die mit Ihnen unterwegs sind.",
+      "title3": "Durchdachtes Design",
+      "desc3": "Wir konzentrieren uns auf Einfachheit, Eleganz und intelligente Details in jedem Produkt, das wir erstellen.",
+      "title4": "Bedeutungsvolle Momente",
+      "desc4": "Unsere Mission ist es, gewöhnliche Reisen durch Spiel zu unvergesslichen Erinnerungen zu machen."
+    }
+  },
+  "waysToShop": {
+    "title": "Wege Zum Einkaufen",
+    "description": "Wählen Sie das perfekte Reisespiel für sich oder Ihr Unternehmen, mit einfacher Bestellung und tollen Angeboten.",
+    "for_individuals": {
+      "title": "Für Einzelpersonen",
+      "description": "Kompakte Reisespiele für Ihr nächstes Abenteuer.",
+      "feature1": "Leicht & reisefreundlich",
+      "feature2": "Hochwertige Materialien",
+      "feature3": "Perfekt für Einzel- oder Gruppenspiel",
+      "button": "Kollektion Erkunden"
+    },
+    "for_businesses": {
+      "title": "Für Unternehmen",
+      "description": "Großbestellungen für Hotels, Fluggesellschaften, Events und Händler.",
+      "feature1": "Großhandelspreise",
+      "feature2": "Großbestellmengen",
+      "feature3": "Dedizierter Support",
+      "button": "Jetzt Kontaktieren"
     }
   },
   "sections": {

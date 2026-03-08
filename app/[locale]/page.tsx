@@ -1,6 +1,23 @@
-import { getTranslations } from 'next-intl/server';
+import Banner from '@/components/home/Banner';
+import Clients from '@/components/home/Clients';
+import Falling from '@/components/home/Falling';
+import Hero from '@/components/home/Hero';
+import PlayAnywhere from '@/components/home/PlayAnywhere';
+import WaysToShop from '@/components/home/WaysToShop';
+import WhoWeAre from '@/components/home/WhoWeAre';
+import Faq from '@/components/sections/Faq';
 
 export default async function Home() {
-  const t = await getTranslations('HomePage');
-  return <h1>{t('title')}</h1>;
+  return (
+    <>
+      <Hero />
+      <Clients />
+      <WhoWeAre />
+      <PlayAnywhere />
+      <WaysToShop />
+      <Falling />
+      <Faq />
+      <Banner />
+    </>
+  );
 }
