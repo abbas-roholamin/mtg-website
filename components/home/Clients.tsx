@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import SectionContainer from '../common/SectionContainer';
 
 export default function Clients() {
   const data = [
@@ -45,7 +46,7 @@ export default function Clients() {
   ];
 
   return (
-    <div className="mx-auto my-16 max-w-[60rem] overflow-hidden">
+    <SectionContainer className="overflow-hidden">
       <div className="relative md:[mask-image:linear-gradient(to_right,#000_80%,transparent_100%)]">
         <div className="relative md:[mask-image:linear-gradient(to_left,#000_80%,transparent_100%)]">
           <div className="infinite-slides relative flex w-max">
@@ -64,6 +65,6 @@ export default function Clients() {
           </div>
         </div>
       </div>
-    </div>
+    </SectionContainer>
   );
 }

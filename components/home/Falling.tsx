@@ -5,6 +5,7 @@ import Matter from 'matter-js';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useTranslations } from 'next-intl';
+import SectionContainer from '../common/SectionContainer';
 
 interface CircleWithImage extends Matter.Body {
   svgPath: string;
@@ -235,12 +236,12 @@ const Falling = () => {
   }, []);
 
   return (
-    <section className="font-poppins my-20 flex h-screen w-full items-center justify-center">
+    <SectionContainer className="">
       <div
         ref={containerRef}
-        className="relative h-150 w-4/5 max-w-350 overflow-hidden rounded-3xl bg-purple-200"
+        className="relative h-140 w-full overflow-hidden rounded-3xl bg-purple-200"
       >
-        <div className="font-quick-sand absolute top-12 w-full text-center text-6xl font-bold">
+        <div className="font-quick-sand absolute top-12 w-full px-5 text-center text-3xl font-bold xl:text-4xl 2xl:text-5xl">
           {t('falling')}
         </div>
 
@@ -250,7 +251,7 @@ const Falling = () => {
           style={{ display: 'block' }}
         />
       </div>
-    </section>
+    </SectionContainer>
   );
 };
 
