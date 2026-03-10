@@ -3,6 +3,7 @@ import Clients from '@/components/home/Clients';
 import Falling from '@/components/home/Falling';
 import Hero from '@/components/home/Hero';
 import PlayAnywhere from '@/components/home/PlayAnywhere';
+import ScrollHorizontal from '@/components/home/scroll/ScrollHorizontal';
 import WaysToShop from '@/components/home/WaysToShop';
 import WhoWeAre from '@/components/home/WhoWeAre';
 import Faq from '@/components/sections/Faq';
@@ -13,6 +14,7 @@ export default async function Home() {
       <Hero />
       <Clients />
       <WhoWeAre />
+      <ScrollHorizontal />
       <PlayAnywhere />
       <WaysToShop />
       <Falling />
