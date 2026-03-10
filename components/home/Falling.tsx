@@ -236,7 +236,7 @@ const Falling = () => {
   }, []);
 
   return (
-    <SectionContainer className="">
+    <SectionContainer>
       <div
         ref={containerRef}
         className="relative h-140 w-full overflow-hidden rounded-3xl bg-purple-200"

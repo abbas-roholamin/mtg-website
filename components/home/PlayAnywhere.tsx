@@ -173,7 +173,7 @@ const PlayAnywhere = () => {
       >
         <h1
           ref={textRef}
-          className="text-primary font-quick-sand relative z-0 w-200 text-center text-5xl font-bold sm:text-6xl lg:text-7xl"
+          className="text-primary font-quick-sand relative z-0 w-200 text-center text-3xl font-bold sm:text-6xl lg:text-7xl"
           style={{ scale: 1.5 }}
         >
           <span>{t('play_anywhere')}</span>

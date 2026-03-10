@@ -6,7 +6,7 @@ import SectionContainer from '../common/SectionContainer';
 export default function Banner() {
   return (
     <SectionContainer className="gap-16 lg:gap-20">
-      <div className="grid rounded-4xl bg-[#f7f7f7] py-12 md:grid-cols-2">
+      <div className="flex flex-col-reverse rounded-4xl bg-[#f7f7f7] py-12 md:grid md:grid-cols-2">
         <div className="flex flex-col items-start justify-center gap-2 px-5 sm:px-8 md:gap-4 md:px-12 xl:px-16">
           <h1 className="font-quick-sand text-3xl font-bold lg:text-4xl">
             Summer Sale
@@ -25,7 +25,7 @@ export default function Banner() {
 
           <Button size={'lg'}>Shop Now</Button>
         </div>
-        <div className="hidden justify-center md:flex">
+        <div className="flex justify-center">
           <div className="relative aspect-square size-full max-w-[400px]">
             <Image
               src="/images/g1.png"
