@@ -2,6 +2,7 @@
 
 import { useQuery } from '@tanstack/react-query';
 import { useLocale, useTranslations } from 'next-intl';
+import SectionContainer from '../common/SectionContainer';
 import {
   Accordion,
   AccordionContent,
@@ -28,7 +29,7 @@ export default function Faq() {
   const faqs = data?.data ?? [];
 
   return (
-    <section>
+    <SectionContainer>
       <div className="mb-8 text-center md:mb-11 lg:mb-14">
         <h2 className="text-primary font-quick-sand mb-4 text-5xl font-bold md:text-6xl lg:text-7xl">
           {t('faq.title')}
@@ -58,6 +59,6 @@ export default function Faq() {
           </AccordionItem>
         ))}
       </Accordion>
-    </section>
+    </SectionContainer>
   );
 }

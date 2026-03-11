@@ -173,7 +173,7 @@ const PlayAnywhere = () => {
       >
         <h1
           ref={textRef}
-          className="text-primary font-quick-sand relative z-0 w-200 text-center text-7xl font-bold"
+          className="text-primary font-quick-sand relative z-0 w-200 text-center text-3xl font-bold sm:text-6xl lg:text-7xl"
           style={{ scale: 1.5 }}
         >
           <span>{t('play_anywhere')}</span>
@@ -190,7 +190,7 @@ const PlayAnywhere = () => {
               }}
               src={images[i].image}
               alt=""
-              className="absolute h-52 w-56 rounded-4xl object-cover"
+              className="absolute size-32 rounded-3xl object-cover sm:size-44 sm:rounded-4xl lg:size-56"
               style={{
                 top: '50%',
                 left: '50%',

@@ -10,7 +10,7 @@ export default function Banner() {
   const t = useTranslations('layout');
 
   return (
-    <section className="bg-primary hidden py-2 text-neutral-50 lg:block">
+    <section className="bg-primary hidden h-10 items-center text-neutral-50 lg:flex">
       <div className="wrapper">
         <div className="flex items-center justify-between gap-4">
           <a
