@@ -64,14 +64,16 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} className="h-full">
-      <body className={`${quickSand.variable} ${inter.variable} antialiased`}>
+      <body
+        className={`${quickSand.variable} ${inter.variable} flex min-h-dvh flex-col antialiased`}
+      >
         <QueryProvider>
           <HydrationBoundary state={dehydratedState}>
             <NextIntlClientProvider>
               <SettingProvider>
                 <Banner />
                 <Header />
-                <main>{children}</main>
+                <main className="flex-1">{children}</main>
                 <Footer />
               </SettingProvider>
               <Toaster />
