@@ -1,5 +1,15 @@
-import React from 'react';
+import Post from '@/components/blog/Post';
+interface Props {
+  params: Promise<{ slug: string }>;
+}
+export default async function Page({ params }: Props) {
+  const { slug } = await params;
 
-export default function Page() {
-  return <div>Page</div>;
+  return (
+    <section className="py-20">
+      <div className="wrapper">
+        <Post slug={slug} />
+      </div>
+    </section>
+  );
 }

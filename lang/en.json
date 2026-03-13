@@ -57,6 +57,11 @@
       "falling": "Our collection from the world of play and joy",
       "scroll_title": "MY Travel Games",
       "shop_now": "Shop Now"
+    },
+    "blog": {
+      "post": {
+        "read_time": "{min} mins read"
+      }
     }
   },
   "whoWeAre": {

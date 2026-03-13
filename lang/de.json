@@ -57,6 +57,11 @@
       "falling": "Unsere Sammlung aus der Welt des Spiels und der Freude",
       "scroll_title": "MY Travel Games",
       "shop_now": "Jetzt shoppen"
+    },
+    "blog": {
+      "post": {
+        "read_time": "{min} Min. Lesezeit"
+      }
     }
   },
   "whoWeAre": {
