@@ -65,6 +65,9 @@ importers:
       react-hook-form:
         specifier: ^7.71.2
         version: 7.71.2(react@19.2.3)
+      react-plock:
+        specifier: ^3.6.1
+        version: 3.6.1(react@19.2.3)
       sonner:
         specifier: ^2.0.7
         version: 2.0.7(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
@@ -3763,6 +3766,11 @@ packages:
 
   react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
+
+  react-plock@3.6.1:
+    resolution: {integrity: sha512-6THvSeSnPTfBBc2tLGKkZnXbTDvFyOIWD+NnUkMYYRMQmYjYgHcdrRaC25Q4DxYCi5+dDTkGN6jQvJn40FkYGA==}
+    peerDependencies:
+      react: ^18.2.0 || ^19.0.0
 
   react-remove-scroll-bar@2.3.8:
     resolution: {integrity: sha512-9r+yi9+mgU33AKcj6IbT9oRCO78WriSj6t/cF8DWBZJ9aOGPOTEDvdUDz1FwKim7QXWwmHqtdHnRJfhAxEG46Q==}
@@ -8074,6 +8082,10 @@ snapshots:
       react: 19.2.3
 
   react-is@16.13.1: {}
+
+  react-plock@3.6.1(react@19.2.3):
+    dependencies:
+      react: 19.2.3
 
   react-remove-scroll-bar@2.3.8(@types/react@19.2.14)(react@19.2.3):
     dependencies:

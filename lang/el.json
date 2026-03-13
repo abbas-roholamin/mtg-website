@@ -59,9 +59,13 @@
       "shop_now": "ψωνίστε τώρα"
     },
     "blog": {
+      "title": "Ιστολόγιο",
       "post": {
         "read_time": "{min} λεπτά ανάγνωσης"
       }
+    },
+    "gallery": {
+      "title": "Συλλογή"
     }
   },
   "whoWeAre": {

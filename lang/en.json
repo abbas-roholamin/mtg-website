@@ -59,9 +59,13 @@
       "shop_now": "Shop Now"
     },
     "blog": {
+      "title": "Blog",
       "post": {
         "read_time": "{min} mins read"
       }
+    },
+    "gallery": {
+      "title": "Gallery"
     }
   },
   "whoWeAre": {
