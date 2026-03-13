@@ -28,7 +28,7 @@ function WhoWeAre() {
     const stop = inView('.game_lovers', element => {
       animate(
         element,
-        { opacity: 1, y: [300, 0] },
+        { opacity: 1, x: [300, 0] },
         {
           duration: 1.5,
           easing: [0.17, 0.55, 0.55, 1],
@@ -40,7 +40,7 @@ function WhoWeAre() {
   }, []);
 
   return (
-    <SectionContainer className="grid content-center lg:grid-cols-2 lg:gap-12 xl:gap-20">
+    <SectionContainer className="grid content-center overflow-hidden lg:grid-cols-2 lg:gap-12 xl:gap-20">
       <div className="who_we_are grid content-center gap-8 xl:gap-16">
         <div className="grid gap-2 sm:gap-4">
           <h1 className="text-primary font-quick-sand text-4xl font-bold sm:text-5xl lg:text-6xl xl:text-[80px]">

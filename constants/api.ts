@@ -3,4 +3,5 @@ export const API = {
   SETTINGS: `${process.env.NEXT_PUBLIC_API_BASE_URL}/setting`,
   FAQ: `${process.env.NEXT_PUBLIC_API_BASE_URL}/faqs`,
   BRANCHES: `${process.env.NEXT_PUBLIC_API_BASE_URL}/branches`,
+  CLIENTS: `${process.env.NEXT_PUBLIC_API_BASE_URL}/partners`,
 } as const;
