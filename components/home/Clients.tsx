@@ -20,13 +20,13 @@ export default function Clients() {
       <div className="relative md:[mask-image:linear-gradient(to_right,#000_60%,transparent_100%)]">
         <div className="relative md:[mask-image:linear-gradient(to_left,#000_80%,transparent_100%)]">
           <div className="infinite-slides relative flex w-max">
-            {data?.data?.map(item => (
-              <div key={item.id} className="inline-block">
+            {data?.data?.map(client => (
+              <div key={client.name} className="inline-block">
                 <div className="relative mx-8 h-[60px] w-[80px] overflow-hidden rounded-2xl">
                   <Image
                     className="h-full w-full object-contain"
                     fill
-                    src={item.image}
+                    src={client.image}
                     alt="test"
                   />
                 </div>
