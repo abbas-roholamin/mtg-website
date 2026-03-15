@@ -1,40 +1,55 @@
 'use client';
 
 import Image from 'next/image';
-import { useLocale } from 'next-intl';
 import { useQuery } from '@tanstack/react-query';
-import SectionContainer from '../common/SectionContainer';
+import { CSSProperties } from 'react';
+import ClientSkeleton from '../skeleton/ClientSkeleton';
 import { CLIENTS_QUERY_KEY } from '@/constants/query-keys';
 import { fetchClients } from '@/queries/clients';
-import { Locale } from '@/types/locale';
+
+const STALE_TIME = 1000 * 60 * 60; // 1 HOUR
+const GC_TIEM = 1000 * 60 * 60 * 2; // 2 HOUR
 
 export default function Clients() {
-  const locale = useLocale();
-  const { data } = useQuery({
-    queryKey: [CLIENTS_QUERY_KEY, locale],
-    queryFn: () => fetchClients(locale as Locale),
+  const { data, isPending } = useQuery({
+    queryKey: [CLIENTS_QUERY_KEY],
+    queryFn: () => fetchClients(),
+    staleTime: STALE_TIME,
+    gcTime: GC_TIEM,
   });
 
+  const clients = data?.data ?? [];
+
+  if (isPending) {
+    return <ClientSkeleton />;
+  }
+
   return (
-    <SectionContainer className="overflow-hidden">
-      <div className="relative md:[mask-image:linear-gradient(to_right,#000_60%,transparent_100%)]">
-        <div className="relative md:[mask-image:linear-gradient(to_left,#000_80%,transparent_100%)]">
-          <div className="infinite-slides relative flex w-max">
-            {data?.data?.map(client => (
-              <div key={client.name} className="inline-block">
-                <div className="relative mx-8 h-[60px] w-[80px] overflow-hidden rounded-2xl">
-                  <Image
-                    className="h-full w-full object-contain"
-                    fill
-                    src={client.image}
-                    alt="test"
-                  />
-                </div>
-              </div>
+    <section className="my-12 sm:my-16 lg:my-20">
+      <div className="wrapper">
+        <div
+          className="marquee fadeout-horizontal"
+          style={{ '--num-items': clients.length } as CSSProperties}
+        >
+          <div className="marquee-track">
+            {clients?.map((client, index) => (
+              <a
+                href={client.url}
+                key={client.name}
+                className="marquee-item relative h-14"
+                style={{ '--item-position': index + 1 } as CSSProperties}
+              >
+                <Image
+                  className="h-full w-full object-contain opacity-60 grayscale hover:opacity-100"
+                  fill
+                  src={client.image}
+                  alt={client.name}
+                />
+              </a>
             ))}
           </div>
         </div>
       </div>
-    </SectionContainer>
+    </section>
   );
 }

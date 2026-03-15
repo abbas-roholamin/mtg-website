@@ -164,6 +164,16 @@ body {
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+@layer utilities {
+  @media (prefers-reduced-motion: reduce) {
+    .motion-safe\:motion-reduce .motion-safe {
+      animation: none !important;
+      transition: none !important;
+      transform: none !important;
+    }
+  }
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -173,10 +183,6 @@ body {
   }
 }
 
-.infinite-slides {
-  animation: scroll 20s linear infinite;
-}
-
 @keyframes scroll {
   0% {
     transform: translateX(0);
@@ -184,4 +190,55 @@ body {
   100% {
     transform: translateX(-50%);
   }
+}
+
+/* Marquee */
+.marquee {
+  max-width: 1800px;
+  overflow: hidden;
+  --speed: 25s;
+  --item-width: 144px;
+  --item-gap: 90px;
+
+  --single-slide-speed: calc(var(--speed) / var(--num-items));
+  --item-width-plus-gap: calc(var(--item-width) + var(--item-gap));
+  --track-width: calc(var(--item-width-plus-gap) * calc(var(--num-items) - 1));
+}
+
+.marquee-track {
+  container-type: inline-size;
+  display: grid;
+  grid-template-columns: var(--track-width) [track] 0px [resting];
+  width: max-content;
+}
+
+.marquee-item {
+  width: var(--item-width);
+  aspect-ratio: 16/9;
+  grid-area: resting;
+  position: relative;
+  animation: marquee-move var(--speed) linear infinite
+    var(--direction, forwards);
+  animation-delay: calc(var(--single-slide-speed) * var(--item-position) * -1);
+}
+
+.marquee-item img {
+  height: auto;
+  width: 100%;
+}
+
+@keyframes marquee-move {
+  to {
+    transform: translateX(calc(-100cqw - 100%));
+  }
+}
+
+.fadeout-horizontal {
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 5rem,
+    black calc(100% - 5rem),
+    transparent
+  );
 }
