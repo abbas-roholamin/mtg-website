@@ -21,7 +21,7 @@ export default function Banner() {
           >
             {setting.phone}
           </a>
-          <p>{t('delivery')}</p>
+          <p className="uppercase">{t('delivery')}</p>
           <div className="flex items-center gap-8">
             <Link href="/contact" className="underline underline-offset-2">
               {t('businesses')}
