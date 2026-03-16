@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '../ui/button';
 
@@ -9,6 +10,7 @@ export default function WaysToShopCard({
   feature2,
   feature3,
   button,
+  href,
 }: {
   icon: string;
   title: string;
@@ -17,6 +19,7 @@ export default function WaysToShopCard({
   feature2: string;
   feature3: string;
   button: string;
+  href: string;
 }) {
   return (
     <div className="bg-secondary grid gap-32 rounded-3xl p-8 sm:gap-40 lg:p-12 xl:gap-64 xl:rounded-4xl">
@@ -48,9 +51,11 @@ export default function WaysToShopCard({
           </div>
           <p>{feature3}</p>
         </div>
-        <Button className="mt-4 lg:mt-8" size={'lg'}>
-          {button}
-        </Button>
+        <Link href={href}>
+          <Button className="mt-4 lg:mt-8" size={'lg'}>
+            {button}
+          </Button>
+        </Link>
       </div>
     </div>
   );

@@ -181,7 +181,7 @@ const PlayAnywhere = () => {
           <span>{t('anytime')}</span>
         </h1>
 
-        <div className="pointer-events-none absolute inset-0 z-10">
+        <div className="pointer-events-none absolute inset-0 z-10 overflow-hidden">
           {images.map((_, i) => (
             <img
               key={i}

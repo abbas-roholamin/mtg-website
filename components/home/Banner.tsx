@@ -26,7 +26,7 @@ export default function Banner() {
           <Button size={'lg'}>Shop Now</Button>
         </div>
         <div className="flex justify-center">
-          <div className="relative aspect-square size-full max-w-[400px]">
+          <div className="relative aspect-square size-full max-w-100">
             <Image
               src="/images/g1.png"
               alt="photo"

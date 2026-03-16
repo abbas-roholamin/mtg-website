@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { motion } from 'motion/react';
 import { useTranslations } from 'next-intl';
 import ServicesCard from '../common/ServicesCard';
@@ -9,7 +10,7 @@ export default function WhoWeAre() {
   const t = useTranslations('whoWeAre');
 
   return (
-    <section className="my-12 sm:my-16 lg:my-20">
+    <section className="my-12 overflow-hidden sm:my-16 lg:my-20">
       <div className="wrapper">
         <div className="grid grid-cols-1 gap-12 py-16 lg:grid-cols-2 lg:gap-16 xl:gap-24">
           <motion.div
@@ -39,9 +40,11 @@ export default function WhoWeAre() {
             </div>
 
             <div>
-              <Button size="lg" className="w-fit">
-                {t('button')}
-              </Button>
+              <Link href="/about">
+                <Button size="lg" className="w-fit">
+                  {t('button')}
+                </Button>
+              </Link>
             </div>
           </motion.div>
 

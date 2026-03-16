@@ -1,6 +1,4 @@
-import Image from 'next/image';
 import { useTranslations } from 'next-intl';
-import { Button } from '../ui/button';
 import SectionContainer from '../common/SectionContainer';
 import WaysToShopCard from './WaysToShopCard';
 
@@ -13,6 +11,7 @@ export default function WaysToShop() {
     feature2: t('for_individuals.feature2'),
     feature3: t('for_individuals.feature3'),
     button: t('for_individuals.button'),
+    href: '/shop',
   };
 
   const businessData = {
@@ -22,6 +21,7 @@ export default function WaysToShop() {
     feature2: t('for_businesses.feature2'),
     feature3: t('for_businesses.feature3'),
     button: t('for_businesses.button'),
+    href: '/contact',
   };
 
   return (
@@ -44,6 +44,7 @@ export default function WaysToShop() {
           feature2={individualData.feature2}
           feature3={individualData.feature3}
           button={individualData.button}
+          href={individualData.href}
         />
 
         <WaysToShopCard
@@ -54,6 +55,7 @@ export default function WaysToShop() {
           feature2={businessData.feature2}
           feature3={businessData.feature3}
           button={businessData.button}
+          href={businessData.href}
         />
       </div>
     </SectionContainer>

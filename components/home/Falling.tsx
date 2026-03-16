@@ -24,11 +24,30 @@ const Falling = () => {
   const imagesCache = useRef<Map<string, HTMLImageElement>>(new Map());
 
   const items = [
-    '/images/1.jpg',
-    '/images/2.jpg',
-    '/images/3.jpg',
-    '/images/4.jpg',
-    '/images/5.jpg',
+    '/images/falling/1.jpg',
+    '/images/falling/2.jpg',
+    '/images/falling/3.jpg',
+    '/images/falling/4.jpg',
+    '/images/falling/14.jpg',
+    '/images/falling/15.jpg',
+    '/images/falling/16.jpg',
+    '/images/falling/17.jpg',
+    '/images/falling/5.jpg',
+    '/images/falling/6.jpg',
+    '/images/falling/7.jpg',
+    '/images/falling/8.jpg',
+    '/images/falling/9.jpg',
+    '/images/falling/10.jpg',
+    '/images/falling/11.jpg',
+    '/images/falling/1.jpg',
+    '/images/falling/2.jpg',
+    '/images/falling/3.jpg',
+    '/images/falling/12.jpg',
+    '/images/falling/13.jpg',
+    '/images/falling/14.jpg',
+    '/images/falling/15.jpg',
+    '/images/falling/16.jpg',
+    '/images/falling/17.jpg',
   ];
 
   const loadImage = (src: string): Promise<HTMLImageElement> => {
@@ -135,7 +154,7 @@ const Falling = () => {
     const circles: Matter.Body[] = [];
     items.forEach((svgPath, index) => {
       const x = cw / 2;
-      const y = 50 + index * 70;
+      const y = index * 20;
       const circle: CircleWithImage = Matter.Bodies.circle(x, y, circleRadius, {
         restitution: 0,
         friction: 0.3,
@@ -153,6 +172,8 @@ const Falling = () => {
     circlesRef.current = circles;
 
     const mouse = Matter.Mouse.create(render.canvas);
+    mouse.element.removeEventListener('wheel', mouse.mousewheel);
+    mouse.element.removeEventListener('DOMMouseScroll', mouse.mousewheel);
     const mouseConstraint = Matter.MouseConstraint.create(engine, {
       mouse: mouse,
       constraint: {
@@ -161,11 +182,6 @@ const Falling = () => {
       },
     });
     Matter.World.add(world, mouseConstraint);
-
-    const preventScroll = (e: Event) => e.preventDefault();
-    canvas.addEventListener('mousewheel', preventScroll);
-    canvas.addEventListener('DOMMouseScroll', preventScroll);
-
     Matter.Events.on(render, 'afterRender', () => {
       const ctx = render.context;
       circles.forEach(async circle => {
@@ -219,7 +235,7 @@ const Falling = () => {
           Matter.Runner.run(runnerRef.current, engineRef.current);
         }
       },
-      once: true,
+      // once: true,
     });
 
     return () => {
@@ -230,8 +246,6 @@ const Falling = () => {
         Matter.World.clear(engineRef.current.world, false);
         Matter.Engine.clear(engineRef.current);
       }
-      canvas.removeEventListener('mousewheel', preventScroll);
-      canvas.removeEventListener('DOMMouseScroll', preventScroll);
     };
   }, []);
 
@@ -239,9 +253,9 @@ const Falling = () => {
     <SectionContainer>
       <div
         ref={containerRef}
-        className="relative h-140 w-full overflow-hidden rounded-3xl bg-purple-200"
+        className="bg-secondary relative h-180 w-full overflow-hidden rounded-3xl"
       >
-        <div className="font-quick-sand absolute top-12 w-full px-5 text-center text-3xl font-bold xl:text-4xl 2xl:text-5xl">
+        <div className="font-quick-sand text-primary absolute top-12 w-full px-5 text-center text-3xl font-bold xl:text-4xl 2xl:text-5xl">
           {t('falling')}
         </div>
 
