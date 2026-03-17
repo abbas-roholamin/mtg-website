@@ -62,9 +62,9 @@
     "typescript": "^5"
   },
   "lint-staged": {
-    "**/*.{js,ts,jsx,json}": "prettier --write"
-  },
-  "*.{json,css,md}": [
-    "prettier --write"
-  ]
+    "*.{js,jsx,ts,tsx,json,css,md}": [
+      "prettier --write",
+      "eslint --fix"
+    ]
+  }
 }
