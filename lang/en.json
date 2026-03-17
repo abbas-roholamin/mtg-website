@@ -103,6 +103,10 @@
       "button": "Contact Now"
     }
   },
+  "inAction": {
+    "title": "In Action",
+    "description": "Pick the perfect travel game for yourself or your business, with easy ordering and great deals."
+  },
   "sections": {
     "faq": {
       "title": "FAQs",

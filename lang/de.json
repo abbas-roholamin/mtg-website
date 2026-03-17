@@ -103,6 +103,10 @@
       "button": "Jetzt Kontaktieren"
     }
   },
+  "inAction": {
+    "title": "Im Einsatz",
+    "description": "Wählen Sie das perfekte Reisespiel für sich oder Ihr Unternehmen – mit einfacher Bestellung und attraktiven Angeboten."
+  },
   "sections": {
     "faq": {
       "title": "Häufig gestellte Fragen",
