@@ -150,7 +150,8 @@ const Falling = () => {
     ];
     Matter.World.add(world, walls);
 
-    const circleRadius = 60;
+    const isMobile = window.innerWidth < 768;
+    const circleRadius = isMobile ? 30 : 60;
     const circles: Matter.Body[] = [];
     items.forEach((svgPath, index) => {
       const x = cw / 2;
@@ -261,7 +262,7 @@ const Falling = () => {
 
         <canvas
           ref={canvasRef}
-          className="absolute top-0 left-0 h-full w-full"
+          className="pointer-events-none absolute top-0 left-0 h-full w-full md:pointer-events-auto"
           style={{ display: 'block' }}
         />
       </div>
