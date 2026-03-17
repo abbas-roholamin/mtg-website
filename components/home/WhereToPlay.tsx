@@ -1,32 +1,60 @@
 'use client';
 import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { ChessKnight, Clock10Icon, MapPin } from 'lucide-react';
+import { BadgeCheck, ChessKnight, Clock10Icon, MapPin } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 import { cn } from '@/lib/utils';
 
 const places = [
   {
     title: 'Home',
     description:
-      'Golden sands, crystal waters, and endless volleyball games. The ultimate playground for sun lovers and water sports enthusiasts.',
+      'Enjoy classic board games in the comfort of your home. Gather family or friends and spend quality time playing timeless games like chess, domino, or tic-tac-toe. Enjoy classic board games in the comfort of your home. Gather family or friends and spend quality time playing timeless games like chess, domino, or tic-tac-toe.',
+    keywords: [
+      'Family games',
+      'Group fun',
+      'Relaxing',
+      'Classic board games',
+      'Social time',
+    ],
     image: '/images/3.jpg',
   },
   {
     title: 'Beach',
     description:
-      'Rugged trails, fresh mountain air, and epic views. Perfect for hiking, climbing, and adrenaline-filled adventures.',
+      'Bring your travel games to the beach and play while relaxing by the sea. Their compact design makes them easy to carry and perfect for fun moments in the sun.',
+    keywords: [
+      'Light & fun',
+      'Outdoor-friendly',
+      'Compact',
+      'Quick games',
+      'Sun & sand play',
+    ],
     image: '/images/1.jpg',
   },
   {
     title: 'Air Port',
     description:
-      "Hidden paths, towering trees, and nature's own playground. Discover wildlife, zip lines, and peaceful retreats.",
+      'Waiting for a flight becomes more enjoyable with a quick game. Travel games are perfect for passing time at the airport with friends, family, or fellow travelers.',
+    keywords: [
+      'Easy to carry',
+      'Travel-friendly',
+      'Quick rounds',
+      'Lightweight',
+      'Pass time',
+    ],
     image: '/images/2.jpg',
   },
   {
     title: 'Cafe',
     description:
-      'City energy meets open space. Sports fields, skate parks, interactive zones, and vibrant community play areas.',
+      'Relax at a café while enjoying a friendly game. Travel games are perfect for playing over coffee with friends or meeting new people. Relax at a café while enjoying a friendly game. Travel games are perfect for playing over coffee with friends or meeting new people.  Relax at a café while enjoying a friendly game. Travel games are perfect for playing over coffee with friends or meeting new people. ',
+    keywords: [
+      'Casual play',
+      'Social & friendly',
+      'Small table games',
+      'Coffee break fun',
+    ],
     image: '/images/4.jpg',
   },
 ];
@@ -34,6 +62,7 @@ const places = [
 export default function WhereToPlay() {
   const [activeIndex, setActiveIndex] = useState(0);
   const placeRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const t = useTranslations('pages.home');
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -72,7 +101,7 @@ export default function WhereToPlay() {
             transition={{ duration: 1.5, ease: [0.17, 0.55, 0.55, 1] }}
           >
             <ChessKnight className="h-[clamp(1.6rem,4vw,3rem)] w-[clamp(1.6rem,4vw,3rem)]" />
-            Play
+            {t('play')}
           </motion.h1>
 
           <motion.h1
@@ -87,7 +116,7 @@ export default function WhereToPlay() {
             }}
           >
             <MapPin className="h-[clamp(1.6rem,4vw,3rem)] w-[clamp(1.6rem,4vw,3rem)]" />
-            Anywhere
+            {t('anywhere')}
           </motion.h1>
 
           <motion.h1
@@ -102,10 +131,9 @@ export default function WhereToPlay() {
             }}
           >
             <Clock10Icon className="h-[clamp(1.6rem,4vw,3rem)] w-[clamp(1.6rem,4vw,3rem)]" />
-            Anytime
+            {t('any_time')}
           </motion.h1>
         </section>
-
         <div className="relative grid grid-cols-1 gap-8 lg:grid-cols-2">
           <div className="flex flex-col gap-24">
             {places.map((place, index) => (
@@ -126,7 +154,7 @@ export default function WhereToPlay() {
                     <span className="text-primary text-3xl font-bold tracking-[4px] uppercase">
                       [0{index + 1}]
                     </span>
-                    <h3 className="text-3xl leading-none font-bold uppercase">
+                    <h3 className="text-primary text-3xl leading-none font-bold uppercase">
                       {place.title}
                     </h3>
                   </div>
@@ -140,37 +168,18 @@ export default function WhereToPlay() {
                     </p>
                   </div>
                   <div>
-                    <h5 className="border-b pb-3 text-sm font-bold text-neutral-700 uppercase">
-                      Explore Data Analysis features
+                    <h5 className="text-primary border-b pb-3 text-sm font-bold uppercase">
+                      Why Players Love Our Games
                     </h5>
-                    <ul className="borde-t divide-y">
-                      <li className="py-4">
-                        <h6 className="mb-3 text-sm font-semibold">
-                          AI Projects
-                        </h6>
-                        <p className="text-sm text-neutral-700">
-                          Transform your calls, documents, and surveys into
-                          clear, concise reports with real customer voice.
-                        </p>
-                      </li>
-                      <li className="py-4">
-                        <h6 className="mb-3 text-sm font-semibold">
-                          AI Projects
-                        </h6>
-                        <p className="text-sm text-neutral-700">
-                          Transform your calls, documents, and surveys into
-                          clear, concise reports with real customer voice.
-                        </p>
-                      </li>
-                      <li className="py-4">
-                        <h6 className="mb-3 text-sm font-semibold">
-                          AI Projects
-                        </h6>
-                        <p className="text-sm text-neutral-700">
-                          Transform your calls, documents, and surveys into
-                          clear, concise reports with real customer voice.
-                        </p>
-                      </li>
+                    <ul>
+                      {place?.keywords.map((keyword, index) => (
+                        <li key={index} className="py-2">
+                          <h6 className="mb-1 flex justify-start gap-1 text-sm font-semibold">
+                            <BadgeCheck className="text-green-600" />
+                            {keyword}
+                          </h6>
+                        </li>
+                      ))}
                     </ul>
                   </div>
                 </div>
@@ -178,17 +187,17 @@ export default function WhereToPlay() {
             ))}
           </div>
           <div className="hidden h-fit lg:sticky lg:top-12 lg:block">
-            <div className="relative aspect-square size-full rounded-2xl">
+            <div className="relative aspect-square size-full">
               <AnimatePresence mode="wait">
                 <motion.img
                   key={activeIndex}
                   src={places[activeIndex].image}
                   alt={places[activeIndex].title}
-                  className="absolute inset-0 size-full object-cover"
-                  initial={{ opacity: 0.9 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0.9 }}
-                  transition={{ duration: 0.6, ease: 'easeOut' }}
+                  className="absolute inset-0 size-10/12 rounded-4xl object-cover"
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.8 }}
+                  transition={{ duration: 0.6, ease: 'easeInOut' }}
                 />
               </AnimatePresence>
             </div>

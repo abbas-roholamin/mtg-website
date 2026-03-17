@@ -12,7 +12,7 @@ export default function Footer() {
   const setting = useSetting();
 
   return (
-    <footer className="bg-[#48CAE4]">
+    <footer className="bg-secondary">
       <section className="wrapper">
         <div className="py-16">
           <div className="mb-8 grid grid-cols-1 gap-10 sm:mb-32 sm:grid-cols-2 lg:grid-cols-4">
@@ -22,7 +22,7 @@ export default function Footer() {
                 <li>
                   <a
                     href={`tel:${setting.phone}`}
-                    className="font-normal text-gray-100 hover:underline"
+                    className="font-normal text-neutral-700 hover:underline"
                   >
                     {setting.phone}
                   </a>
@@ -30,7 +30,7 @@ export default function Footer() {
                 <li>
                   <a
                     href={`mailto:${setting.email}`}
-                    className="font-normal text-gray-100 hover:underline"
+                    className="font-normal text-neutral-700 hover:underline"
                   >
                     {setting.email}
                   </a>
@@ -38,14 +38,14 @@ export default function Footer() {
               </ul>
             </div>
             <div>
-              <h3 className="mb-3 font-semibold text-gray-100 sm:mb-6">
+              <h3 className="mb-3 font-semibold text-neutral-700 sm:mb-6">
                 {f('legal')}
               </h3>
               <ul className="space-y-1.5">
                 <li>
                   <Link
                     href="/page/terms"
-                    className="hover:text-primary text-gray-100 transition-colors"
+                    className="hover:text-primary text-neutral-700 transition-colors"
                   >
                     {n('terms')}
                   </Link>
@@ -53,7 +53,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/page/privacy-policy"
-                    className="hover:text-primary text-gray-100 transition-colors"
+                    className="hover:text-primary text-neutral-700 transition-colors"
                   >
                     {n('privacy')}
                   </Link>
@@ -61,7 +61,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/page/imprint"
-                    className="hover:text-primary text-gray-100 transition-colors"
+                    className="hover:text-primary text-neutral-700 transition-colors"
                   >
                     {n('imprint')}
                   </Link>
@@ -69,7 +69,7 @@ export default function Footer() {
               </ul>
             </div>
             <div>
-              <h3 className="mb-3 font-semibold text-gray-100 sm:mb-6">
+              <h3 className="mb-3 font-semibold text-neutral-700 sm:mb-6">
                 {f('quick_links')}
               </h3>
               <ul className="space-y-1.5">
@@ -77,7 +77,7 @@ export default function Footer() {
                   <li key={item.label}>
                     <Link
                       href={item.href}
-                      className="hover:text-primary text-gray-100 transition-colors"
+                      className="hover:text-primary text-neutral-700 transition-colors"
                     >
                       {n(item.label)}
                     </Link>
@@ -86,14 +86,14 @@ export default function Footer() {
               </ul>
             </div>
             <div>
-              <h3 className="mb-3 font-semibold text-gray-100 sm:mb-6">
+              <h3 className="mb-3 font-semibold text-neutral-700 sm:mb-6">
                 {f('support')}
               </h3>
               <ul className="space-y-1.5">
                 <li>
                   <Link
                     href="/contact"
-                    className="hover:text-primary text-gray-100 transition-colors"
+                    className="hover:text-primary text-neutral-700 transition-colors"
                   >
                     {n('contact')}
                   </Link>
@@ -101,7 +101,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/faqs"
-                    className="hover:text-primary text-gray-100 transition-colors"
+                    className="hover:text-primary text-neutral-700 transition-colors"
                   >
                     {n('faqs')}
                   </Link>
@@ -118,7 +118,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <InstagramIcon className="text-gray-100" />
+                  <InstagramIcon className="text-neutral-700" />
                 </a>{' '}
               </li>
               <li>
@@ -128,7 +128,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <FacebookIcon className="text-gray-100" />{' '}
+                  <FacebookIcon className="text-neutral-700" />{' '}
                 </a>
               </li>
               <li>
@@ -138,11 +138,11 @@ export default function Footer() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <LinkedinIcon className="text-gray-100" />{' '}
+                  <LinkedinIcon className="text-neutral-700" />{' '}
                 </a>
               </li>
             </ul>
-            <p className="text-sm text-gray-100">
+            <p className="text-sm text-neutral-700">
               © {new Date().getFullYear()} — Copyright
             </p>
           </div>
