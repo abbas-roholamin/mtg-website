@@ -5,3 +5,4 @@ export const BLOG_QUERY_KEY = 'BLOG';
 export const GALLERY_QUERY_KEY = 'GALLERY';
 export const FEATURED_GALLARY_QUERY_KEY = 'FEATURED_GALLARY';
 export const CLIENTS_QUERY_KEY = 'CLIENTS';
+export const INACTION_QUERY_KEY = 'INACTION';

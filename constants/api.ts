@@ -7,4 +7,5 @@ export const API = {
   GALLERY: `${process.env.NEXT_PUBLIC_API_BASE_URL}/gallery`,
   FEATURED_GALLARY: `${process.env.NEXT_PUBLIC_API_BASE_URL}/gallery/featured `,
   CLIENTS: `${process.env.NEXT_PUBLIC_API_BASE_URL}/partners`,
+  INACTIONS: `${process.env.NEXT_PUBLIC_API_BASE_URL}/video`,
 } as const;

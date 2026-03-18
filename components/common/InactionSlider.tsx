@@ -3,47 +3,26 @@
 import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
-
+import { useQuery } from '@tanstack/react-query';
 import { Autoplay, Keyboard, Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
 import { useRef } from 'react';
 import { ChevronDown } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import SectionContainer from './SectionContainer';
 import { cn } from '@/lib/utils';
-
-const videos = [
-  {
-    id: 1,
-    url: 'https://www.youtube.com/embed/tujMhWMFT9k?si=T5whKSpZbNBQ63Xm',
-  },
-  {
-    id: 2,
-    url: 'https://www.youtube.com/embed/70AHh_d0rII?si=6YuDg6jcZBuCeB2a',
-  },
-  {
-    id: 3,
-    url: 'https://www.youtube.com/embed/Dq0NxvKSJsw?si=kj7H-h_c5oirg033',
-  },
-  {
-    id: 4,
-    url: 'https://www.youtube.com/embed/RiFGwmf2mW8?si=P_M-20kB7zGwMMir',
-  },
-  {
-    id: 5,
-    url: 'https://www.youtube.com/embed/bQTKyKz6QWc?si=lQDoClmg3hLadz6P',
-  },
-  {
-    id: 6,
-    url: 'https://www.youtube.com/embed/70AHh_d0rII?si=6YuDg6jcZBuCeB2a',
-  },
-];
+import { INACTION_QUERY_KEY } from '@/constants/query-keys';
+import { fetchVideos } from '@/queries/inaction';
 
 export default function InactionSlider() {
   const t = useTranslations('inAction');
   const prevRef = useRef(null);
   const nextRef = useRef(null);
+
+  const { data } = useQuery({
+    queryKey: [INACTION_QUERY_KEY],
+    queryFn: () => fetchVideos(),
+  });
 
   return (
     <SectionContainer className="relative !my-32 grid gap-8 lg:gap-4">
@@ -100,9 +79,9 @@ export default function InactionSlider() {
             'mySwiper !flex !grid-cols-2 !gap-4 !overflow-visible sm:!grid sm:!grid-cols-2 sm:!overflow-hidden md:!grid-cols-3 md:!gap-6 lg:!grid-cols-4 xl:!grid-cols-4 xl:!gap-8 2xl:!grid-cols-4'
           )}
         >
-          {videos.map(video => (
+          {data?.data.map(video => (
             <SwiperSlide
-              key={video.id}
+              key={video.title}
               className="!me-2 !w-[45%] overflow-hidden rounded-2xl last:!me-0 sm:!me-4 sm:!w-full md:!me-6 xl:!me-8"
             >
               <div className="flex aspect-square items-center justify-center">
@@ -110,6 +89,7 @@ export default function InactionSlider() {
                   style={{ width: '100%', height: '100%' }}
                   src={video.url}
                   title="YouTube video player"
+                  allowFullScreen
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 ></iframe>
               </div>
