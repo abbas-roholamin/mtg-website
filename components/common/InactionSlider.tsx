@@ -25,7 +25,7 @@ export default function InactionSlider() {
   });
 
   return (
-    <SectionContainer className="relative !my-32 grid gap-8 lg:gap-4">
+    <SectionContainer className="relative !my-32 grid gap-8 overflow-x-hidden lg:gap-4">
       <div className="flex w-full flex-col items-center justify-between gap-4 md:gap-6 lg:flex-row lg:gap-8 xl:gap-10">
         <h1 className="text-primary font-quick-sand text-center text-4xl font-bold sm:text-5xl lg:text-6xl xl:text-[80px]">
           {t('title')}
@@ -36,7 +36,7 @@ export default function InactionSlider() {
       </div>
 
       <div className="flex flex-col-reverse items-end gap-8 lg:flex-col">
-        <div className="hidden w-max gap-1.5 lg:flex">
+        <div className="mx-auto flex w-max gap-1.5 lg:mx-0">
           <button
             ref={prevRef}
             className={`${'prevEl'} flex size-9 size-10 cursor-pointer items-center justify-center rounded-full bg-neutral-100 transition-all duration-700 disabled:bg-neutral-50 sm:size-12 lg:size-14`}
