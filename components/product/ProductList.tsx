@@ -6,7 +6,6 @@ import Card from './Card';
 import ProductListSkeleton from './skeleton/ProductListSkeleton';
 import { SearchInput } from './filter/searchInput';
 import { Sort } from './filter/Sort';
-import { Locale } from '@/types/locale';
 import { fetchProducts } from '@/queries/product';
 import { PRODUCTS_QUERY_KEY } from '@/constants/query-keys';
 import { useSearchQueryParam } from '@/hooks/use-search-query-params';
@@ -41,7 +40,7 @@ export default function ProductList() {
         <SearchInput />
         <Sort />
       </div>
-      <ul className="grid grid-cols-1 grid-cols-2 gap-x-4 gap-y-8 md:gap-x-6 md:gap-y-14 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-20 xl:grid-cols-4">
+      <ul className="grid grid-cols-2 gap-x-4 gap-y-8 md:gap-x-6 md:gap-y-14 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-20 xl:grid-cols-4">
         {products.map(product => (
           <li key={product.slug}>
             <Card product={product} />

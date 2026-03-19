@@ -9,7 +9,7 @@ export default function ProductListSkeleton() {
         <SearchInput />
         <Sort />
       </div>
-      <ul className="grid grid-cols-1 grid-cols-2 gap-x-4 gap-y-8 md:gap-x-6 md:gap-y-14 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-20 xl:grid-cols-4">
+      <ul className="grid grid-cols-2 gap-x-4 gap-y-8 md:gap-x-6 md:gap-y-14 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-20 xl:grid-cols-4">
         {Array.from({ length: 6 }).map((_, index) => (
           <li key={index}>
             <article>
