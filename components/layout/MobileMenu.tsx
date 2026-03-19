@@ -18,7 +18,7 @@ export default function MobileMenu() {
   return (
     <div>
       <button aria-label="Open menu" onClick={() => setOpen(true)}>
-        <MenuIcon className="text-white" />
+        <MenuIcon />
       </button>
       <Activity mode={open ? 'visible' : 'hidden'}>
         <div className="fixed inset-0 z-50 h-screen w-screen bg-white p-10">
