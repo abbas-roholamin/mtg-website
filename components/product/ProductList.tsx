@@ -22,7 +22,7 @@ export default function ProductList() {
   });
 
   const { data, isPending } = useQuery({
-    queryKey: [PRODUCTS_QUERY_KEY, locale],
+    queryKey: [PRODUCTS_QUERY_KEY, query],
     queryFn: () => fetchProducts(query),
     staleTime: STALE_TIME,
     gcTime: GC_TIEM,
