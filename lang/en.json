@@ -79,6 +79,26 @@
           "oldest": "Oldest"
         }
       },
+      "warranty": {
+        "title": "Warranty",
+        "description": "Each of our games includes the high-quality cotton bag with printed  playing field – a well thought-out 2-in-1 concept that cleverly combines gaming fun and storage.",
+        "duration": "We stand up for the quality of our products. That’s why we grant a generous <tag>2-year</tag> warranty on each cotton bag.",
+        "note": "<tag>Note:</tag> The warranty refers to the cotton bag with the playing field. The return of the original bag is required for the  use of the warranty."
+      },
+      "features": {
+        "free_exchange": {
+          "title": "Free Exchange",
+          "description": "In the case of material or manufacturing defects, we will gladly replace your product free of charge — no discussion, no hidden fees."
+        },
+        "fast_processing": {
+          "title": "Fast Processing",
+          "description": "Our warranty process is designed to be simple and efficient — no complicated procedures and no long waiting times."
+        },
+        "direct_exchange": {
+          "title": "Direct Exchange",
+          "description": "Simply send us the defective product and receive a replacement quickly. Service can be that straightforward."
+        }
+      },
       "similar": {
         "title": "Similar Products"
       }

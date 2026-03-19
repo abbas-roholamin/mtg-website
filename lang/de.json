@@ -79,6 +79,26 @@
           "oldest": "Älteste"
         }
       },
+      "warranty": {
+        "title": "Garantie",
+        "description": "Jedes unserer Spiele enthält den hochwertigen Baumwollbeutel mit bedrucktem Spielfeld – ein durchdachtes 2-in-1-Konzept, das Spielspaß und Aufbewahrung clever kombiniert.",
+        "duration": "Wir stehen für die Qualität unserer Produkte ein. Deshalb gewähren wir auf jeden Baumwollbeutel eine großzügige <tag>2-Jahres</tag> Garantie.",
+        "note": "<tag>Hinweis:</tag> Die Garantie bezieht sich auf den Baumwollbeutel mit Spielfeld. Für die Inanspruchnahme der Garantie ist die Rücksendung des Originalbeutels erforderlich."
+      },
+      "features": {
+        "free_exchange": {
+          "title": "Kostenloser Umtausch",
+          "description": "Bei Material- oder Herstellungsfehlern ersetzen wir Ihr Produkt gerne kostenlos – ohne Diskussion, ohne versteckte Gebühren."
+        },
+        "fast_processing": {
+          "title": "Schnelle Bearbeitung",
+          "description": "Unser Garantieprozess ist bewusst einfach und effizient gestaltet – keine komplizierten Verfahren und keine langen Wartezeiten."
+        },
+        "direct_exchange": {
+          "title": "Direkter Umtausch",
+          "description": "Schicken Sie uns einfach das defekte Produkt und erhalten Sie schnell einen Ersatz. Service kann so unkompliziert sein."
+        }
+      },
       "similar": {
         "title": "Ähnliche Produkte"
       }

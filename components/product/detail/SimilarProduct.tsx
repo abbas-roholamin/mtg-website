@@ -1,8 +1,8 @@
 'use client';
 import { useQuery } from '@tanstack/react-query';
 import { useLocale, useTranslations } from 'next-intl';
-import SimilarProductSkeleton from './skeleton/SimilarProductSkeleton';
-import Card from './Card';
+import SimilarProductSkeleton from '../skeleton/SimilarProductSkeleton';
+import Card from '../Card';
 import { Locale } from '@/types/locale';
 import { fetchSimilarProducts } from '@/queries/product';
 import { PRODUCTS_QUERY_KEY } from '@/constants/query-keys';
