@@ -1,12 +1,8 @@
 'use client';
 
-import { useRef } from 'react';
-import { ChevronDown } from 'lucide-react';
 import { useTranslations } from 'next-intl';
-import SectionContainer from '../common/Section';
 import Section from '../common/Section';
 import Wrapper from '../common/Wrapper';
-import { cn } from '@/lib/utils';
 import {
   Carousel,
   CarouselContent,

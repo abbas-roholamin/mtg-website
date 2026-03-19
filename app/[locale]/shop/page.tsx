@@ -1,5 +1,5 @@
 import { getTranslations } from 'next-intl/server';
-import Inaction from '@/components/sections/InAction';
+import InAction from '@/components/sections/InAction';
 import ProductList from '@/components/product/ProductList';
 import Section from '@/components/common/Section';
 import Wrapper from '@/components/common/Wrapper';
@@ -15,7 +15,7 @@ export default async function Page() {
         </h1>
         <ProductList />
       </Wrapper>
-      <Inaction />
+      <InAction />
     </Section>
   );
 }
