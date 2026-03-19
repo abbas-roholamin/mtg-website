@@ -96,10 +96,6 @@ body {
   font-family: var(--font-inter), Arial, Helvetica, sans-serif;
 }
 
-.wrapper {
-  @apply container mx-auto px-4 md:px-10 xl:px-6;
-}
-
 .dark {
   --background: oklch(0.145 0 0);
 
@@ -241,4 +237,8 @@ body {
     black calc(100% - 5rem),
     transparent
   );
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
 }
