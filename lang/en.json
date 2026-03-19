@@ -78,6 +78,9 @@
           "newest": "Newest",
           "oldest": "Oldest"
         }
+      },
+      "similar": {
+        "title": "Similar Products"
       }
     }
   },

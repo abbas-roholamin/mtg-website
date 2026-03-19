@@ -18,3 +18,12 @@ export async function fetchProduct(
   if (!res.ok) throw new Error('...');
   return res.json();
 }
+
+export async function fetchSimilarProducts(
+  slug: string,
+  locale: Locale
+): Promise<ProductListResponse> {
+  const res = await fetch(`${API.PRODUCTS}/${slug}/similar?${locale}`);
+  if (!res.ok) throw new Error('...');
+  return res.json();
+}
