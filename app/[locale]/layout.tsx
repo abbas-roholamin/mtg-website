@@ -10,6 +10,7 @@ import { Locale, NextIntlClientProvider, hasLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { setRequestLocale } from 'next-intl/server';
 import { Toaster } from 'sonner';
+import { NuqsAdapter } from 'nuqs/adapters/next/app';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import Banner from '@/components/layout/Banner';
@@ -70,13 +71,15 @@ export default async function RootLayout({
         <QueryProvider>
           <HydrationBoundary state={dehydratedState}>
             <NextIntlClientProvider>
-              <SettingProvider>
-                <Banner />
-                <Header />
-                <main className="flex-1">{children}</main>
-                <Footer />
-              </SettingProvider>
-              <Toaster />
+              <NuqsAdapter>
+                <SettingProvider>
+                  <Banner />
+                  <Header />
+                  <main className="flex-1">{children}</main>
+                  <Footer />
+                </SettingProvider>
+                <Toaster />
+              </NuqsAdapter>
             </NextIntlClientProvider>
           </HydrationBoundary>
         </QueryProvider>

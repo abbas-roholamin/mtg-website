@@ -66,6 +66,19 @@
     },
     "gallery": {
       "title": "Συλλογή"
+    },
+    "product": {
+      "title": "Προϊόν",
+      "filter": {
+        "search": "αναζήτηση...",
+        "sort": {
+          "title": "Ταξινόμηση κατά",
+          "price-low-high": "Τιμή χαμηλή προς υψηλή",
+          "price-high-low": "Τιμή υψηλή προς χαμηλή",
+          "newest": "Νεότερα",
+          "oldest": "Παλαιότερα"
+        }
+      }
     }
   },
   "whoWeAre": {

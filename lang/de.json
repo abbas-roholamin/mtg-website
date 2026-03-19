@@ -66,6 +66,19 @@
     },
     "gallery": {
       "title": "Galerie"
+    },
+    "product": {
+      "title": "Produkt",
+      "filter": {
+        "search": "suchen...",
+        "sort": {
+          "title": "Sortieren nach",
+          "price-low-high": "Preis aufsteigend",
+          "price-high-low": "Preis absteigend",
+          "newest": "Neueste",
+          "oldest": "Älteste"
+        }
+      }
     }
   },
   "whoWeAre": {
