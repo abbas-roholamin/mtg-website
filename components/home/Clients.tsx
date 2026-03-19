@@ -4,6 +4,8 @@ import Image from 'next/image';
 import { useQuery } from '@tanstack/react-query';
 import { CSSProperties } from 'react';
 import ClientSkeleton from '../skeleton/ClientSkeleton';
+import Section from '../common/Section';
+import Wrapper from '../common/Wrapper';
 import { CLIENTS_QUERY_KEY } from '@/constants/query-keys';
 import { fetchClients } from '@/queries/clients';
 
@@ -25,8 +27,8 @@ export default function Clients() {
   }
 
   return (
-    <section className="my-12 sm:my-16 lg:my-20">
-      <div className="wrapper">
+    <Section>
+      <Wrapper>
         <div
           className="marquee fadeout-horizontal"
           style={{ '--num-items': clients.length } as CSSProperties}
@@ -49,7 +51,7 @@ export default function Clients() {
             ))}
           </div>
         </div>
-      </div>
-    </section>
+      </Wrapper>
+    </Section>
   );
 }

@@ -1,4 +1,6 @@
 import Post from '@/components/blog/Post';
+import Section from '@/components/common/Section';
+import Wrapper from '@/components/common/Wrapper';
 interface Props {
   params: Promise<{ slug: string }>;
 }
@@ -6,10 +8,10 @@ export default async function Page({ params }: Props) {
   const { slug } = await params;
 
   return (
-    <section className="py-20">
-      <div className="wrapper">
+    <Section>
+      <Wrapper>
         <Post slug={slug} />
-      </div>
-    </section>
+      </Wrapper>
+    </Section>
   );
 }

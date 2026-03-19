@@ -5,13 +5,15 @@ import { motion } from 'motion/react';
 import { useTranslations } from 'next-intl';
 import ServicesCard from '../common/ServicesCard';
 import { Button } from '../ui/button';
+import Wrapper from '../common/Wrapper';
+import Section from '../common/Section';
 
 export default function WhoWeAre() {
   const t = useTranslations('whoWeAre');
 
   return (
-    <section className="my-12 overflow-hidden sm:my-16 lg:my-20">
-      <div className="wrapper">
+    <Section>
+      <Wrapper className="overflow-hidden">
         <div className="grid grid-cols-1 gap-12 py-16 lg:grid-cols-2 lg:gap-16 xl:gap-24">
           <motion.div
             className="flex flex-col justify-center gap-10 xl:gap-16"
@@ -92,7 +94,7 @@ export default function WhoWeAre() {
             </div>
           </motion.div>
         </div>
-      </div>
-    </section>
+      </Wrapper>
+    </Section>
   );
 }

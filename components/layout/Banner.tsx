@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import LocaleSwitcher from '../common/LocaleSwticher';
+import Wrapper from '../common/Wrapper';
 import { useSetting } from '@/providers/SettingProvider';
 
 export default function Banner() {
@@ -11,7 +12,7 @@ export default function Banner() {
 
   return (
     <section className="bg-primary hidden h-10 items-center text-neutral-50 lg:flex">
-      <div className="wrapper">
+      <Wrapper>
         <div className="flex items-center justify-between gap-4">
           <a
             href={`tel:${setting.phone}`}
@@ -29,7 +30,7 @@ export default function Banner() {
             <LocaleSwitcher />
           </div>
         </div>
-      </div>
+      </Wrapper>
     </section>
   );
 }

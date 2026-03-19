@@ -1,5 +1,6 @@
 import { useTranslations } from 'next-intl';
-import SectionContainer from '../common/SectionContainer';
+import Section from '../common/Section';
+import Wrapper from '../common/Wrapper';
 import WaysToShopCard from './WaysToShopCard';
 
 export default function WaysToShop() {
@@ -25,39 +26,41 @@ export default function WaysToShop() {
   };
 
   return (
-    <SectionContainer className="">
-      <div className="mb-12 sm:mb-16 lg:mb-20">
-        <h1 className="text-primary font-quick-sand text-center text-4xl font-bold sm:text-5xl lg:text-6xl xl:text-[80px]">
-          {t('title')}
-        </h1>
-        <p className="mx-auto mt-5 max-w-200 text-center text-lg font-semibold text-neutral-500 sm:text-xl xl:text-2xl">
-          {t('description')}
-        </p>
-      </div>
+    <Section>
+      <Wrapper>
+        <div className="mb-12 sm:mb-16 lg:mb-20">
+          <h1 className="text-primary font-quick-sand text-center text-4xl font-bold sm:text-5xl lg:text-6xl xl:text-[80px]">
+            {t('title')}
+          </h1>
+          <p className="mx-auto mt-5 max-w-200 text-center text-lg font-semibold text-neutral-500 sm:text-xl xl:text-2xl">
+            {t('description')}
+          </p>
+        </div>
 
-      <div className="grid gap-4 md:grid-cols-2 lg:gap-8">
-        <WaysToShopCard
-          icon="/icons/persons.svg"
-          title={individualData.title}
-          description={individualData.description}
-          feature1={individualData.feature1}
-          feature2={individualData.feature2}
-          feature3={individualData.feature3}
-          button={individualData.button}
-          href={individualData.href}
-        />
+        <div className="grid gap-4 md:grid-cols-2 lg:gap-8">
+          <WaysToShopCard
+            icon="/icons/persons.svg"
+            title={individualData.title}
+            description={individualData.description}
+            feature1={individualData.feature1}
+            feature2={individualData.feature2}
+            feature3={individualData.feature3}
+            button={individualData.button}
+            href={individualData.href}
+          />
 
-        <WaysToShopCard
-          icon="/icons/apartment.svg"
-          title={businessData.title}
-          description={businessData.description}
-          feature1={businessData.feature1}
-          feature2={businessData.feature2}
-          feature3={businessData.feature3}
-          button={businessData.button}
-          href={businessData.href}
-        />
-      </div>
-    </SectionContainer>
+          <WaysToShopCard
+            icon="/icons/apartment.svg"
+            title={businessData.title}
+            description={businessData.description}
+            feature1={businessData.feature1}
+            feature2={businessData.feature2}
+            feature3={businessData.feature3}
+            button={businessData.button}
+            href={businessData.href}
+          />
+        </div>
+      </Wrapper>
+    </Section>
   );
 }

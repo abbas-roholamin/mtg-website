@@ -4,6 +4,7 @@ import { useTranslations } from 'next-intl';
 import { FacebookIcon, InstagramIcon, LinkedinIcon } from 'lucide-react';
 import Image from 'next/image';
 import Logo from '../common/Logo';
+import Wrapper from '../common/Wrapper';
 import { MENU } from '@/constants/menu';
 import { useSetting } from '@/providers/SettingProvider';
 
@@ -13,7 +14,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-neutral-50">
-      <section className="wrapper">
+      <Wrapper>
         <div className="py-16">
           <ul className="mb-16 flex flex-col items-center justify-center gap-6 sm:flex-row">
             {MENU.map(item => (
@@ -111,7 +112,7 @@ export default function Footer() {
             © {new Date().getFullYear()} — {setting.name}
           </p>
         </div>
-      </section>
+      </Wrapper>
     </footer>
   );
 }

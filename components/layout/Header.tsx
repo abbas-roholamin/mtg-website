@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import Logo from '../common/Logo';
 import { ActiveLink } from '../common/ActiveLink';
+import Wrapper from '../common/Wrapper';
 import MobileMenu from './MobileMenu';
 import { MENU } from '@/constants/menu';
 import { cn } from '@/lib/utils';
@@ -20,7 +21,7 @@ export default function Header() {
         'absolute top-0 left-0 z-50 text-white lg:top-10': isHome,
       })}
     >
-      <div className="wrapper grid grid-cols-[100px_1fr_100px]">
+      <Wrapper className="grid grid-cols-[100px_1fr_100px]">
         <div className="flex items-center lg:hidden">
           <MobileMenu />
         </div>
@@ -56,7 +57,7 @@ export default function Header() {
             </span>
           </Link>
         </div>
-      </div>
+      </Wrapper>
     </header>
   );
 }

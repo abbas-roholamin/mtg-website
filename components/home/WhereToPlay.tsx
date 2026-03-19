@@ -2,6 +2,8 @@
 import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ChessKnight, Clock10Icon, MapPin } from 'lucide-react';
+import Section from '../common/Section';
+import Wrapper from '../common/Wrapper';
 import { cn } from '@/lib/utils';
 
 const places = [
@@ -61,8 +63,8 @@ export default function WhereToPlay() {
   }, []);
 
   return (
-    <section className="my-12 sm:my-16 lg:my-20">
-      <div className="wrapper">
+    <Section>
+      <Wrapper>
         <section className="mb-40 flex flex-col items-center gap-3 md:gap-4">
           <motion.h1
             className="impact flex items-center gap-2 text-center text-[clamp(4rem,6vw,4.5rem)] leading-tight font-extrabold text-green-600 md:gap-3"
@@ -194,7 +196,7 @@ export default function WhereToPlay() {
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </Wrapper>
+    </Section>
   );
 }

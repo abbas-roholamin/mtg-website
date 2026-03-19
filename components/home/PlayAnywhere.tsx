@@ -166,41 +166,39 @@ const PlayAnywhere = () => {
   }, []);
 
   return (
-    <div>
-      <section
-        ref={sectionRef}
-        className="font-poppins relative flex h-screen w-full items-center justify-center overflow-hidden"
+    <section
+      ref={sectionRef}
+      className="font-poppins relative flex h-screen w-full items-center justify-center overflow-hidden"
+    >
+      <h1
+        ref={textRef}
+        className="text-primary font-quick-sand relative z-0 w-200 text-center text-3xl font-bold sm:text-6xl lg:text-7xl"
+        style={{ scale: 1.5 }}
       >
-        <h1
-          ref={textRef}
-          className="text-primary font-quick-sand relative z-0 w-200 text-center text-3xl font-bold sm:text-6xl lg:text-7xl"
-          style={{ scale: 1.5 }}
-        >
-          <span>{t('play_anywhere')}</span>
-          <br />
-          <span>{t('anytime')}</span>
-        </h1>
+        <span>{t('play_anywhere')}</span>
+        <br />
+        <span>{t('anytime')}</span>
+      </h1>
 
-        <div className="pointer-events-none absolute inset-0 z-10 overflow-hidden">
-          {images.map((_, i) => (
-            <img
-              key={i}
-              ref={el => {
-                imagesRef.current[i] = el;
-              }}
-              src={images[i].image}
-              alt=""
-              className="absolute size-32 rounded-3xl object-cover sm:size-44 sm:rounded-4xl lg:size-56"
-              style={{
-                top: '50%',
-                left: '50%',
-                transform: 'translate(-50%, -50%)',
-              }}
-            />
-          ))}
-        </div>
-      </section>
-    </div>
+      <div className="pointer-events-none absolute inset-0 z-10 overflow-hidden">
+        {images.map((_, i) => (
+          <img
+            key={i}
+            ref={el => {
+              imagesRef.current[i] = el;
+            }}
+            src={images[i].image}
+            alt=""
+            className="absolute size-32 rounded-3xl object-cover sm:size-44 sm:rounded-4xl lg:size-56"
+            style={{
+              top: '50%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)',
+            }}
+          />
+        ))}
+      </div>
+    </section>
   );
 };
 

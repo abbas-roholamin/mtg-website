@@ -1,4 +1,5 @@
 import Features from '@/components/product/detail/Features';
+import ProductDetail from '@/components/product/detail/ProductDetail';
 import SimilarProduct from '@/components/product/detail/SimilarProduct';
 import Warranty from '@/components/product/detail/Warranty';
 
@@ -13,6 +14,7 @@ export default async function Page({ params }: Props) {
     <section className="py-20">
       <div className="wrapper">
         <div className="mb-24">
+          <ProductDetail slug={slug} />
           <div className="space-y-8">
             <Warranty />
             <Features />

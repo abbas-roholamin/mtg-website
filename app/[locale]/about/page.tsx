@@ -4,13 +4,15 @@ import Highlights from '@/components/about/Highlights';
 import Stats from '@/components/about/Stats';
 import Contact from '@/components/sections/Contact';
 import Faq from '@/components/sections/Faq';
+import Section from '@/components/common/Section';
+import Wrapper from '@/components/common/Wrapper';
 
 export default async function Page() {
   const t = await getTranslations('pages');
 
   return (
-    <div className="py-20">
-      <div className="wrapper">
+    <Section>
+      <Wrapper>
         <div className="space-y-24 md:space-y-32 lg:space-y-40">
           <section className="space-y-8 md:space-y-12 lg:space-y-16 xl:space-y-20">
             <div className="flex flex-col justify-between gap-4 md:flex-row md:gap-6 lg:gap-8 xl:gap-10">
@@ -35,7 +37,7 @@ export default async function Page() {
           <Contact />
           <Faq />
         </div>
-      </div>
-    </div>
+      </Wrapper>
+    </Section>
   );
 }

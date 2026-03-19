@@ -5,7 +5,8 @@ import Matter from 'matter-js';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useTranslations } from 'next-intl';
-import SectionContainer from '../common/SectionContainer';
+import Section from '../common/Section';
+import Wrapper from '../common/Wrapper';
 
 interface CircleWithImage extends Matter.Body {
   svgPath: string;
@@ -251,22 +252,24 @@ const Falling = () => {
   }, []);
 
   return (
-    <SectionContainer>
-      <div
-        ref={containerRef}
-        className="bg-secondary relative h-180 w-full overflow-hidden rounded-3xl"
-      >
-        <div className="font-quick-sand text-primary absolute top-12 w-full px-5 text-center text-3xl font-bold xl:text-4xl 2xl:text-5xl">
-          {t('falling')}
-        </div>
+    <Section>
+      <Wrapper>
+        <div
+          ref={containerRef}
+          className="bg-secondary relative h-180 w-full overflow-hidden rounded-3xl"
+        >
+          <div className="font-quick-sand text-primary absolute top-12 w-full px-5 text-center text-3xl font-bold xl:text-4xl 2xl:text-5xl">
+            {t('falling')}
+          </div>
 
-        <canvas
-          ref={canvasRef}
-          className="pointer-events-none absolute top-0 left-0 h-full w-full md:pointer-events-auto"
-          style={{ display: 'block' }}
-        />
-      </div>
-    </SectionContainer>
+          <canvas
+            ref={canvasRef}
+            className="pointer-events-none absolute top-0 left-0 h-full w-full md:pointer-events-auto"
+            style={{ display: 'block' }}
+          />
+        </div>
+      </Wrapper>
+    </Section>
   );
 };
 
