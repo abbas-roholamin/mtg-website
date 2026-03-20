@@ -1,3 +1,4 @@
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { Button } from '../ui/button';
 import Countdown from '../common/Countdown';
@@ -5,6 +6,7 @@ import Section from '../common/Section';
 import Wrapper from '../common/Wrapper';
 
 export default function Banner() {
+  const t = useTranslations('pages.home');
   return (
     <Section>
       <Wrapper>

@@ -8,6 +8,7 @@ import WaysToShop from '@/components/home/WaysToShop';
 import WhoWeAre from '@/components/home/WhoWeAre';
 import Faq from '@/components/sections/Faq';
 import Inaction from '@/components/sections/InAction';
+import FeaturedProduct from '@/components/home/FeaturedProduct';
 
 export default async function Home() {
   return (
@@ -19,6 +20,7 @@ export default async function Home() {
       <PlayAnywhere />
       <WaysToShop />
       <Falling />
+      <FeaturedProduct />
       <Inaction />
       <Faq />
       <Banner />

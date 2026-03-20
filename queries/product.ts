@@ -27,3 +27,11 @@ export async function fetchSimilarProducts(
   if (!res.ok) throw new Error('...');
   return res.json();
 }
+
+export async function fetchFeaturedProducts(
+  locale: Locale
+): Promise<ProductListResponse> {
+  const res = await fetch(`${API.PRODUCTS}/featured?${locale}`);
+  if (!res.ok) throw new Error('...');
+  return res.json();
+}
