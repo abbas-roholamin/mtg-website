@@ -60,7 +60,33 @@
       "play": "Play",
       "anywhere": "Anywhere",
       "any_time": "Anytime",
-      "latest_product": "New & Latest Releases"
+      "latest_product": "New & Latest Releases",
+      "places": {
+        "home": {
+          "title": "Home",
+          "description": "Enjoy classic board games in the comfort of your home. Gather family or friends and spend quality time playing timeless games like chess, domino, or tic-tac-toe.",
+          "keywords": "Family games, Group fun, Relaxing, Classic board games, Social time",
+          "image": "/images/whereToPlay/home.jpg"
+        },
+        "beach": {
+          "title": "Beach",
+          "description": "The Beach Collection Relaxation, portability, and fun in the sun! Why just lounge when you can play? Our travel board games are designed for the modern explorer — ultra-portable and easy to pack, they fit perfectly in your beach bag alongside your towel and sunscreen. Whether you’re under an umbrella or soaking up the sun, bring your travel games to the beach and enjoy fun moments with family and friends, turning your beach day into a mini championship",
+          "keywords": "Light & fun, Outdoor-friendly, Compact, Quick games, Sun & sand play",
+          "image": "/images/whereToPlay/beach.jpg"
+        },
+        "airport": {
+          "title": "Air Port",
+          "description": "The Airport Lounge Collection, Flight delayed? Long layover? Put the phones away and make memories instead. Our travel games are the ultimate airport companions — small enough to play on a tray table and light enough to slip into your carry-on without a second thought. From the departure gate to 30,000 feet, keep the excitement alive with games that go wherever you do. Waiting for a flight has never been more enjoyable — play with friends, family, or fellow travelers and make your journey start even before takeoff.",
+          "keywords": "Easy to carry, Travel-friendly, Quick rounds,Lightweight,Pass time",
+          "image": "/images/whereToPlay/airport.jpg"
+        },
+        "cafe": {
+          "title": "Cafe",
+          "description": "The Café Collection, Casual Play, Social Connection, and Coffee Break Fun. Turn Coffee Time into Game Time. Relax at a café while enjoying a friendly game. Our travel board games are perfect for playing over coffee with friends or meeting new people. Compact and lightweight, they fit easily on small tables, making your coffee break more engaging and memorable. Whether it’s a quick match between sips or a longer session with friends, our games turn every café visit into a social, fun, and memorable experience.",
+          "keywords": "Casual play, Social & friendly, Small table games,Coffee break fun",
+          "image": "/images/whereToPlay/cafe.jpg"
+        }
+      }
     },
     "blog": {
       "title": "Blog",
