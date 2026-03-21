@@ -237,7 +237,7 @@ const Falling = () => {
           Matter.Runner.run(runnerRef.current, engineRef.current);
         }
       },
-      // once: true,
+      once: true,
     });
 
     return () => {
