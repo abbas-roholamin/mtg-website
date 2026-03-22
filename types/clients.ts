@@ -1,8 +1,9 @@
 import { ApiResponse } from './response';
 
-export interface InAction {
-  title: string;
+export interface Client {
+  name: string;
   url: string;
+  image: string;
 }
 
-export type InActionsResponse = ApiResponse<InAction[]>;
+export type ClientsResponse = ApiResponse<Client[]>;
