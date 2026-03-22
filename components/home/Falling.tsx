@@ -12,6 +12,10 @@ interface CircleWithImage extends Matter.Body {
   svgPath: string;
 }
 
+interface MatterMouseWithWheel extends Matter.Mouse {
+  mousewheel: (event: Event) => void;
+}
+
 gsap.registerPlugin(ScrollTrigger);
 
 const Falling = () => {
@@ -173,9 +177,10 @@ const Falling = () => {
     Matter.World.add(world, circles);
     circlesRef.current = circles;
 
-    const mouse = Matter.Mouse.create(render.canvas);
+    const mouse = Matter.Mouse.create(render.canvas) as MatterMouseWithWheel;
     mouse.element.removeEventListener('wheel', mouse.mousewheel);
     mouse.element.removeEventListener('DOMMouseScroll', mouse.mousewheel);
+
     const mouseConstraint = Matter.MouseConstraint.create(engine, {
       mouse: mouse,
       constraint: {

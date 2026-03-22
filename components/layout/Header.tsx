@@ -50,7 +50,7 @@ export default function Header() {
           <Link href="search">
             <Search className="size-7" />
           </Link>
-          <Link href="search" className="relative">
+          <Link href="cart" className="relative">
             <ShoppingCart className="size-7" />
             <span className="bg-primary text-primary-foreground absolute -top-1/3 -right-1/4 grid size-5 place-content-center rounded-full text-xs">
               4
