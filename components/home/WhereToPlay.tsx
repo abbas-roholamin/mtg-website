@@ -7,64 +7,36 @@ import Section from '../common/Section';
 import Wrapper from '../common/Wrapper';
 import { cn } from '@/lib/utils';
 
-const places = [
-  {
-    title: 'Home',
-    description:
-      'Enjoy classic board games in the comfort of your home. Gather family or friends and spend quality time playing timeless games like chess, domino, or tic-tac-toe. Enjoy classic board games in the comfort of your home. Gather family or friends and spend quality time playing timeless games like chess, domino, or tic-tac-toe.',
-    keywords: [
-      'Family games',
-      'Group fun',
-      'Relaxing',
-      'Classic board games',
-      'Social time',
-    ],
-    image: '/images/3.jpg',
-  },
-  {
-    title: 'Beach',
-    description:
-      'Bring your travel games to the beach and play while relaxing by the sea. Their compact design makes them easy to carry and perfect for fun moments in the sun.',
-    keywords: [
-      'Light & fun',
-      'Outdoor-friendly',
-      'Compact',
-      'Quick games',
-      'Sun & sand play',
-    ],
-    image: '/images/1.jpg',
-  },
-  {
-    title: 'Air Port',
-    description:
-      'Waiting for a flight becomes more enjoyable with a quick game. Travel games are perfect for passing time at the airport with friends, family, or fellow travelers.',
-    keywords: [
-      'Easy to carry',
-      'Travel-friendly',
-      'Quick rounds',
-      'Lightweight',
-      'Pass time',
-    ],
-    image: '/images/2.jpg',
-  },
-  {
-    title: 'Cafe',
-    description:
-      'Relax at a café while enjoying a friendly game. Travel games are perfect for playing over coffee with friends or meeting new people. Relax at a café while enjoying a friendly game. Travel games are perfect for playing over coffee with friends or meeting new people.  Relax at a café while enjoying a friendly game. Travel games are perfect for playing over coffee with friends or meeting new people. ',
-    keywords: [
-      'Casual play',
-      'Social & friendly',
-      'Small table games',
-      'Coffee break fun',
-    ],
-    image: '/images/4.jpg',
-  },
-];
-
 export default function WhereToPlay() {
   const [activeIndex, setActiveIndex] = useState(0);
   const placeRefs = useRef<(HTMLDivElement | null)[]>([]);
   const t = useTranslations('pages.home');
+  const places = [
+    {
+      title: t('places.home.title'),
+      description: t('places.home.description'),
+      keywords: t('places.home.keywords').split(','),
+      image: t('places.home.image'),
+    },
+    {
+      title: t('places.beach.title'),
+      description: t('places.beach.description'),
+      keywords: t('places.beach.keywords').split(','),
+      image: t('places.beach.image'),
+    },
+    {
+      title: t('places.airport.title'),
+      description: t('places.airport.description'),
+      keywords: t('places.airport.keywords').split(','),
+      image: t('places.airport.image'),
+    },
+    {
+      title: t('places.cafe.title'),
+      description: t('places.cafe.description'),
+      keywords: t('places.cafe.keywords').split(','),
+      image: t('places.cafe.image'),
+    },
+  ];
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -138,7 +110,7 @@ export default function WhereToPlay() {
         </section>
         <div className="relative grid grid-cols-1 gap-8 lg:grid-cols-2">
           <div className="flex flex-col gap-24">
-            {places.map((place, index) => (
+            {places?.map((place, index) => (
               <div
                 key={index}
                 ref={el => {
@@ -163,7 +135,7 @@ export default function WhereToPlay() {
 
                   <div className="mb-16">
                     <h4 className="mb-2 text-2xl font-semibold">
-                      Identify the next thing to work on
+                      Create Memorable Moments with Classic Games
                     </h4>
                     <p className="leading-relaxed text-neutral-600">
                       {place.description}
@@ -196,10 +168,10 @@ export default function WhereToPlay() {
                   src={places[activeIndex].image}
                   alt={places[activeIndex].title}
                   className="absolute inset-0 size-10/12 rounded-4xl object-cover"
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.8 }}
-                  transition={{ duration: 0.6, ease: 'easeInOut' }}
+                  initial={{ opacity: 0.9 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0.9 }}
+                  transition={{ duration: 0.6, ease: 'easeOut' }}
                 />
               </AnimatePresence>
             </div>

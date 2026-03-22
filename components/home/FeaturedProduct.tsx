@@ -42,9 +42,9 @@ export default function FeaturedProduct() {
         >
           <div className="lg:max-auto py-16 sm:py-24 lg:mx-auto">
             <div className="flex items-center justify-between">
-              <h2 className="text-primary text-2xl font-bold tracking-tight">
+              <h1 className="text-primary font-quick-sand text-center text-4xl font-bold sm:text-5xl lg:text-6xl xl:text-[80px]">
                 {t('latest_product')}
-              </h2>
+              </h1>
               <div className="relative mb-8 hidden justify-end gap-4 md:flex">
                 <CarouselPrevious className="static size-10 translate-y-0 hover:cursor-pointer" />
                 <CarouselNext className="static size-10 translate-y-0 hover:cursor-pointer" />
