@@ -211,5 +211,19 @@
     "title": "404 Not Found",
     "description": "Your visited page not found. You may go home page.",
     "cta": "Back to Home"
+  },
+  "cart": {
+    "cart": "Cart",
+    "order_summary": "Order Summary",
+    "empty": "Cart is empty",
+    "checkout": "Checkout",
+    "color": "Color",
+    "design": "Design",
+    "remove": "Remove",
+    "price": "Price",
+    "discount": "Discount",
+    "shipping": "Shipping",
+    "total": "Total",
+    "estimated_delivery": "Estimated Delivery"
   }
 }

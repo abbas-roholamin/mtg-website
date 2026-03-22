@@ -212,5 +212,19 @@
     "title": "404 Nicht gefunden",
     "description": "Die von Ihnen aufgerufene Seite wurde nicht gefunden. Sie können zur Startseite zurückkehren.",
     "cta": "Zurück zur Startseite"
+  },
+  "cart": {
+    "cart": "Warenkorb",
+    "order_summary": "Bestellübersicht",
+    "empty": "Der Warenkorb ist leer",
+    "checkout": "Zur Kasse",
+    "color": "Farbe",
+    "design": "Design",
+    "remove": "Entfernen",
+    "price": "Preis",
+    "discount": "Rabatt",
+    "shipping": "Versand",
+    "total": "Gesamt",
+    "estimated_delivery": "Voraussichtliche Lieferung"
   }
 }
