@@ -2,11 +2,37 @@
 
 import { useEffect, useRef } from 'react';
 import Matter from 'matter-js';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { motion, useInView } from 'motion/react'; // ← new import
 import { useTranslations } from 'next-intl';
 import Section from '../common/Section';
 import Wrapper from '../common/Wrapper';
+
+const items = [
+  '/images/falling/1.jpg',
+  '/images/falling/2.jpg',
+  '/images/falling/3.jpg',
+  '/images/falling/4.jpg',
+  '/images/falling/14.jpg',
+  '/images/falling/15.jpg',
+  '/images/falling/16.jpg',
+  '/images/falling/17.jpg',
+  '/images/falling/5.jpg',
+  '/images/falling/6.jpg',
+  '/images/falling/7.jpg',
+  '/images/falling/8.jpg',
+  '/images/falling/9.jpg',
+  '/images/falling/10.jpg',
+  '/images/falling/11.jpg',
+  '/images/falling/1.jpg',
+  '/images/falling/2.jpg',
+  '/images/falling/3.jpg',
+  '/images/falling/12.jpg',
+  '/images/falling/13.jpg',
+  '/images/falling/14.jpg',
+  '/images/falling/15.jpg',
+  '/images/falling/16.jpg',
+  '/images/falling/17.jpg',
+];
 
 interface CircleWithImage extends Matter.Body {
   svgPath: string;
@@ -15,8 +41,6 @@ interface CircleWithImage extends Matter.Body {
 interface MatterMouseWithWheel extends Matter.Mouse {
   mousewheel: (event: Event) => void;
 }
-
-gsap.registerPlugin(ScrollTrigger);
 
 const Falling = () => {
   const t = useTranslations('pages.home');
@@ -28,32 +52,11 @@ const Falling = () => {
   const circlesRef = useRef<Matter.Body[]>([]);
   const imagesCache = useRef<Map<string, HTMLImageElement>>(new Map());
 
-  const items = [
-    '/images/falling/1.jpg',
-    '/images/falling/2.jpg',
-    '/images/falling/3.jpg',
-    '/images/falling/4.jpg',
-    '/images/falling/14.jpg',
-    '/images/falling/15.jpg',
-    '/images/falling/16.jpg',
-    '/images/falling/17.jpg',
-    '/images/falling/5.jpg',
-    '/images/falling/6.jpg',
-    '/images/falling/7.jpg',
-    '/images/falling/8.jpg',
-    '/images/falling/9.jpg',
-    '/images/falling/10.jpg',
-    '/images/falling/11.jpg',
-    '/images/falling/1.jpg',
-    '/images/falling/2.jpg',
-    '/images/falling/3.jpg',
-    '/images/falling/12.jpg',
-    '/images/falling/13.jpg',
-    '/images/falling/14.jpg',
-    '/images/falling/15.jpg',
-    '/images/falling/16.jpg',
-    '/images/falling/17.jpg',
-  ];
+  const isInView = useInView(containerRef, {
+    once: true,
+    amount: 0.4,
+    margin: '0px 0px -100px 0px',
+  });
 
   const loadImage = (src: string): Promise<HTMLImageElement> => {
     return new Promise((resolve, reject) => {
@@ -158,6 +161,7 @@ const Falling = () => {
     const isMobile = window.innerWidth < 768;
     const circleRadius = isMobile ? 30 : 60;
     const circles: Matter.Body[] = [];
+
     items.forEach((svgPath, index) => {
       const x = cw / 2;
       const y = index * 20;
@@ -171,9 +175,10 @@ const Falling = () => {
           strokeStyle: 'transparent',
         },
       }) as CircleWithImage;
-      (circle as CircleWithImage).svgPath = svgPath;
+      circle.svgPath = svgPath;
       circles.push(circle);
     });
+
     Matter.World.add(world, circles);
     circlesRef.current = circles;
 
@@ -189,6 +194,7 @@ const Falling = () => {
       },
     });
     Matter.World.add(world, mouseConstraint);
+
     Matter.Events.on(render, 'afterRender', () => {
       const ctx = render.context;
       circles.forEach(async circle => {
@@ -215,7 +221,6 @@ const Falling = () => {
           const size = circleRadius * 2;
           ctx.drawImage(img, -size / 2, -size / 2, size, size);
         } catch (error) {
-          console.warn('Error loading SVG:', svgPath);
           ctx.font = '40px sans-serif';
           ctx.fillStyle = '#999';
           ctx.textAlign = 'center';
@@ -234,32 +239,26 @@ const Falling = () => {
     renderRef.current = render;
     runnerRef.current = runner;
 
-    const scrollTrigger = ScrollTrigger.create({
-      trigger: container,
-      start: 'top 80%',
-      onEnter: () => {
-        if (runnerRef.current && engineRef.current) {
-          Matter.Runner.run(runnerRef.current, engineRef.current);
-        }
-      },
-      once: true,
-    });
-
+    // Cleanup
     return () => {
-      scrollTrigger.kill();
-      if (runnerRef.current) Matter.Runner.stop(runnerRef.current);
-      if (renderRef.current) Matter.Render.stop(renderRef.current);
-      if (engineRef.current) {
-        Matter.World.clear(engineRef.current.world, false);
-        Matter.Engine.clear(engineRef.current);
-      }
+      Matter.Runner.stop(runner);
+      Matter.Render.stop(render);
+      Matter.World.clear(world, false);
+      Matter.Engine.clear(engine);
+      render.canvas.remove();
     };
   }, []);
+
+  useEffect(() => {
+    if (isInView && runnerRef.current && engineRef.current) {
+      Matter.Runner.run(runnerRef.current, engineRef.current);
+    }
+  }, [isInView]);
 
   return (
     <Section>
       <Wrapper>
-        <div
+        <motion.div
           ref={containerRef}
           className="bg-secondary relative h-180 w-full overflow-hidden rounded-3xl"
         >
@@ -272,7 +271,7 @@ const Falling = () => {
             className="pointer-events-none absolute top-0 left-0 h-full w-full md:pointer-events-auto"
             style={{ display: 'block' }}
           />
-        </div>
+        </motion.div>
       </Wrapper>
     </Section>
   );
