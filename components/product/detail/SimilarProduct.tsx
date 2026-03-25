@@ -31,7 +31,7 @@ export default function SimilarProduct({ slug }: SimilarProductProps) {
 
   return (
     <section>
-      <h2 className="text-primary font-quick-sand mb-8 text-center text-4xl font-bold md:mb-12 md:text-5xl lg:mb-16 lg:text-6xl xl:mb-20 xl:text-7xl">
+      <h2 className="text-primary font-poppins mb-8 text-center text-4xl font-bold md:mb-12 md:text-5xl lg:mb-16 lg:text-6xl xl:mb-20 xl:text-7xl">
         {t('product.similar.title')}
       </h2>
       <ul className="grid grid-cols-2 gap-x-4 gap-y-8 md:gap-x-6 md:gap-y-14 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-20 xl:grid-cols-4">

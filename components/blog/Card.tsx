@@ -33,7 +33,7 @@ export default function Card({ post }: CardProps) {
           })}
         </p>
       </div>
-      <h2 className="font-quick-sand mb-1 text-xl font-bold text-neutral-900">
+      <h2 className="font-poppins mb-1 text-xl font-bold text-neutral-900">
         <Link href={`blog/${post.slug}`} prefetch>
           {post.title}
         </Link>

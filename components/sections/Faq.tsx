@@ -30,7 +30,7 @@ export default function Faq() {
   return (
     <section>
       <div className="mb-8 text-center md:mb-11 lg:mb-14">
-        <h2 className="text-primary font-quick-sand mb-4 text-5xl font-bold md:text-6xl lg:text-7xl">
+        <h2 className="text-primary font-poppins mb-4 text-5xl font-bold md:text-6xl lg:text-7xl">
           {t('faq.title')}
         </h2>
         <p className="text-base font-bold text-neutral-500 md:text-lg lg:text-xl">

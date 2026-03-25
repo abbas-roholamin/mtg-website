@@ -31,7 +31,7 @@ export default function Branch() {
           </div>
           <div className="lg:group-even:col-start-1 lg:group-even:row-start-1">
             <div className="mb-5 md:mb-6 lg:mb-8">
-              <h3 className="text-primary font-quick-sand mb-1.5 text-4xl font-bold sm:mb-2 md:mb-3 md:text-5xl lg:mb-4 lg:text-6xl">
+              <h3 className="text-primary font-poppins mb-1.5 text-4xl font-bold sm:mb-2 md:mb-3 md:text-5xl lg:mb-4 lg:text-6xl">
                 {branch.country}
               </h3>
               <p className="text-neutral-500 md:text-base lg:text-lg">

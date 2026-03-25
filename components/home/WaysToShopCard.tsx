@@ -27,7 +27,7 @@ export default function WaysToShopCard({
         <div className="relative size-10 sm:size-12 lg:size-16 xl:size-20">
           <Image src={icon} alt="logo" fill className="object-cover" />
         </div>
-        <h1 className="font-quick-sand mt-2 text-3xl font-bold sm:mt-4 sm:text-4xl lg:text-5xl xl:text-6xl">
+        <h1 className="font-poppins mt-2 text-3xl font-bold sm:mt-4 sm:text-4xl lg:text-5xl xl:text-6xl">
           {title}
         </h1>
         <p className="mt-2 text-base lg:text-lg">{description}</p>

@@ -16,7 +16,7 @@ export default async function Page() {
         <div className="space-y-24 md:space-y-32 lg:space-y-40">
           <section className="space-y-8 md:space-y-12 lg:space-y-16 xl:space-y-20">
             <div className="flex flex-col justify-between gap-4 md:flex-row md:gap-6 lg:gap-8 xl:gap-10">
-              <h1 className="text-primary font-quick-sand text-3xl font-bold text-balance md:w-3/6 lg:text-4xl xl:text-5xl">
+              <h1 className="text-primary font-poppins text-3xl font-bold text-balance md:w-3/6 lg:text-4xl xl:text-5xl">
                 {t('about.title')}
               </h1>
               <p className="text-balance text-neutral-500 md:w-2/6">

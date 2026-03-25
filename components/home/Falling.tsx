@@ -262,7 +262,7 @@ const Falling = () => {
           ref={containerRef}
           className="bg-secondary relative h-180 w-full overflow-hidden rounded-3xl"
         >
-          <div className="font-quick-sand text-primary absolute top-12 w-full px-5 text-center text-3xl font-bold xl:text-4xl 2xl:text-5xl">
+          <div className="font-poppins text-primary absolute top-12 w-full px-5 text-center text-3xl font-bold xl:text-4xl 2xl:text-5xl">
             {t('falling')}
           </div>
 

@@ -1,5 +1,5 @@
 import Features from '@/components/product/detail/Features';
-import ProductDetail from '@/components/product/detail/Features';
+import ProductDetail from '@/components/product/detail/ProductDetail';
 import SimilarProduct from '@/components/product/detail/SimilarProduct';
 import Warranty from '@/components/product/detail/Warranty';
 

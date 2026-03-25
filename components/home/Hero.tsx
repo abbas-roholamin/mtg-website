@@ -21,7 +21,7 @@ export default function Hero() {
     <div>
       <div className="relative flex h-[calc(100vh-40px)] items-center justify-center">
         <div className="relative z-30 grid content-center justify-center gap-3 sm:gap-4 xl:gap-8">
-          <h1 className="font-quick-sand text-center text-4xl font-bold text-white uppercase sm:text-6xl lg:text-7xl xl:text-8xl">
+          <h1 className="font-poppins text-center text-4xl font-bold text-white uppercase sm:text-6xl lg:text-7xl xl:text-8xl">
             {setting.name}
           </h1>
 

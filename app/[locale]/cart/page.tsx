@@ -87,7 +87,7 @@ export default function CartPage() {
     <div>
       <div className="bg-primary flex h-11 items-center text-white">
         <Wrapper>
-          <span className="font-quick-sand font-bold">{t('cart')}</span>{' '}
+          <span className="font-poppins font-bold">{t('cart')}</span>{' '}
           <span>(2 items)</span>
         </Wrapper>
       </div>
@@ -107,7 +107,7 @@ export default function CartPage() {
 
         {/* Summary */}
         <div className="grid h-fit gap-6 rounded-[16px] border border-neutral-200 p-5 sm:gap-8 sm:p-8">
-          <h2 className="font-quick-sand text-2xl font-bold sm:text-[28px]">
+          <h2 className="font-poppins text-2xl font-bold sm:text-[28px]">
             {t('order_summary')}
           </h2>
 

@@ -36,7 +36,7 @@ export default function Countdown({ targetDate }: CountdownProps) {
 
   const renderTimeBlock = (value: number, label: string) => (
     <div className="flex size-14 flex-col items-center justify-center rounded-lg bg-white md:size-16">
-      <p className="font-quick-sand text-xl font-bold">
+      <p className="font-poppins text-xl font-bold">
         {String(value).padStart(2, '0')}
       </p>
       <p className="text-[10px] sm:text-xs">{label}</p>

@@ -32,7 +32,7 @@ export default function CartItem({
       </div>
 
       <div className="flex-1">
-        <h2 className="font-quick-sand text-lg font-bold sm:text-2xl">
+        <h2 className="font-poppins text-lg font-bold sm:text-2xl">
           {item.name}
         </h2>
 
@@ -46,7 +46,7 @@ export default function CartItem({
           </p>
         </div>
 
-        <p className="font-quick-sand mt-2 text-xl font-bold sm:hidden">
+        <p className="font-poppins mt-2 text-xl font-bold sm:hidden">
           ${item.price}
         </p>
 
@@ -77,7 +77,7 @@ export default function CartItem({
         </div>
       </div>
 
-      <p className="font-quick-sand hidden text-2xl font-bold sm:block">
+      <p className="font-poppins hidden text-2xl font-bold sm:block">
         ${item.price}
       </p>
     </div>

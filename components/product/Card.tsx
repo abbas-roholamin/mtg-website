@@ -24,7 +24,7 @@ export default function Card({ product }: CardProps) {
           {product.name}
         </h2>
       </Link>
-      <p className="font-quick-sand text-center text-xl font-bold text-neutral-950 md:text-2xl lg:text-3xl">
+      <p className="font-poppins text-center text-xl font-bold text-neutral-950 md:text-2xl lg:text-3xl">
         {product.price}
       </p>
     </article>

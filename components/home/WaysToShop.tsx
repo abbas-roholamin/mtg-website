@@ -29,7 +29,7 @@ export default function WaysToShop() {
     <Section>
       <Wrapper>
         <div className="mb-12 sm:mb-16 lg:mb-20">
-          <h1 className="text-primary font-quick-sand text-center text-4xl font-bold sm:text-5xl lg:text-6xl xl:text-[80px]">
+          <h1 className="text-primary font-poppins text-center text-4xl font-bold sm:text-5xl lg:text-6xl xl:text-[80px]">
             {t('title')}
           </h1>
           <p className="mx-auto mt-5 max-w-200 text-center text-lg font-semibold text-neutral-500 sm:text-xl xl:text-2xl">

@@ -1,42 +1,35 @@
 'use client';
 import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { BadgeCheck, ChessKnight, Clock10Icon, MapPin } from 'lucide-react';
+import { ChessKnight, Clock10Icon, MapPin, SquareCheck } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Section from '../common/Section';
 import Wrapper from '../common/Wrapper';
 import { cn } from '@/lib/utils';
 
+const places = [
+  {
+    name: 'home',
+    image: '/images/whereToPlay/home.jpg',
+  },
+  {
+    name: 'beach',
+    image: '/images/whereToPlay/beach.jpg',
+  },
+  {
+    name: 'airport',
+    image: '/images/whereToPlay/airport.jpg',
+  },
+  {
+    name: 'cafe',
+    image: '/images/whereToPlay/cafe.jpg',
+  },
+];
+
 export default function WhereToPlay() {
   const [activeIndex, setActiveIndex] = useState(0);
   const placeRefs = useRef<(HTMLDivElement | null)[]>([]);
   const t = useTranslations('pages.home');
-  const places = [
-    {
-      title: t('places.home.title'),
-      description: t('places.home.description'),
-      keywords: t('places.home.keywords').split(','),
-      image: t('places.home.image'),
-    },
-    {
-      title: t('places.beach.title'),
-      description: t('places.beach.description'),
-      keywords: t('places.beach.keywords').split(','),
-      image: t('places.beach.image'),
-    },
-    {
-      title: t('places.airport.title'),
-      description: t('places.airport.description'),
-      keywords: t('places.airport.keywords').split(','),
-      image: t('places.airport.image'),
-    },
-    {
-      title: t('places.cafe.title'),
-      description: t('places.cafe.description'),
-      keywords: t('places.cafe.keywords').split(','),
-      image: t('places.cafe.image'),
-    },
-  ];
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -125,35 +118,33 @@ export default function WhereToPlay() {
                   })}
                 >
                   <div className="mb-6 inline-flex items-center gap-3">
-                    <span className="text-primary text-3xl font-bold tracking-[4px] uppercase">
+                    <span className="text-primary font-poppins text-3xl font-bold tracking-[4px] uppercase">
                       [0{index + 1}]
                     </span>
                     <h3 className="text-primary text-3xl leading-none font-bold uppercase">
-                      {place.title}
+                      {t(`places.${place.name}.title`)}
                     </h3>
                   </div>
+                  <p className="mb-10 leading-relaxed text-neutral-600">
+                    {t(`places.${place.name}.description`)}
+                  </p>
 
-                  <div className="mb-16">
-                    <h4 className="mb-2 text-2xl font-semibold">
-                      Create Memorable Moments with Classic Games
-                    </h4>
-                    <p className="leading-relaxed text-neutral-600">
-                      {place.description}
-                    </p>
-                  </div>
                   <div>
-                    <h5 className="text-primary border-b pb-3 text-sm font-bold uppercase">
-                      Why Players Love Our Games
+                    <h5 className="text-primary mb-3 border-b pb-3 text-sm font-bold uppercase">
+                      {t('places.features')}
                     </h5>
-                    <ul>
-                      {place?.keywords.map((keyword, index) => (
-                        <li key={index} className="py-2">
-                          <h6 className="mb-1 flex justify-start gap-1 text-sm font-semibold">
-                            <BadgeCheck className="text-green-600" />
-                            {keyword}
-                          </h6>
-                        </li>
-                      ))}
+                    <ul className="space-y-3">
+                      {t(`places.${place.name}.keywords`)
+                        .split(',')
+                        .map(keyword => (
+                          <li
+                            key={keyword}
+                            className="flex items-center justify-start gap-2 text-sm font-medium text-neutral-700"
+                          >
+                            <span className="h-0.5 w-3 bg-neutral-700" />
+                            <h6>{keyword}</h6>
+                          </li>
+                        ))}
                     </ul>
                   </div>
                 </div>
@@ -166,7 +157,7 @@ export default function WhereToPlay() {
                 <motion.img
                   key={activeIndex}
                   src={places[activeIndex].image}
-                  alt={places[activeIndex].title}
+                  alt={places[activeIndex].name}
                   className="absolute inset-0 size-10/12 rounded-4xl object-cover"
                   initial={{ opacity: 0.9 }}
                   animate={{ opacity: 1 }}

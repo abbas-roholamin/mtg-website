@@ -9,7 +9,7 @@ export default async function Page() {
   return (
     <Section>
       <Wrapper>
-        <h1 className="text-primary font-quick-sand mb-12 text-center text-7xl font-bold">
+        <h1 className="text-primary font-poppins mb-12 text-center text-7xl font-bold">
           {t('blog.title')}
         </h1>
         <BlogList />

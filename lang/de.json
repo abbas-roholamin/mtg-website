@@ -60,31 +60,28 @@
       "play": "Spielen",
       "anywhere": "Überall",
       "any_time": "Jederzeit",
-      "latest_product": "Neuheiten & Neueste Releases",
+      "latest_product": "Produkte",
       "places": {
+        "features": "Spielfunktionen",
         "home": {
           "title": "Zuhause",
           "description": "Genießen Sie klassische Brettspiele in der Komfort Ihres Zuhauses. Versammeln Sie Familie oder Freunde und verbringen Sie wertvolle Zeit mit zeitlosen Spielen wie Schach, Domino oder Tic-Tac-Toe.",
-          "keywords": "Familienspiele, Gruppenunterhaltung, Entspannung, Klassische Brettspiele, Soziale Zeit",
-          "image": "/images/whereToPlay/home.jpg"
+          "keywords": "Familienspiele, Gruppenunterhaltung, Entspannung, Klassische Brettspiele, Soziale Zeit"
         },
         "beach": {
           "title": "Strand",
           "description": "Die Strandkollektion — Entspannung, Tragbarkeit und Spaß in der Sonne! Warum nur faulenzen, wenn Sie spielen können? Unsere Reise-Brettspiele sind für den modernen Entdecker konzipiert — ultra-portabel und leicht zu packen, passen sie perfekt in Ihre Strandtasche zusammen mit Handtuch und Sonnencreme. Ob unter einem Sonnenschirm oder in der Sonne, bringen Sie Ihre Spiele mit an den Strand und genießen Sie spaßige Momente mit Familie und Freunden und machen Sie Ihren Strandtag zu einem kleinen „Meisterschafts“-Erlebnis.",
-          "keywords": "Spaß & leicht, Outdoor-tauglich, Kompakt, Schnelle Spiele, Sonne & Sand",
-          "image": "/images/whereToPlay/beach.jpg"
+          "keywords": "Spaß & leicht, Outdoor-tauglich, Kompakt, Schnelle Spiele, Sonne & Sand"
         },
         "airport": {
           "title": "Flughafen",
           "description": "Die Airport Lounge Kollektion — Flug verspätet? Lange Wartezeit? Legen Sie die Telefone weg und schaffen Sie Erinnerungen. Unsere Reise-Brettspiele sind die perfekten Begleiter im Flughafen — klein genug, um auf dem Tablett zu spielen, und leicht genug, um sie ohne weiteres in Ihrem Handgepäck zu verstauen. Von der Abflughalle bis 30.000 Fuß halten die Spiele die Spannung aufrecht. Warten auf einen Flug war noch nie so angenehm — spielen Sie mit Freunden, Familie oder anderen Reisenden und beginnen Sie Ihre Reise schon vor dem Abheben.",
-          "keywords": "Leicht zu tragen, Reise-freundlich, Schnelle Runden, Leicht, Zeitvertreib",
-          "image": "/images/whereToPlay/airport.jpg"
+          "keywords": "Leicht zu tragen, Reise-freundlich, Schnelle Runden, Leicht, Zeitvertreib"
         },
         "cafe": {
           "title": "Café",
           "description": "Die Café-Kollektion — Entspanntes Spielen, soziale Verbindung und Kaffeepausen-Spaß. Verwandeln Sie die Kaffeepause in Spielzeit. Entspannen Sie sich im Café bei einem freundlichen Spiel. Unsere Reise-Brettspiele eignen sich perfekt, um bei Kaffee mit Freunden zu spielen oder neue Leute kennenzulernen. Kompakt und leicht, passen sie problemlos auf kleine Tische und machen Ihren Café-Besuch unterhaltsam und unvergesslich. Ob für schnelle Spiele oder längere Sessions, unsere Spiele machen jeden Café-Besuch sozial, unterhaltsam und unvergesslich.",
-          "keywords": "Entspanntes Spiel, Sozial & freundlich, Kleine Tische, Kaffeepausen-Spaß",
-          "image": "/images/whereToPlay/cafe.jpg"
+          "keywords": "Entspanntes Spiel, Sozial & freundlich, Kleine Tische, Kaffeepausen-Spaß"
         }
       }
     },

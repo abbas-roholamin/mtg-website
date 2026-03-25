@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Inter, Quicksand } from 'next/font/google';
+import { Inter, Poppins } from 'next/font/google';
 import './../globals.css';
 import {
   dehydrate,
@@ -21,9 +21,9 @@ import { SettingProvider } from '@/providers/SettingProvider';
 import { routing } from '@/i18n/routing';
 import { fetchFaqs } from '@/queries/faq';
 
-const quickSand = Quicksand({
-  variable: '--font-quick-sand',
-  subsets: ['latin'],
+const poppins = Poppins({
+  variable: '--font-poppins',
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
 });
 
 const inter = Inter({
@@ -66,7 +66,7 @@ export default async function RootLayout({
   return (
     <html lang={locale} className="h-full">
       <body
-        className={`${quickSand.variable} ${inter.variable} flex min-h-dvh flex-col antialiased`}
+        className={`${poppins.variable} ${inter.variable} flex min-h-dvh flex-col antialiased`}
       >
         <QueryProvider>
           <HydrationBoundary state={dehydratedState}>

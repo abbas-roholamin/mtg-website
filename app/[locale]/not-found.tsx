@@ -9,7 +9,7 @@ export default async function NotFoundPage() {
     <section className="grid place-content-center py-52">
       <div className="wrapper">
         <div className="mb-20 text-center">
-          <h1 className="text-primary font-quick-sand mb-5 text-7xl font-bold">
+          <h1 className="text-primary font-poppins mb-5 text-7xl font-bold">
             {t('title')}
           </h1>
           <p className="text-lg text-neutral-900">{t('description')}</p>

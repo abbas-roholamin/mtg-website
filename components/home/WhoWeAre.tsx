@@ -33,7 +33,7 @@ export default function WhoWeAre() {
             }}
           >
             <div className="space-y-4 sm:space-y-6">
-              <h1 className="font-quick-sand text-primary text-4xl font-bold sm:text-5xl lg:text-6xl xl:text-8xl">
+              <h1 className="font-poppins text-primary text-4xl font-bold sm:text-5xl lg:text-6xl xl:text-[80px]">
                 {t('title')}
               </h1>
               <p className="text-base leading-relaxed text-neutral-600 sm:text-lg">

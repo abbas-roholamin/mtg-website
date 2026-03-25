@@ -34,7 +34,7 @@ export default function InAction() {
     <Section>
       <Wrapper>
         <div className="mb-8 flex w-full flex-col items-center justify-between gap-4 md:gap-6 lg:flex-row lg:gap-8 xl:gap-10">
-          <h1 className="text-primary font-quick-sand text-center text-4xl font-bold sm:text-5xl lg:text-6xl xl:text-[80px]">
+          <h1 className="text-primary font-poppins text-center text-4xl font-bold sm:text-5xl lg:text-6xl xl:text-[80px]">
             {t('title')}
           </h1>
           <p className="max-w-[560px] text-center text-neutral-500 md:text-lg lg:text-start lg:text-xl">

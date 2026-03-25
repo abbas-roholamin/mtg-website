@@ -7,7 +7,7 @@ export default async function Warranty() {
   return (
     <section className="grid grid-cols-1 items-center gap-10 md:gap-16 lg:grid-cols-2 lg:gap-20">
       <div>
-        <h2 className="text-primary font-quick-sand mb-4 text-4xl font-bold md:mb-6 md:text-5xl lg:mb-8 lg:text-6xl xl:text-7xl">
+        <h2 className="text-primary font-poppins mb-4 text-4xl font-bold md:mb-6 md:text-5xl lg:mb-8 lg:text-6xl xl:text-7xl">
           {t('product.warranty.title')}
         </h2>
         <div className="space-y-4">
