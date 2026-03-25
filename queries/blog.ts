@@ -16,3 +16,9 @@ export async function fetchPost(
   if (!res.ok) throw new Error('...');
   return res.json();
 }
+
+export async function fetchFeaturedBlog(locale: Locale): Promise<BlogResponse> {
+  const res = await fetch(`${API.BLOG}/featured?${locale}`);
+  if (!res.ok) throw new Error('...');
+  return res.json();
+}

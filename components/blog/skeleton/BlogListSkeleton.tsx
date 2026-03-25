@@ -1,9 +1,14 @@
 import { Skeleton } from '@/components/ui/skeleton';
 
-export default function BlogListSkeleton() {
+interface BlogListSkeletonProps {
+  length?: number;
+}
+export default function BlogListSkeleton({
+  length = 6,
+}: BlogListSkeletonProps) {
   return (
     <ul className="grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
-      {Array.from({ length: 6 }).map((_, index) => (
+      {Array.from({ length }).map((_, index) => (
         <li key={index}>
           <article>
             <Skeleton className="mb-3 aspect-video overflow-hidden rounded-2xl" />

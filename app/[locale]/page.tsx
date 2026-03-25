@@ -9,6 +9,7 @@ import WhoWeAre from '@/components/home/WhoWeAre';
 import Faq from '@/components/sections/Faq';
 import Inaction from '@/components/sections/InAction';
 import FeaturedProduct from '@/components/home/FeaturedProduct';
+import FeaturedBlog from '@/components/home/FeaturedBlog';
 
 export default async function Home() {
   return (
@@ -23,6 +24,7 @@ export default async function Home() {
       <FeaturedProduct />
       <Inaction />
       <Faq />
+      <FeaturedBlog />
       <Banner />
     </>
   );
