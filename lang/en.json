@@ -249,5 +249,43 @@
     "shipping": "Shipping",
     "total": "Total",
     "estimated_delivery": "Estimated Delivery"
+  },
+  "custom_characters": {
+    "title": "Choose your game to customize",
+    "feature1": {
+      "title": "Be the hero of your own game!",
+      "description": "Change classic games with real characters from your family. From backgammon to Ludo, now it’s your turn to be on the game board."
+    },
+    "feature2": {
+      "title": "Our classic games — this time with pieces that smile!",
+      "description": "Have you ever thought about playing with your own face, your spouse’s, or your children’s instead of ordinary colored pieces? We turn your ideas into fantasy characters and place them on game pieces."
+    },
+    "feature3": {
+      "title": "A lasting gift",
+      "description": "Ideal for wedding anniversaries, children’s birthdays, and family gatherings that will never be forgotten."
+    },
+    "feature4": {
+      "title": "A game is not just entertainment; it is a memory",
+      "description": "At My Travel Games, we have taken classic games like Ludo, Tic-Tac-Toe, and Backgammon out of their rigid and repetitive form. By adding your personalized characters, every roll of the dice in Backgammon brings a smile to your loved ones’ faces."
+    },
+    "form": {
+      "select": "Select",
+      "bag_color": "Bag Color",
+      "design": "Design",
+      "count": "Count",
+      "character_style": "Character Style",
+      "description": "Description",
+      "write_description": "Write your description here...",
+      "images": "Images",
+      "btn": "Submit Order",
+      "upload_image": "Upload Image",
+      "rule": "JPG, JPEG and PNG, Max 5 MB",
+      "game_price": "Game Price",
+      "customization": "Customization",
+      "total": "Total",
+      "warranty": "Warranty",
+      "warranty_description1": "Your order will be carefully prepared and ready within 7 days. We use high-quality materials and permanent printing techniques, ensuring that the colors are applied directly onto the surface and will not fade, peel, or wash away over time.",
+      "warranty_description2": "We are committed to delivering a product that is both durable and made to last, so you can enjoy it with confidence."
+    }
   }
 }

@@ -11,9 +11,13 @@ import { cn } from '@/lib/utils';
 
 interface ProductGalleryProps {
   images: string[];
+  align?: 'start' | 'center' | 'end';
 }
 
-export default function ProductGallery({ images }: ProductGalleryProps) {
+export default function ProductGallery({
+  images,
+  align = 'start',
+}: ProductGalleryProps) {
   const [selectedImage, setSelectedImage] = useState<number>(0);
 
   return (
@@ -34,10 +38,15 @@ export default function ProductGallery({ images }: ProductGalleryProps) {
           loop: true,
         }}
       >
-        <CarouselContent className="ml-0">
+        <CarouselContent
+          className={cn(
+            'ml-0 flex gap-2',
+            align === 'center' && 'justify-center'
+          )}
+        >
           {images.map((image, index) => (
             <CarouselItem
-              key={image}
+              key={image + index}
               className={cn(
                 'relative h-16 overflow-hidden rounded-lg border bg-[#F7F7F7] sm:h-24 md:basis-1/3 lg:basis-1/5',
                 {
@@ -49,8 +58,8 @@ export default function ProductGallery({ images }: ProductGalleryProps) {
               <Image
                 src={image}
                 alt={`Thumbnail ${index + 1}`}
-                width={40}
-                height={40}
+                fill
+                className="object-contain"
               />
             </CarouselItem>
           ))}
