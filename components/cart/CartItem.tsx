@@ -1,10 +1,10 @@
 import { MinusIcon, PlusIcon } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
-import { CartItem } from '@/types/cart';
+import { CartItem as CartItemType } from '@/types/cart';
 
 interface CartItemProps {
-  item: CartItem;
+  item: CartItemType;
   onIncrement: (id: number) => void;
   onDecrement: (id: number) => void;
   onRemove: (id: number) => void;
