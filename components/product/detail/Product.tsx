@@ -1,9 +1,11 @@
 'use client';
 
 import { useQuery } from '@tanstack/react-query';
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import Image from 'next/image';
+import { notFound } from 'next/navigation';
 import ProductDetail from './ProductDetail';
+import ProductDetailSkeleton from './ProductDetailSkeleton';
 import Section from '@/components/common/Section';
 import Wrapper from '@/components/common/Wrapper';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -20,6 +22,7 @@ const GC_TIEM = 1000 * 60 * 60 * 2; // 2 HOUR
 
 export default function Product({ slug }: ProductProps) {
   const locale = useLocale();
+  const t = useTranslations('pages');
   const { data, isPending } = useQuery({
     queryKey: [PRODUCTS_QUERY_KEY, slug, locale],
     queryFn: () => fetchProduct(slug, locale as Locale),
@@ -30,10 +33,10 @@ export default function Product({ slug }: ProductProps) {
   const product = data?.data;
 
   if (isPending) {
-    return <div>Loading</div>;
+    return <ProductDetailSkeleton />;
   }
 
-  if (!product) return null;
+  if (!product) return notFound();
 
   return (
     <Section>
@@ -41,39 +44,39 @@ export default function Product({ slug }: ProductProps) {
         <ProductDetail product={product} />
         <Tabs
           defaultValue="description"
-          className="mt-12 w-full md:mt-24 lg:mt-32 xl:mt-40"
+          className="mt-12 w-full md:mt-24 lg:mt-32"
         >
           <TabsList className="border-border flex w-full snap-start flex-row overflow-x-auto overflow-y-hidden rounded-none border-b bg-transparent p-0">
             <TabsTrigger
               value="description"
-              className="shrink-0 grow-1 rounded-none border-transparent px-4 hover:cursor-pointer data-[state=active]:bg-transparent"
+              className="shrink-0 grow rounded-none border-transparent px-4 hover:cursor-pointer data-[state=active]:bg-transparent"
             >
               <span className="text-sm font-medium sm:text-base">
-                Description
+                {t('product.details.tabs.description')}
               </span>
             </TabsTrigger>
             <TabsTrigger
               value="instructions"
-              className="shrink-0 grow-1 rounded-none border-transparent px-4 hover:cursor-pointer data-[state=active]:bg-transparent"
+              className="shrink-0 grow rounded-none border-transparent px-4 hover:cursor-pointer data-[state=active]:bg-transparent"
             >
               <span className="text-sm font-medium sm:text-base">
-                Game Instructions
+                {t('product.details.tabs.instructions')}
               </span>
             </TabsTrigger>
             <TabsTrigger
               value="reviews"
-              className="shrink-0 grow-1 rounded-none border-transparent px-4 hover:cursor-pointer data-[state=active]:bg-transparent"
+              className="shrink-0 grow rounded-none border-transparent px-4 hover:cursor-pointer data-[state=active]:bg-transparent"
             >
               <span className="text-sm font-medium sm:text-base">
-                Reviews ({product.reviews.length})
+                {t('product.details.tabs.reviews')} ({product.reviews.length})
               </span>
             </TabsTrigger>
             <TabsTrigger
               value="scope"
-              className="shrink-0 grow-1 rounded-none border-transparent px-4 hover:cursor-pointer data-[state=active]:bg-transparent"
+              className="shrink-0 grow rounded-none border-transparent px-4 hover:cursor-pointer data-[state=active]:bg-transparent"
             >
               <span className="text-sm font-medium sm:text-base">
-                Scope of delivery
+                {t('product.details.tabs.scope')}
               </span>
             </TabsTrigger>
           </TabsList>
