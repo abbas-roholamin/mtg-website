@@ -10,10 +10,13 @@ import MobileMenu from './MobileMenu';
 import { MENU } from '@/constants/menu';
 import { cn } from '@/lib/utils';
 import { useRoot } from '@/hooks/use-root';
+import { useCart } from '@/context/CartContext';
 
 export default function Header() {
   const t = useTranslations('navigation');
   const isHome = useRoot();
+  const { getTotalItems } = useCart();
+  const itemCount = getTotalItems();
 
   return (
     <header
@@ -50,11 +53,13 @@ export default function Header() {
           <Link href="search">
             <Search className="size-7" />
           </Link>
-          <Link href="cart" className="relative">
+          <Link href="/cart" className="relative">
             <ShoppingCart className="size-7" />
-            <span className="bg-primary text-primary-foreground absolute -top-1/3 -right-1/4 grid size-5 place-content-center rounded-full text-xs">
-              4
-            </span>
+            {itemCount > 0 && (
+              <span className="bg-primary text-primary-foreground absolute -top-1/3 -right-1/4 grid size-5 place-content-center rounded-full text-xs">
+                {itemCount}
+              </span>
+            )}
           </Link>
         </div>
       </Wrapper>

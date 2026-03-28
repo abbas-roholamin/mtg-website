@@ -1,5 +1,6 @@
 import { Locale } from './locale';
 import { ApiResponse } from './response';
+import { Review } from './Review';
 
 export interface Product {
   id: number;
@@ -17,14 +18,17 @@ export interface ProductDetail {
   slug: string;
   name: string;
   description: string;
-  attributes: Array<Record<string, string>>;
+  instructions: string;
+  attributes: Record<string, string>;
   thumbnail: string;
   meta_title: string;
   meta_description: string;
   variations: Array<Variation>;
+  reviews: Array<Review>;
 }
 
 export interface Variation {
+  id: number;
   sku: string;
   price: string;
   stock: number;

@@ -1,5 +1,7 @@
+import Section from '@/components/common/Section';
+import Wrapper from '@/components/common/Wrapper';
 import Features from '@/components/product/detail/Features';
-import ProductDetail from '@/components/product/detail/ProductDetail';
+import Product from '@/components/product/detail/Product';
 import SimilarProduct from '@/components/product/detail/SimilarProduct';
 import Warranty from '@/components/product/detail/Warranty';
 
@@ -11,17 +13,17 @@ export default async function Page({ params }: Props) {
   const { slug } = await params;
 
   return (
-    <section className="py-20">
-      <div className="wrapper">
+    <Section>
+      <Wrapper>
         <div className="mb-24">
-          <ProductDetail slug={slug} />
+          <Product slug={slug} />
           <div className="space-y-8">
             <Warranty />
             <Features />
           </div>
         </div>
         <SimilarProduct slug={slug} />
-      </div>
-    </section>
+      </Wrapper>
+    </Section>
   );
 }
