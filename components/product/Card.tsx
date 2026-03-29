@@ -4,9 +4,10 @@ import { Product } from '@/types/product';
 
 interface CardProps {
   product: Product;
+  showPrice?: boolean;
 }
 
-export default function Card({ product }: CardProps) {
+export default function Card({ product, showPrice = true }: CardProps) {
   return (
     <article>
       <div className="mb-3 aspect-auto overflow-hidden rounded-2xl bg-neutral-100">
@@ -24,9 +25,11 @@ export default function Card({ product }: CardProps) {
           {product.name}
         </h2>
       </Link>
-      <p className="font-poppins text-center text-xl font-bold text-neutral-950 md:text-2xl lg:text-3xl">
-        {product.price}
-      </p>
+      {showPrice && (
+        <p className="font-poppins text-center text-xl font-bold text-neutral-950 md:text-2xl lg:text-3xl">
+          {product.price}
+        </p>
+      )}
     </article>
   );
 }
