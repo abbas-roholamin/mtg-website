@@ -22,7 +22,7 @@ export default function ProductGallery({
 
   return (
     <div className="space-y-4">
-      <div className="border-border relative flex h-[600px] items-center justify-center overflow-hidden rounded-lg border bg-[#F7F7F7]">
+      <div className="border-border relative flex h-100 items-center justify-center overflow-hidden rounded-lg bg-[#F7F7F7] md:h-140 lg:h-150">
         <Image
           src={images[selectedImage]}
           alt="Product image"
@@ -48,7 +48,7 @@ export default function ProductGallery({
             <CarouselItem
               key={image + index}
               className={cn(
-                'relative h-16 overflow-hidden rounded-lg border bg-[#F7F7F7] sm:h-24 md:basis-1/3 lg:basis-1/5',
+                'relative h-16 basis-1/3 overflow-hidden rounded-lg border bg-[#F7F7F7] sm:h-24 md:basis-1/4 lg:basis-1/5',
                 {
                   'border-primary': selectedImage === index,
                 }

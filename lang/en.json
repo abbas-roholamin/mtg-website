@@ -129,7 +129,47 @@
       },
       "similar": {
         "title": "Similar Products"
+      },
+      "details": {
+        "product": {
+          "variations": "Variations:",
+          "attributes": "Attributes:",
+          "quantity": "Quantity",
+          "stock": {
+            "in": "In stock ({count} left)",
+            "out": "  Out of stock"
+          },
+          "cta": {
+            "buy_now": "Buy Now",
+            "add_to_cart": "Add to Cart",
+            "added": "Added {quantity} × {product} to cart!"
+          },
+          "links": {
+            "shipping": "Free delivery on orders over €50.00",
+            "warranty": " 2 years warranty - <tag>Read More</tag>"
+          }
+        },
+        "tabs": {
+          "description": "Description",
+          "instructions": "Game Instructions",
+          "reviews": "Reviews",
+          "scope": " Scope of delivery"
+        }
       }
+    },
+    "cart": {
+      "cart": "Cart",
+      "order_summary": "Order Summary",
+      "empty": "Cart is empty",
+      "checkout": "Checkout",
+      "variant": "Variant",
+      "remove": "Remove",
+      "price": "Price",
+      "discount": "Discount",
+      "shipping": "Shipping",
+      "total": "Total",
+      "estimated_delivery": "Estimated Delivery",
+      "clear": "Clear Cart"
     }
   },
   "whoWeAre": {
@@ -235,20 +275,6 @@
     "title": "404 Not Found",
     "description": "Your visited page not found. You may go home page.",
     "cta": "Back to Home"
-  },
-  "cart": {
-    "cart": "Cart",
-    "order_summary": "Order Summary",
-    "empty": "Cart is empty",
-    "checkout": "Checkout",
-    "color": "Color",
-    "design": "Design",
-    "remove": "Remove",
-    "price": "Price",
-    "discount": "Discount",
-    "shipping": "Shipping",
-    "total": "Total",
-    "estimated_delivery": "Estimated Delivery"
   },
   "custom_characters": {
     "title": "Choose your game to customize",

@@ -129,7 +129,47 @@
       },
       "similar": {
         "title": "Ähnliche Produkte"
+      },
+      "details": {
+        "product": {
+          "variations": "Variationen:",
+          "attributes": "Attribute:",
+          "quantity": "Menge",
+          "stock": {
+            "in": "Auf Lager ({count} verfügbar)",
+            "out": "Nicht auf Lager"
+          },
+          "cta": {
+            "buy_now": "Jetzt kaufen",
+            "add_to_cart": "In den Warenkorb",
+            "added": "{quantity} × {product} wurde dem Warenkorb hinzugefügt!"
+          },
+          "links": {
+            "shipping": "Kostenlose Lieferung bei Bestellungen über 50,00 €",
+            "warranty": "2 Jahre Garantie - <tag>Mehr erfahren</tag>"
+          }
+        },
+        "tabs": {
+          "description": "Beschreibung",
+          "instructions": "Spielanleitung",
+          "reviews": "Bewertungen",
+          "scope": "Lieferumfang"
+        }
       }
+    },
+    "cart": {
+      "cart": "Warenkorb",
+      "order_summary": "Bestellübersicht",
+      "empty": "Der Warenkorb ist leer",
+      "checkout": "Zur Kasse",
+      "variant": "Variante",
+      "remove": "Entfernen",
+      "price": "Preis",
+      "discount": "Rabatt",
+      "shipping": "Versand",
+      "total": "Gesamt",
+      "estimated_delivery": "Voraussichtliche Lieferung",
+      "clear": "Warenkorb leeren"
     }
   },
   "whoWeAre": {
@@ -236,20 +276,6 @@
     "title": "404 Nicht gefunden",
     "description": "Die von Ihnen aufgerufene Seite wurde nicht gefunden. Sie können zur Startseite zurückkehren.",
     "cta": "Zurück zur Startseite"
-  },
-  "cart": {
-    "cart": "Warenkorb",
-    "order_summary": "Bestellübersicht",
-    "empty": "Der Warenkorb ist leer",
-    "checkout": "Zur Kasse",
-    "color": "Farbe",
-    "design": "Design",
-    "remove": "Entfernen",
-    "price": "Preis",
-    "discount": "Rabatt",
-    "shipping": "Versand",
-    "total": "Gesamt",
-    "estimated_delivery": "Voraussichtliche Lieferung"
   },
   "custom_characters": {
     "title": "Wähle dein Spiel zur Personalisierung aus",

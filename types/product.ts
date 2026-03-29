@@ -38,9 +38,8 @@ export interface Variation {
   attributes: Array<Attribute>;
 }
 
-export interface Attribute {
-  attribute: string;
-  values: Array<Value>;
+export interface Attribute extends Value {
+  attribute: 'color' | 'size';
 }
 
 export interface Value {
