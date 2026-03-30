@@ -16,8 +16,10 @@ import { routing } from '@/i18n/routing';
 import { usePathname, useRouter } from '@/i18n/navigation';
 import { cn } from '@/lib/utils';
 import { useSetting } from '@/providers/SettingProvider';
+import { useCart } from '@/context/CartContext';
 
 export default function LocaleSwitcher() {
+  const { getTotalItems } = useCart();
   const router = useRouter();
   const pathname = usePathname();
   const params = useParams();
@@ -43,7 +45,7 @@ export default function LocaleSwitcher() {
 
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger asChild>
+      <DropdownMenuTrigger asChild disabled={!!getTotalItems()}>
         <button
           disabled={isPending}
           className="flex items-center gap-1.5 outline-none disabled:opacity-90"
