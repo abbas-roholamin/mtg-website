@@ -29,7 +29,15 @@ export default function ProductList() {
   });
 
   if (isPending) {
-    return <ProductListSkeleton />;
+    return (
+      <section>
+        <div className="mb-8 flex items-center justify-between gap-4 md:mb-14 lg:mb-20">
+          <SearchInput />
+          <Sort />
+        </div>
+        <ProductListSkeleton />
+      </section>
+    );
   }
 
   const products = data?.data ?? [];

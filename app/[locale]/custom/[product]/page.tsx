@@ -1,4 +1,4 @@
-import OrderForm from '@/components/my-customer-characters/OrderForm';
+import OrderForm from '@/components/custom/OrderForm';
 import ProductGallery from '@/components/product/detail/ImageGallery';
 
 export default function page() {

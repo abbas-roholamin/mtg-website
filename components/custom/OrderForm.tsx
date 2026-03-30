@@ -30,7 +30,7 @@ export default function OrderForm() {
   const [count, setCount] = useState(12);
   const [images, setImages] = useState<string[]>([]);
   const fileRef = useRef<HTMLInputElement | null>(null);
-  const t = useTranslations('custom_characters');
+  const t = useTranslations('pages.custom');
 
   const {
     control,

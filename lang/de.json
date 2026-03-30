@@ -170,6 +170,44 @@
       "total": "Gesamt",
       "estimated_delivery": "Voraussichtliche Lieferung",
       "clear": "Warenkorb leeren"
+    },
+    "custom": {
+      "title": "Anpassbare Spiele",
+      "feature1": {
+        "title": "Sei der Held deines eigenen Spiels!",
+        "description": "Verändere klassische Spiele mit echten Charakteren aus deiner Familie. Vom Backgammon bis Ludo – jetzt bist du an der Reihe, auf dem Spielbrett zu stehen."
+      },
+      "feature2": {
+        "title": "Unsere klassischen Spiele — diesmal mit Figuren, die lächeln!",
+        "description": "Hast du schon einmal daran gedacht, mit deinem eigenen Gesicht, dem deines Partners oder deiner Kinder zu spielen, statt mit gewöhnlichen farbigen Figuren? Wir verwandeln deine Ideen in Fantasiefiguren und platzieren sie auf Spielfiguren."
+      },
+      "feature3": {
+        "title": "Ein bleibendes Geschenk",
+        "description": "Ideal für Hochzeitstage, Kindergeburtstage und Familientreffen, die niemals vergessen werden."
+      },
+      "feature4": {
+        "title": "Ein Spiel ist nicht nur Unterhaltung; es ist eine Erinnerung",
+        "description": "Bei My Travel Games haben wir klassische Spiele wie Ludo, Tic-Tac-Toe und Backgammon aus ihrer starren und sich wiederholenden Form befreit. Durch das Hinzufügen deiner personalisierten Charaktere bringt jeder Würfelwurf im Backgammon ein Lächeln auf die Gesichter deiner Liebsten."
+      },
+      "form": {
+        "select": "Auswählen",
+        "bag_color": "Taschenfarbe",
+        "design": "Design",
+        "count": "Anzahl",
+        "character_style": "Charakterstil",
+        "description": "Beschreibung",
+        "write_description": "Schreiben Sie hier Ihre Beschreibung...",
+        "images": "Bilder",
+        "btn": "Bestellung absenden",
+        "upload_image": "Bild hochladen",
+        "rule": "JPG, JPEG und PNG, max. 5 MB",
+        "game_price": "Spielpreis",
+        "customization": "Anpassung",
+        "total": "Gesamt",
+        "warranty": "Garantie",
+        "warranty_description1": "Ihre Bestellung wird sorgfältig vorbereitet und ist innerhalb von 7 Tagen fertig. Wir verwenden hochwertige Materialien und dauerhafte Drucktechniken, sodass die Farben direkt auf die Oberfläche aufgetragen werden und mit der Zeit nicht verblassen, abblättern oder ausgewaschen werden.",
+        "warranty_description2": "Wir verpflichten uns, ein langlebiges und hochwertiges Produkt zu liefern, das Sie mit Vertrauen nutzen können."
+      }
     }
   },
   "whoWeAre": {
@@ -276,43 +314,5 @@
     "title": "404 Nicht gefunden",
     "description": "Die von Ihnen aufgerufene Seite wurde nicht gefunden. Sie können zur Startseite zurückkehren.",
     "cta": "Zurück zur Startseite"
-  },
-  "custom_characters": {
-    "title": "Wähle dein Spiel zur Personalisierung aus",
-    "feature1": {
-      "title": "Sei der Held deines eigenen Spiels!",
-      "description": "Verändere klassische Spiele mit echten Charakteren aus deiner Familie. Vom Backgammon bis Ludo – jetzt bist du an der Reihe, auf dem Spielbrett zu stehen."
-    },
-    "feature2": {
-      "title": "Unsere klassischen Spiele — diesmal mit Figuren, die lächeln!",
-      "description": "Hast du schon einmal daran gedacht, mit deinem eigenen Gesicht, dem deines Partners oder deiner Kinder zu spielen, statt mit gewöhnlichen farbigen Figuren? Wir verwandeln deine Ideen in Fantasiefiguren und platzieren sie auf Spielfiguren."
-    },
-    "feature3": {
-      "title": "Ein bleibendes Geschenk",
-      "description": "Ideal für Hochzeitstage, Kindergeburtstage und Familientreffen, die niemals vergessen werden."
-    },
-    "feature4": {
-      "title": "Ein Spiel ist nicht nur Unterhaltung; es ist eine Erinnerung",
-      "description": "Bei My Travel Games haben wir klassische Spiele wie Ludo, Tic-Tac-Toe und Backgammon aus ihrer starren und sich wiederholenden Form befreit. Durch das Hinzufügen deiner personalisierten Charaktere bringt jeder Würfelwurf im Backgammon ein Lächeln auf die Gesichter deiner Liebsten."
-    },
-    "form": {
-      "select": "Auswählen",
-      "bag_color": "Taschenfarbe",
-      "design": "Design",
-      "count": "Anzahl",
-      "character_style": "Charakterstil",
-      "description": "Beschreibung",
-      "write_description": "Schreiben Sie hier Ihre Beschreibung...",
-      "images": "Bilder",
-      "btn": "Bestellung absenden",
-      "upload_image": "Bild hochladen",
-      "rule": "JPG, JPEG und PNG, max. 5 MB",
-      "game_price": "Spielpreis",
-      "customization": "Anpassung",
-      "total": "Gesamt",
-      "warranty": "Garantie",
-      "warranty_description1": "Ihre Bestellung wird sorgfältig vorbereitet und ist innerhalb von 7 Tagen fertig. Wir verwenden hochwertige Materialien und dauerhafte Drucktechniken, sodass die Farben direkt auf die Oberfläche aufgetragen werden und mit der Zeit nicht verblassen, abblättern oder ausgewaschen werden.",
-      "warranty_description2": "Wir verpflichten uns, ein langlebiges und hochwertiges Produkt zu liefern, das Sie mit Vertrauen nutzen können."
-    }
   }
 }

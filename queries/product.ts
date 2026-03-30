@@ -35,3 +35,11 @@ export async function fetchFeaturedProducts(
   if (!res.ok) throw new Error('...');
   return res.json();
 }
+
+export async function fetchEditableProducts(
+  locale: Locale
+): Promise<ProductListResponse> {
+  const res = await fetch(`${API.PRODUCTS}/editable?${locale}`);
+  if (!res.ok) throw new Error('...');
+  return res.json();
+}
