@@ -313,5 +313,13 @@
     "title": "404 Not Found",
     "description": "Your visited page not found. You may go home page.",
     "cta": "Back to Home"
+  },
+  "order_status": {
+    "done": "Thank you for your shopping!",
+    "done_description": "Your order has been successfully placed and is now being processed.",
+    "done_btn": "Go to Products",
+    "failed": "Oops! There was an issue",
+    "failed_description": " Oops! There was a problem processing your order. Please review the details and try again.",
+    "failed_btn": "Reorder"
   }
 }

@@ -314,5 +314,13 @@
     "title": "404 Nicht gefunden",
     "description": "Die von Ihnen aufgerufene Seite wurde nicht gefunden. Sie können zur Startseite zurückkehren.",
     "cta": "Zurück zur Startseite"
+  },
+  "order_status": {
+    "done": "Vielen Dank für Ihren Einkauf!",
+    "done_description": "Ihre Bestellung wurde erfolgreich aufgegeben und wird nun bearbeitet.",
+    "done_btn": "Zu den Produkten",
+    "failed": "Ups! Es ist ein Problem aufgetreten",
+    "failed_description": "Ups! Bei der Verarbeitung Ihrer Bestellung ist ein Problem aufgetreten. Bitte überprüfen Sie die Angaben und versuchen Sie es erneut.",
+    "failed_btn": "Erneut bestellen"
   }
 }
