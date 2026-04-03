@@ -1,13 +1,13 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Product } from '@/types/product';
+import { cn } from '@/lib/utils';
 
 interface CardProps {
   product: Product;
-  showPrice?: boolean;
 }
 
-export default function Card({ product, showPrice = true }: CardProps) {
+export default function Card({ product }: CardProps) {
   return (
     <article>
       <div className="mb-3 aspect-auto overflow-hidden rounded-2xl bg-neutral-100">
@@ -25,11 +25,24 @@ export default function Card({ product, showPrice = true }: CardProps) {
           {product.name}
         </h2>
       </Link>
-      {showPrice && (
-        <p className="font-poppins text-center text-xl font-bold text-neutral-950 md:text-2xl lg:text-3xl">
-          {product.price}
+      <div className="flex items-center justify-center gap-1">
+        {product.coupon && (
+          <p className="font-poppins text-center text-xl font-bold text-neutral-950 md:text-2xl lg:text-3xl">
+            {product.coupon.final_price.formatted_amount}
+          </p>
+        )}
+        <p
+          className={cn(
+            'font-poppins text-center text-xl font-bold text-neutral-950 md:text-2xl lg:text-3xl',
+            {
+              'text-md font-bold text-neutral-500 line-through md:text-lg lg:text-xl':
+                product.coupon,
+            }
+          )}
+        >
+          {product.formatted_price}
         </p>
-      )}
+      </div>
     </article>
   );
 }

@@ -7,3 +7,4 @@ export const FEATURED_GALLARY_QUERY_KEY = 'FEATURED_GALLARY';
 export const CLIENTS_QUERY_KEY = 'CLIENTS';
 export const PRODUCTS_QUERY_KEY = 'PRODUCTS';
 export const VIDEOS_QUERY_KEY = 'VIDEOS';
+export const COUPON_QUERY_KEY = 'COUPON';

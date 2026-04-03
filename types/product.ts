@@ -34,8 +34,12 @@ export interface ProductDetail {
 export interface Variation {
   id: number;
   sku: string;
-  price: string;
+  price: number;
   formatted_price: string;
+  final_price: {
+    amount: number;
+    formatted_amount: string;
+  };
   stock: number;
   thumbnail: string;
   images: Array<string>;

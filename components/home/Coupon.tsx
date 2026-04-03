@@ -42,7 +42,7 @@ export default function Coupon() {
                 {coupon.product.formatted_price}
               </p>
               <p className="text-2xl font-bold md:text-3xl">
-                {coupon.final_price}
+                {coupon.final_price.formatted_amount}
               </p>
             </div>
             <Countdown targetDate={coupon.expiration_date} />

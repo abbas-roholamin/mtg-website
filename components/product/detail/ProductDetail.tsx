@@ -8,6 +8,7 @@ import { ProductDetail as ProductDetailType, Variation } from '@/types/product';
 import { Button } from '@/components/ui/button';
 import { useCart } from '@/context/CartContext';
 import { Badge } from '@/components/ui/badge';
+import { cn } from '@/lib/utils';
 
 interface ProductDetailProps {
   product: ProductDetailType;
@@ -43,7 +44,8 @@ export default function ProductDetail({ product }: ProductDetailProps) {
       variationId: selectedVariation.id,
       sku: selectedVariation.sku,
       name: product.name,
-      price: parseFloat(selectedVariation.price),
+      price: selectedVariation.price,
+      formatted_price: selectedVariation.formatted_price,
       quantity: quantity,
       thumbnail: selectedVariation.thumbnail || product.thumbnail,
       attributes: product.attributes,
@@ -75,10 +77,22 @@ export default function ProductDetail({ product }: ProductDetailProps) {
           {product.name}
         </h1>
 
-        <div className="mb-6 flex items-baseline gap-3">
-          <span className="text-foreground font-poppins text-4xl font-bold">
-            €{parseFloat(selectedVariation.price).toFixed(2)}
-          </span>
+        <div className="mb-6 flex items-end gap-4">
+          <div>
+            <p
+              className={cn('text-foreground font-poppins text-4xl font-bold', {
+                'text-2xl text-neutral-500 line-through': product.coupon,
+              })}
+            >
+              {selectedVariation.formatted_price}
+            </p>
+            {product.coupon && (
+              <p className="text-foreground font-poppins text-4xl font-bold">
+                {selectedVariation.final_price.formatted_amount}
+              </p>
+            )}
+          </div>
+
           {selectedVariation.stock > 0 ? (
             <span className="text-sm font-medium text-green-600">
               {t('product.details.product.stock.in', {
