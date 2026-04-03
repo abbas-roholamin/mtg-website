@@ -1,4 +1,4 @@
-import Banner from '@/components/home/Banner';
+import Coupon from '@/components/home/Coupon';
 import Clients from '@/components/home/Clients';
 import Falling from '@/components/home/Falling';
 import Hero from '@/components/home/Hero';
@@ -25,7 +25,7 @@ export default async function Home() {
       <Inaction />
       <Faq />
       <FeaturedBlog />
-      <Banner />
+      <Coupon />
     </>
   );
 }

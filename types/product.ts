@@ -1,3 +1,4 @@
+import { Coupon } from './coupon';
 import { Locale } from './locale';
 import { ApiResponse } from './response';
 import { Review } from './Review';
@@ -9,7 +10,9 @@ export interface Product {
   description: string;
   attributes: Array<Record<string, string>>;
   thumbnail: string;
-  price: string;
+  price: number;
+  formatted_price: string;
+  coupon: Coupon | null;
   locale: Locale;
 }
 
@@ -25,12 +28,14 @@ export interface ProductDetail {
   meta_description: string;
   variations: Array<Variation>;
   reviews: Array<Review>;
+  coupon: Coupon | null;
 }
 
 export interface Variation {
   id: number;
   sku: string;
   price: string;
+  formatted_price: string;
   stock: number;
   thumbnail: string;
   images: Array<string>;
