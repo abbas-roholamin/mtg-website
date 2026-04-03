@@ -61,29 +61,17 @@ export default function Footer() {
 
           <ul className="mb-6 flex items-center justify-center gap-4">
             <li>
-              <a
-                href={`https:/${setting.instagram}`}
-                target="_blank"
-                rel="noreferrer"
-              >
+              <a href={setting.instagram} target="_blank" rel="noreferrer">
                 <InstagramIcon className="text-neutral-500" />
               </a>
             </li>
             <li>
-              <a
-                href={`https:/${setting.facebook}`}
-                target="_blank"
-                rel="noreferrer"
-              >
+              <a href={setting.facebook} target="_blank" rel="noreferrer">
                 <FacebookIcon className="text-neutral-500" />{' '}
               </a>
             </li>
             <li>
-              <a
-                href={`https:/${setting.linkedin}`}
-                target="_blank"
-                rel="noreferrer"
-              >
+              <a href={setting.linkedin} target="_blank" rel="noreferrer">
                 <LinkedinIcon className="text-neutral-500" />{' '}
               </a>
             </li>
