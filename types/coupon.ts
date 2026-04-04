@@ -13,10 +13,8 @@ export interface Coupon {
   is_active: boolean;
   max_redemptions: number;
   times_used: number;
-  final_price: {
-    amount: number;
-    formatted_amount: string;
-  };
+  final_amount: number;
+  final_formatted_amount: string;
 }
 
 export type CouponType = 'percentage' | 'fixed_amount';

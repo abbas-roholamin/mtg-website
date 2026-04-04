@@ -88,7 +88,7 @@ export default function ProductDetail({ product }: ProductDetailProps) {
             </p>
             {product.coupon && (
               <p className="text-foreground font-poppins text-4xl font-bold">
-                {selectedVariation.final_price.formatted_amount}
+                {selectedVariation.final_formatted_amount}
               </p>
             )}
           </div>

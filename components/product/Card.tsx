@@ -28,7 +28,7 @@ export default function Card({ product }: CardProps) {
       <div className="flex items-center justify-center gap-1">
         {product.coupon && (
           <p className="font-poppins text-center text-xl font-bold text-neutral-950 md:text-2xl lg:text-3xl">
-            {product.coupon.final_price.formatted_amount}
+            {product.coupon.final_formatted_amount}
           </p>
         )}
         <p
