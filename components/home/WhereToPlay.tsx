@@ -3,6 +3,7 @@ import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ChessKnight, Clock10Icon, MapPin, SquareCheck } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 import Section from '../common/Section';
 import Wrapper from '../common/Wrapper';
 import { cn } from '@/lib/utils';
@@ -110,7 +111,6 @@ export default function WhereToPlay() {
                   placeRefs.current[index] = el;
                 }}
                 data-index={index}
-                className="flex items-center"
               >
                 <div
                   className={cn('lg:max-w-lg', {
@@ -148,6 +148,14 @@ export default function WhereToPlay() {
                     </ul>
                   </div>
                 </div>
+                <div className="relative mt-10 block aspect-video lg:hidden">
+                  <Image
+                    src={places[index].image}
+                    alt={places[index].name}
+                    fill
+                    className="rounded-2xl object-cover"
+                  />
+                </div>
               </div>
             ))}
           </div>
@@ -158,7 +166,7 @@ export default function WhereToPlay() {
                   key={activeIndex}
                   src={places[activeIndex].image}
                   alt={places[activeIndex].name}
-                  className="absolute inset-0 size-10/12 rounded-4xl object-cover"
+                  className="absolute inset-0 size-10/12 rounded-2xl object-cover"
                   initial={{ opacity: 0.9 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0.9 }}
