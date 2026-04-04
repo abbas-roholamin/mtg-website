@@ -1,7 +1,7 @@
 'use client';
 import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { ChessKnight, Clock10Icon, MapPin, SquareCheck } from 'lucide-react';
+import { ChessKnight, Clock10Icon, MapPin } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Section from '../common/Section';
