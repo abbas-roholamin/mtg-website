@@ -25,4 +25,8 @@ export const MENU: Menu = [
     label: 'contact',
     href: '/contact',
   },
+  {
+    label: 'custom',
+    href: '/customization',
+  },
 ];
