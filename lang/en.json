@@ -319,5 +319,17 @@
     "failed": "Oops! There was an issue",
     "failed_description": " Oops! There was a problem processing your order. Please review the details and try again.",
     "failed_btn": "Reorder"
+  },
+  "checkout": {
+    "product": {
+      "name": {
+        "required": "Product is required"
+      }
+    },
+    "amount": {
+      "minimum": "Minimum value is not valid"
+    },
+    "error": "Somthing went wrong",
+    "validation_field": "Validation field"
   }
 }

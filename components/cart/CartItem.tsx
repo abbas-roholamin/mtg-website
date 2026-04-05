@@ -2,6 +2,7 @@ import { MinusIcon, PlusIcon } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { CartItem as CartItemType } from '@/types/cart';
+import { cn } from '@/lib/utils';
 
 interface CartItemProps {
   item: CartItemType;
@@ -61,7 +62,7 @@ export default function CartItem({
         <div className="mt-6 flex items-center gap-6">
           <div className="flex items-center gap-2">
             <button
-              onClick={() => onDecrement(item.variationId)}
+              onClick={() => onDecrement(item.product_variation_id)}
               className="flex size-9 cursor-pointer items-center justify-center rounded-full bg-neutral-100 hover:opacity-90 sm:size-10"
             >
               <MinusIcon className="size-4" />
@@ -70,14 +71,14 @@ export default function CartItem({
             <span className="px-2">{item.quantity}</span>
 
             <button
-              onClick={() => onIncrement(item.variationId)}
+              onClick={() => onIncrement(item.product_variation_id)}
               className="flex size-9 cursor-pointer items-center justify-center rounded-full bg-neutral-100 hover:opacity-90 sm:size-10"
             >
               <PlusIcon className="size-4" />
             </button>
           </div>
           <button
-            onClick={() => onRemove(item.variationId)}
+            onClick={() => onRemove(item.product_variation_id)}
             className="text-sm text-red-500 hover:underline"
           >
             {t('cart.remove')}
@@ -85,9 +86,20 @@ export default function CartItem({
         </div>
       </div>
 
-      <p className="font-poppins hidden text-2xl font-bold sm:block">
-        ${item.price}
-      </p>
+      <div>
+        <p
+          className={cn('font-poppins hidden text-2xl font-bold sm:block', {
+            'text-xl text-neutral-500 line-through': item.final_price,
+          })}
+        >
+          {item.formatted_price}
+        </p>
+        {item.final_price && (
+          <p className="font-poppins hidden text-2xl font-bold sm:block">
+            {item.final_formatted_price}
+          </p>
+        )}
+      </div>
     </div>
   );
 }

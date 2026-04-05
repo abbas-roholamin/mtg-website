@@ -40,13 +40,15 @@ export default function ProductDetail({ product }: ProductDetailProps) {
 
   const handleAddToCart = () => {
     addToCart({
-      productId: product.id,
-      variationId: selectedVariation.id,
-      sku: selectedVariation.sku,
+      product_id: product.id,
+      product_variation_id: selectedVariation.id,
       name: product.name,
       price: selectedVariation.price,
       formatted_price: selectedVariation.formatted_price,
+      final_price: selectedVariation.final_amount,
+      final_formatted_price: selectedVariation.final_formatted_amount,
       quantity: quantity,
+      stock: selectedVariation.stock,
       thumbnail: selectedVariation.thumbnail || product.thumbnail,
       attributes: product.attributes,
       variation_attributes: selectedVariation.attributes,
@@ -60,8 +62,48 @@ export default function ProductDetail({ product }: ProductDetailProps) {
     );
   };
 
-  const handleBuyNow = () => {
-    handleAddToCart();
+  const handleBuyNow = async () => {
+    try {
+      const response = await fetch('/api/checkout_sessions', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify([
+          {
+            price_data: {
+              product_data: {
+                name: product.name,
+                images: [selectedVariation.thumbnail],
+              },
+              currency: 'eur',
+              unit_amount:
+                (selectedVariation.final_amount
+                  ? selectedVariation.final_amount
+                  : selectedVariation.price) * 100,
+            },
+            metadata: {
+              product_id: product.id,
+              product_variation_id: selectedVariation.id,
+            },
+            quantity,
+          },
+        ]),
+      });
+
+      const { url, error } = await response.json();
+
+      if (error) {
+        toast.error(t('cart.error'));
+        return;
+      }
+
+      if (url) {
+        window.location.href = url;
+      }
+    } catch {
+      toast.error(t('cart.error'));
+    }
   };
 
   return (

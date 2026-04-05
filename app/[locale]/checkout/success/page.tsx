@@ -1,5 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
+import Link from 'next/link';
 import Section from '@/components/common/Section';
 import Wrapper from '@/components/common/Wrapper';
 import { Button } from '@/components/ui/button';
@@ -25,7 +26,9 @@ export default async function page() {
             {t('done_description')}
           </p>
 
-          <Button className="mt-8">{t('done_btn')}</Button>
+          <Button className="mt-8">
+            <Link href="/shop">{t('done_btn')}</Link>
+          </Button>
         </div>
       </Wrapper>
     </Section>

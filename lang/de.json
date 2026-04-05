@@ -320,5 +320,17 @@
     "failed": "Ups! Es ist ein Problem aufgetreten",
     "failed_description": "Ups! Bei der Verarbeitung Ihrer Bestellung ist ein Problem aufgetreten. Bitte überprüfen Sie die Angaben und versuchen Sie es erneut.",
     "failed_btn": "Erneut bestellen"
+  },
+  "checkout": {
+    "product": {
+      "name": {
+        "required": "Το προϊόν είναι υποχρεωτικό"
+      }
+    },
+    "amount": {
+      "minimum": "Η ελάχιστη τιμή δεν είναι έγκυρη"
+    },
+    "error": "Κάτι πήγε στραβά",
+    "validation_field": "Πεδίο επικύρωσης"
   }
 }

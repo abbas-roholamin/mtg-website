@@ -319,5 +319,17 @@
     "failed": "Ωχ! Παρουσιάστηκε πρόβλημα",
     "failed_description": "Ωχ! Παρουσιάστηκε πρόβλημα κατά την επεξεργασία της παραγγελίας σας. Παρακαλούμε ελέγξτε τα στοιχεία και δοκιμάστε ξανά.",
     "failed_btn": "Επανάληψη Παραγγελίας"
+  },
+  "checkout": {
+    "product": {
+      "name": {
+        "required": "Produkt ist erforderlich"
+      }
+    },
+    "amount": {
+      "minimum": "Der Mindestwert ist ungültig"
+    },
+    "error": "Etwas ist schiefgelaufen",
+    "validation_field": "Validierungsfeld"
   }
 }

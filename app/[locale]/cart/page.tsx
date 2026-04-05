@@ -1,7 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { useState } from 'react';
+import { toast } from 'sonner';
 import CartItem from '@/components/cart/CartItem';
 import Wrapper from '@/components/common/Wrapper';
 import { Button } from '@/components/ui/button';
@@ -9,29 +9,36 @@ import { useCart } from '@/context/CartContext';
 import Section from '@/components/common/Section';
 
 export default function CartPage() {
-  const { cart, removeFromCart, updateQuantity, getTotalPrice, clearCart } =
-    useCart();
   const t = useTranslations('pages');
-
-  const [discountRate] = useState(0.1); // 10% discount
+  const {
+    cart,
+    removeFromCart,
+    updateQuantity,
+    getTotalFinalPrice,
+    getTotalPrice,
+    clearCart,
+    getStripeLineItems,
+  } = useCart();
 
   const subtotal = getTotalPrice();
-  const discount = subtotal * discountRate;
-  const shipping = subtotal > 50 ? 0 : 20;
-  const total = subtotal - discount + shipping;
+  const finalPrice = getTotalFinalPrice();
+  const discount = subtotal - finalPrice;
+  const total = subtotal - discount;
 
   const estimatedDate = new Date();
   estimatedDate.setDate(estimatedDate.getDate() + 5);
 
-  const handleIncrement = (variationId: number) => {
-    const item = cart.find(i => i.variationId === variationId);
+  const handleIncrement = (product_variation_id: number) => {
+    const item = cart.find(
+      i => i.product_variation_id === product_variation_id
+    );
     if (item) {
-      updateQuantity(variationId, item.quantity + 1);
+      updateQuantity(product_variation_id, item.quantity + 1);
     }
   };
 
   const handleDecrement = (variationId: number) => {
-    const item = cart.find(i => i.variationId === variationId);
+    const item = cart.find(i => i.product_variation_id === variationId);
     if (item && item.quantity > 1) {
       updateQuantity(variationId, item.quantity - 1);
     }
@@ -39,6 +46,31 @@ export default function CartPage() {
 
   const handleRemove = (variationId: number) => {
     removeFromCart(variationId);
+  };
+
+  const handleSubmit = async () => {
+    try {
+      const response = await fetch('/api/checkout_sessions', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(getStripeLineItems()),
+      });
+
+      const { url, error } = await response.json();
+
+      if (error) {
+        alert(error);
+        return;
+      }
+
+      if (url) {
+        window.location.href = url;
+      }
+    } catch {
+      toast.error(t('cart.error'));
+    }
   };
 
   if (cart.length === 0) {
@@ -56,11 +88,11 @@ export default function CartPage() {
         <div className="lg:col-span-2 [&>*:not(:last-child)]:border-b [&>*:not(:last-child)]:border-b-neutral-200">
           {cart.map(item => (
             <CartItem
-              key={item.variationId}
+              key={item.product_variation_id}
               item={item}
-              onIncrement={() => handleIncrement(item.variationId)}
-              onDecrement={() => handleDecrement(item.variationId)}
-              onRemove={() => handleRemove(item.variationId)}
+              onIncrement={handleIncrement}
+              onDecrement={handleDecrement}
+              onRemove={handleRemove}
             />
           ))}
         </div>
@@ -78,19 +110,8 @@ export default function CartPage() {
             </div>
 
             <div className="flex justify-between text-green-600">
-              <span>{t('cart.discount')} (10%)</span>
+              <span>{t('cart.discount')}</span>
               <span>-€{discount.toFixed(2)}</span>
-            </div>
-
-            <div className="flex justify-between">
-              <span>{t('cart.shipping')}</span>
-              <span>
-                {shipping === 0 ? (
-                  <span className="text-green-600">Free</span>
-                ) : (
-                  `€${shipping.toFixed(2)}`
-                )}
-              </span>
             </div>
 
             <div className="h-px w-full bg-neutral-200" />
@@ -108,11 +129,7 @@ export default function CartPage() {
             <Button
               className="bg-primary w-full cursor-pointer"
               size={'lg'}
-              onClick={() => {
-                // TODO: Navigate to checkout
-                alert('cart.Proceeding to checkout...');
-                // router.push('/checkout');
-              }}
+              onClick={handleSubmit}
             >
               {t('cart.checkout')}
             </Button>

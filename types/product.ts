@@ -36,8 +36,8 @@ export interface Variation {
   sku: string;
   price: number;
   formatted_price: string;
-  final_amount: number;
-  final_formatted_amount: string;
+  final_amount: number | null;
+  final_formatted_amount: string | null;
   stock: number;
   thumbnail: string;
   images: Array<string>;
