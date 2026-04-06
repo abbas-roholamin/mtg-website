@@ -331,5 +331,8 @@
     },
     "error": "Somthing went wrong",
     "validation_field": "Validation field"
+  },
+  "customization": {
+    "title": "My Custom Char"
   }
 }

@@ -331,5 +331,8 @@
     },
     "error": "Etwas ist schiefgelaufen",
     "validation_field": "Validierungsfeld"
+  },
+  "customization": {
+    "title": "Ο Προσαρμοσμένος Χαρακτήρας Μου"
   }
 }

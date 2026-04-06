@@ -332,5 +332,8 @@
     },
     "error": "Κάτι πήγε στραβά",
     "validation_field": "Πεδίο επικύρωσης"
+  },
+  "customization": {
+    "title": "Mein Individueller Charakter"
   }
 }
