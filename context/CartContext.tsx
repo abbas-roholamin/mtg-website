@@ -2,7 +2,7 @@
 
 import { createContext, useContext, useState, ReactNode } from 'react';
 import { CartItem } from '@/types/cart';
-import { StripeLineItem } from '@/schemas/checkout-schema';
+import { Item } from '@/types/checkout';
 
 type CartContextType = {
   cart: CartItem[];
@@ -13,7 +13,7 @@ type CartContextType = {
   getTotalFinalPrice: () => number;
   getTotalPrice: () => number;
   getTotalItems: () => number;
-  getStripeLineItems: () => StripeLineItem[];
+  getStripeLineItems: () => Item[];
 };
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
@@ -70,7 +70,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
   const getTotalItems = () =>
     cart.reduce((sum, item) => sum + item.quantity, 0);
 
-  const getStripeLineItems = (): StripeLineItem[] => {
+  const getStripeLineItems = (): Item[] => {
     return cart.map(item => ({
       price_data: {
         product_data: {
@@ -78,7 +78,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
           images: item.thumbnail ? [item.thumbnail] : [],
         },
         currency: 'eur',
-        unit_amount: (item.final_price ? item.final_price : item.price) * 100,
+        unit_amount: item.final_price ? item.final_price : item.price,
       },
       metadata: {
         product_id: item.product_id,

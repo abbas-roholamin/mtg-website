@@ -330,6 +330,7 @@
       "minimum": "Der Mindestwert ist ungültig"
     },
     "error": "Etwas ist schiefgelaufen",
+    "field": "Πεδίο ολοκλήρωσης αγοράς",
     "validation_field": "Validierungsfeld"
   }
 }

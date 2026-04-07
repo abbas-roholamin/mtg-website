@@ -7,9 +7,11 @@ import Wrapper from '@/components/common/Wrapper';
 import { Button } from '@/components/ui/button';
 import { useCart } from '@/context/CartContext';
 import Section from '@/components/common/Section';
+import { useCheckoutMutation } from '@/hooks/use-checkout-mutation';
 
 export default function CartPage() {
   const t = useTranslations('pages');
+  const c = useTranslations('checkout');
   const {
     cart,
     removeFromCart,
@@ -19,6 +21,7 @@ export default function CartPage() {
     clearCart,
     getStripeLineItems,
   } = useCart();
+  const { mutate, isPending } = useCheckoutMutation();
 
   const subtotal = getTotalPrice();
   const finalPrice = getTotalFinalPrice();
@@ -48,29 +51,23 @@ export default function CartPage() {
     removeFromCart(variationId);
   };
 
-  const handleSubmit = async () => {
-    try {
-      const response = await fetch('/api/checkout_sessions', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
+  const handleSubmit = () => {
+    mutate(
+      {
+        items: getStripeLineItems(),
+        subtotal_amount: subtotal,
+        discount_amount: discount,
+        total_amount: total,
+      },
+      {
+        onSuccess: ({ data }) => {
+          window.location.href = data.checkout_url;
         },
-        body: JSON.stringify(getStripeLineItems()),
-      });
-
-      const { url, error } = await response.json();
-
-      if (error) {
-        alert(error);
-        return;
+        onError: () => {
+          toast.error(c('error'));
+        },
       }
-
-      if (url) {
-        window.location.href = url;
-      }
-    } catch {
-      toast.error(t('cart.error'));
-    }
+    );
   };
 
   if (cart.length === 0) {
@@ -130,6 +127,7 @@ export default function CartPage() {
               className="bg-primary w-full cursor-pointer"
               size={'lg'}
               onClick={handleSubmit}
+              disabled={isPending}
             >
               {t('cart.checkout')}
             </Button>

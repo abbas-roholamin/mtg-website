@@ -9,6 +9,7 @@ import { Button } from '@/components/ui/button';
 import { useCart } from '@/context/CartContext';
 import { Badge } from '@/components/ui/badge';
 import { cn } from '@/lib/utils';
+import { useCheckoutMutation } from '@/hooks/use-checkout-mutation';
 
 interface ProductDetailProps {
   product: ProductDetailType;
@@ -19,7 +20,9 @@ export default function ProductDetail({ product }: ProductDetailProps) {
   const [selectedVariation, setSelectedVariation] = useState(defaultVariation);
   const [quantity, setQuantity] = useState<number>(1);
   const t = useTranslations('pages');
+  const c = useTranslations('checkout');
   const { addToCart } = useCart();
+  const { mutate, isPending } = useCheckoutMutation();
 
   const handleVariationChange = (variation: Variation) => {
     setSelectedVariation(variation);
@@ -63,13 +66,19 @@ export default function ProductDetail({ product }: ProductDetailProps) {
   };
 
   const handleBuyNow = async () => {
-    try {
-      const response = await fetch('/api/checkout_sessions', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify([
+    const unit_amount = selectedVariation.final_amount
+      ? selectedVariation.final_amount
+      : selectedVariation.price;
+
+    const subtotal_amount = selectedVariation.price * quantity;
+    const discount_amount = selectedVariation.final_amount
+      ? selectedVariation.price * quantity -
+        selectedVariation.final_amount * quantity
+      : 0;
+
+    mutate(
+      {
+        items: [
           {
             price_data: {
               product_data: {
@@ -77,10 +86,7 @@ export default function ProductDetail({ product }: ProductDetailProps) {
                 images: [selectedVariation.thumbnail],
               },
               currency: 'eur',
-              unit_amount:
-                (selectedVariation.final_amount
-                  ? selectedVariation.final_amount
-                  : selectedVariation.price) * 100,
+              unit_amount,
             },
             metadata: {
               product_id: product.id,
@@ -88,22 +94,20 @@ export default function ProductDetail({ product }: ProductDetailProps) {
             },
             quantity,
           },
-        ]),
-      });
-
-      const { url, error } = await response.json();
-
-      if (error) {
-        toast.error(t('cart.error'));
-        return;
+        ],
+        subtotal_amount,
+        discount_amount,
+        total_amount: subtotal_amount - discount_amount,
+      },
+      {
+        onSuccess: ({ data }) => {
+          window.location.href = data.checkout_url;
+        },
+        onError: () => {
+          toast.error(c('error'));
+        },
       }
-
-      if (url) {
-        window.location.href = url;
-      }
-    } catch {
-      toast.error(t('cart.error'));
-    }
+    );
   };
 
   return (
@@ -239,7 +243,7 @@ export default function ProductDetail({ product }: ProductDetailProps) {
         <div className="flex flex-col gap-4 sm:flex-row">
           <Button
             onClick={handleBuyNow}
-            disabled={selectedVariation.stock === 0}
+            disabled={selectedVariation.stock === 0 || isPending}
             className="grow rounded-lg py-6 text-base font-semibold hover:cursor-pointer"
           >
             {t('product.details.product.cta.buy_now')}
@@ -247,7 +251,7 @@ export default function ProductDetail({ product }: ProductDetailProps) {
 
           <Button
             onClick={handleAddToCart}
-            disabled={selectedVariation.stock === 0}
+            disabled={selectedVariation.stock === 0 || isPending}
             variant="outline"
             className="grow rounded-lg py-6 text-base font-semibold hover:cursor-pointer"
           >
