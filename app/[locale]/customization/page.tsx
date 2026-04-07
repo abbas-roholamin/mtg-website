@@ -1,42 +1,15 @@
 import { getTranslations } from 'next-intl/server';
-import Image from 'next/image';
 import Section from '@/components/common/Section';
 import Wrapper from '@/components/common/Wrapper';
 import ProductList from '@/components/custom/ProductList';
+import CustomHero from '@/components/custom/Hero';
 
 export default async function page() {
   const t = await getTranslations('pages.custom');
   return (
     <Section>
       <Wrapper className="grid gap-16 sm:gap-20 lg:gap-24">
-        <div className="mx-auto grid w-[320px] grid-cols-[2fr_3fr_2fr] content-center items-center gap-4 sm:w-[500px] md:w-[650px] lg:w-[800px]">
-          <div className="relative aspect-square w-full rotate-3 overflow-hidden">
-            <Image
-              src="/images/g1.png"
-              alt="custom character"
-              fill
-              className="object-cover"
-            />
-          </div>
-
-          <div className="relative aspect-square w-full rotate-3 overflow-hidden">
-            <Image
-              src="/images/g1.png"
-              alt="custom character"
-              fill
-              className="object-cover"
-            />
-          </div>
-
-          <div className="relative aspect-square w-full rotate-3 overflow-hidden">
-            <Image
-              src="/images/g1.png"
-              alt="custom character"
-              fill
-              className="object-cover"
-            />
-          </div>
-        </div>
+        <CustomHero />
 
         <div className="grid gap-6 sm:gap-8">
           <div className="grid space-y-1">

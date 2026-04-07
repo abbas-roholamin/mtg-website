@@ -333,5 +333,8 @@
     "error": "Κάτι πήγε στραβά",
     "field": "Kassenfeld",
     "validation_field": "Πεδίο επικύρωσης"
+  },
+  "customization": {
+    "title": "Mein Individueller Charakter"
   }
 }
