@@ -98,6 +98,8 @@ export default function ProductDetail({ product }: ProductDetailProps) {
         subtotal_amount,
         discount_amount,
         total_amount: subtotal_amount - discount_amount,
+        customization_price: 0,
+        notes: '',
       },
       {
         onSuccess: ({ data }) => {

@@ -2,8 +2,8 @@
 
 import { useQuery } from '@tanstack/react-query';
 import { useLocale } from 'next-intl';
-import Card from '../product/Card';
 import ProductListSkeleton from '../product/skeleton/ProductListSkeleton';
+import Card from './Card';
 import { Locale } from '@/types/locale';
 import { fetchEditableProducts } from '@/queries/product';
 import { PRODUCTS_QUERY_KEY } from '@/constants/query-keys';

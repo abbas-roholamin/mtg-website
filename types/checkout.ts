@@ -3,6 +3,9 @@ export interface Checkout {
   subtotal_amount: number;
   discount_amount: number;
   total_amount: number;
+  customization_price: number;
+  images?: File[];
+  notes: string;
 }
 
 export interface Item {

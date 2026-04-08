@@ -40,103 +40,96 @@ export default function Product({ slug }: ProductProps) {
 
   return (
     <Section>
-      <Wrapper>
-        <ProductDetail product={product} />
-        <Tabs
-          defaultValue="description"
-          className="mt-12 w-full md:mt-24 lg:mt-32"
-        >
-          <TabsList className="border-border flex w-full snap-start flex-row overflow-x-auto overflow-y-hidden rounded-none border-b bg-transparent p-0">
-            <TabsTrigger
-              value="description"
-              className="shrink-0 grow rounded-none border-transparent px-4 hover:cursor-pointer data-[state=active]:bg-transparent"
-            >
-              <span className="text-sm font-medium sm:text-base">
-                {t('product.details.tabs.description')}
-              </span>
-            </TabsTrigger>
-            <TabsTrigger
-              value="instructions"
-              className="shrink-0 grow rounded-none border-transparent px-4 hover:cursor-pointer data-[state=active]:bg-transparent"
-            >
-              <span className="text-sm font-medium sm:text-base">
-                {t('product.details.tabs.instructions')}
-              </span>
-            </TabsTrigger>
-            <TabsTrigger
-              value="reviews"
-              className="shrink-0 grow rounded-none border-transparent px-4 hover:cursor-pointer data-[state=active]:bg-transparent"
-            >
-              <span className="text-sm font-medium sm:text-base">
-                {t('product.details.tabs.reviews')} ({product.reviews.length})
-              </span>
-            </TabsTrigger>
-            <TabsTrigger
-              value="scope"
-              className="shrink-0 grow rounded-none border-transparent px-4 hover:cursor-pointer data-[state=active]:bg-transparent"
-            >
-              <span className="text-sm font-medium sm:text-base">
-                {t('product.details.tabs.scope')}
-              </span>
-            </TabsTrigger>
-          </TabsList>
+      <ProductDetail product={product} />
+      <Tabs
+        defaultValue="description"
+        className="mt-12 w-full md:mt-24 lg:mt-32"
+      >
+        <TabsList className="border-border flex w-full snap-start flex-row overflow-x-auto overflow-y-hidden rounded-none border-b bg-transparent p-0">
+          <TabsTrigger
+            value="description"
+            className="shrink-0 grow rounded-none border-transparent px-4 hover:cursor-pointer data-[state=active]:bg-transparent"
+          >
+            <span className="text-sm font-medium sm:text-base">
+              {t('product.details.tabs.description')}
+            </span>
+          </TabsTrigger>
+          <TabsTrigger
+            value="instructions"
+            className="shrink-0 grow rounded-none border-transparent px-4 hover:cursor-pointer data-[state=active]:bg-transparent"
+          >
+            <span className="text-sm font-medium sm:text-base">
+              {t('product.details.tabs.instructions')}
+            </span>
+          </TabsTrigger>
+          <TabsTrigger
+            value="reviews"
+            className="shrink-0 grow rounded-none border-transparent px-4 hover:cursor-pointer data-[state=active]:bg-transparent"
+          >
+            <span className="text-sm font-medium sm:text-base">
+              {t('product.details.tabs.reviews')} ({product.reviews.length})
+            </span>
+          </TabsTrigger>
+          <TabsTrigger
+            value="scope"
+            className="shrink-0 grow rounded-none border-transparent px-4 hover:cursor-pointer data-[state=active]:bg-transparent"
+          >
+            <span className="text-sm font-medium sm:text-base">
+              {t('product.details.tabs.scope')}
+            </span>
+          </TabsTrigger>
+        </TabsList>
 
-          <TabsContent value="description" className="space-y-6 py-8">
-            <div
-              dangerouslySetInnerHTML={{ __html: product.description }}
-              className="prose !max-w-full"
-            ></div>
-          </TabsContent>
+        <TabsContent value="description" className="space-y-6 py-8">
+          <div
+            dangerouslySetInnerHTML={{ __html: product.description }}
+            className="prose !max-w-full"
+          ></div>
+        </TabsContent>
 
-          <TabsContent value="instructions" className="space-y-6 py-8">
-            <div
-              dangerouslySetInnerHTML={{ __html: product.instructions }}
-              className="prose !max-w-full"
-            ></div>
-          </TabsContent>
+        <TabsContent value="instructions" className="space-y-6 py-8">
+          <div
+            dangerouslySetInnerHTML={{ __html: product.instructions }}
+            className="prose !max-w-full"
+          ></div>
+        </TabsContent>
 
-          <TabsContent value="reviews" className="py-8">
-            <ul className="divide-y">
-              {product.reviews.map(review => (
-                <li
-                  key={review.comment}
-                  className="flex items-start gap-4 py-4"
-                >
-                  <Image
-                    src="/images/avatar.png"
-                    alt="avatar"
-                    width={48}
-                    height={48}
-                    className="size-12"
-                  />
-                  <div>
-                    <div className="mb-4">
-                      <p className="mb-1 text-lg font-semibold">
-                        {review.name}
-                      </p>
-                      <time className="text-sm text-neutral-500">
-                        {review.created_at}
-                      </time>
-                    </div>
-                    <div>{review.comment}</div>
+        <TabsContent value="reviews" className="py-8">
+          <ul className="divide-y">
+            {product.reviews.map(review => (
+              <li key={review.comment} className="flex items-start gap-4 py-4">
+                <Image
+                  src="/images/avatar.png"
+                  alt="avatar"
+                  width={48}
+                  height={48}
+                  className="size-12"
+                />
+                <div>
+                  <div className="mb-4">
+                    <p className="mb-1 text-lg font-semibold">{review.name}</p>
+                    <time className="text-sm text-neutral-500">
+                      {review.created_at}
+                    </time>
                   </div>
-                </li>
-              ))}
-            </ul>
-          </TabsContent>
+                  <div>{review.comment}</div>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </TabsContent>
 
-          <TabsContent value="scope" className="py-8">
-            <div className="prose prose-sm max-w-none space-y-4">
-              <ul className="text-foreground list-inside list-disc space-y-2">
-                <li>1 Canvas bag with 28 dominoes</li>
-                <li>14 Black stones</li>
-                <li>14 Light stones</li>
-                <li>Instruction manual</li>
-              </ul>
-            </div>
-          </TabsContent>
-        </Tabs>
-      </Wrapper>
+        <TabsContent value="scope" className="py-8">
+          <div className="prose prose-sm max-w-none space-y-4">
+            <ul className="text-foreground list-inside list-disc space-y-2">
+              <li>1 Canvas bag with 28 dominoes</li>
+              <li>14 Black stones</li>
+              <li>14 Light stones</li>
+              <li>Instruction manual</li>
+            </ul>
+          </div>
+        </TabsContent>
+      </Tabs>
     </Section>
   );
 }

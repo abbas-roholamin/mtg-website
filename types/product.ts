@@ -36,6 +36,8 @@ export interface Variation {
   sku: string;
   price: number;
   formatted_price: string;
+  customization_price: number;
+  formatted_customization_price: string;
   final_amount: number | null;
   final_formatted_amount: string | null;
   stock: number;
