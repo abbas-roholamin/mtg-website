@@ -10,12 +10,11 @@ interface CardProps {
 export default function Card({ product }: CardProps) {
   return (
     <article>
-      <div className="mb-3 aspect-auto overflow-hidden rounded-2xl bg-neutral-100">
+      <div className="relative mb-3 aspect-square overflow-hidden rounded-2xl bg-neutral-100">
         <Image
           src={product.thumbnail}
           alt={product.name}
-          width={1000}
-          height={1000}
+          fill
           className="object-cover"
         />
       </div>
