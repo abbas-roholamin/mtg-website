@@ -10,7 +10,11 @@ import { useCart } from '@/context/CartContext';
 import { Badge } from '@/components/ui/badge';
 import { cn } from '@/lib/utils';
 import { useCheckoutMutation } from '@/hooks/use-checkout-mutation';
-
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from '@/components/ui/tooltip';
 interface ProductDetailProps {
   product: ProductDetailType;
 }
@@ -204,12 +208,19 @@ export default function ProductDetail({ product }: ProductDetailProps) {
               <label className="text-foreground mb-3 block text-sm font-bold">
                 {t('product.details.product.attributes')}
               </label>
-              <ul className="text-sm leading-6">
+              <ul className="flex flex-wrap gap-3 text-sm leading-6">
                 {Object.entries(product.attributes)
                   .filter(([, value]) => value)
                   .map(([key, value]) => (
-                    <li key={key}>
-                      <Badge variant="secondary">{value}</Badge>
+                    <li key={key} className="relative">
+                      <Tooltip>
+                        <TooltipTrigger>
+                          <Badge variant="secondary">{value}</Badge>
+                        </TooltipTrigger>
+                        <TooltipContent className="capitalize">
+                          {key}
+                        </TooltipContent>
+                      </Tooltip>
                     </li>
                   ))}
               </ul>

@@ -21,6 +21,7 @@ import { SettingProvider } from '@/providers/SettingProvider';
 import { routing } from '@/i18n/routing';
 import { fetchFaqs } from '@/queries/faq';
 import { CartProvider } from '@/context/CartContext';
+import { TooltipProvider } from '@/components/ui/tooltip';
 
 const poppins = Poppins({
   variable: '--font-poppins',
@@ -75,10 +76,12 @@ export default async function RootLayout({
               <NuqsAdapter>
                 <SettingProvider>
                   <CartProvider>
-                    <Banner />
-                    <Header />
-                    <main className="flex-1">{children}</main>
-                    <Footer />
+                    <TooltipProvider>
+                      <Banner />
+                      <Header />
+                      <main className="flex-1">{children}</main>
+                      <Footer />
+                    </TooltipProvider>
                   </CartProvider>
                 </SettingProvider>
                 <Toaster />
