@@ -28,15 +28,6 @@ const items = [
   '/images/falling/18.jpg',
   '/images/falling/19.jpg',
   '/images/falling/20.jpg',
-  '/images/falling/21.jpg',
-  '/images/falling/22.jpg',
-  '/images/falling/23.jpg',
-  '/images/falling/24.jpg',
-  '/images/falling/25.jpg',
-  '/images/falling/26.jpg',
-  '/images/falling/27.jpg',
-  '/images/falling/28.jpg',
-  '/images/falling/29.jpg',
 ];
 
 interface CircleWithImage extends Matter.Body {
