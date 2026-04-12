@@ -1,6 +1,10 @@
 import { API } from '@/constants/api';
 import { Locale } from '@/types/locale';
-import { ProductListResponse, ProductResponse } from '@/types/product';
+import {
+  CustomizationProductResponse,
+  ProductListResponse,
+  ProductResponse,
+} from '@/types/product';
 
 export async function fetchProducts(
   query: string
@@ -23,7 +27,7 @@ export async function fetchSimilarProducts(
   slug: string,
   locale: Locale
 ): Promise<ProductListResponse> {
-  const res = await fetch(`${API.PRODUCTS}/${slug}/similar?${locale}`);
+  const res = await fetch(`${API.PRODUCTS}/${slug}/similar?locale=${locale}`);
   if (!res.ok) throw new Error('...');
   return res.json();
 }
@@ -31,15 +35,24 @@ export async function fetchSimilarProducts(
 export async function fetchFeaturedProducts(
   locale: Locale
 ): Promise<ProductListResponse> {
-  const res = await fetch(`${API.PRODUCTS}/featured?${locale}`);
+  const res = await fetch(`${API.PRODUCTS}/featured?locale=${locale}`);
   if (!res.ok) throw new Error('...');
   return res.json();
 }
 
-export async function fetchEditableProducts(
+export async function fetchCustomizationProducts(
   locale: Locale
 ): Promise<ProductListResponse> {
-  const res = await fetch(`${API.PRODUCTS}/editable?${locale}`);
+  const res = await fetch(`${API.CUSTOMIZATION}?locale=${locale}`);
+  if (!res.ok) throw new Error('...');
+  return res.json();
+}
+
+export async function fetchCustomizationProduct(
+  slug: string,
+  locale: Locale
+): Promise<CustomizationProductResponse> {
+  const res = await fetch(`${API.CUSTOMIZATION}/${slug}?locale=${locale}`);
   if (!res.ok) throw new Error('...');
   return res.json();
 }

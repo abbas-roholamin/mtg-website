@@ -5,8 +5,11 @@ import { useLocale } from 'next-intl';
 import ProductListSkeleton from '../product/skeleton/ProductListSkeleton';
 import Card from './Card';
 import { Locale } from '@/types/locale';
-import { fetchEditableProducts } from '@/queries/product';
-import { PRODUCTS_QUERY_KEY } from '@/constants/query-keys';
+import { fetchCustomizationProducts } from '@/queries/product';
+import {
+  CUSTOMIZATION_QUERY_KEY,
+  PRODUCTS_QUERY_KEY,
+} from '@/constants/query-keys';
 
 const STALE_TIME = 1000 * 60 * 60; // 1 HOUR
 const GC_TIEM = 1000 * 60 * 60 * 2; // 2 HOUR
@@ -15,8 +18,8 @@ export default function ProductList() {
   const locale = useLocale();
 
   const { data, isPending } = useQuery({
-    queryKey: [PRODUCTS_QUERY_KEY, 'editable', locale],
-    queryFn: () => fetchEditableProducts(locale as Locale),
+    queryKey: [PRODUCTS_QUERY_KEY, CUSTOMIZATION_QUERY_KEY, locale],
+    queryFn: () => fetchCustomizationProducts(locale as Locale),
     staleTime: STALE_TIME,
     gcTime: GC_TIEM,
   });

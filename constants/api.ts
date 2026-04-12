@@ -11,4 +11,5 @@ export const API = {
   VIDEO: `${process.env.NEXT_PUBLIC_API_BASE_URL}/video`,
   COUPON: `${process.env.NEXT_PUBLIC_API_BASE_URL}/coupon`,
   CHECKOUT: `${process.env.NEXT_PUBLIC_API_BASE_URL}/checkout`,
+  CUSTOMIZATION: `${process.env.NEXT_PUBLIC_API_BASE_URL}/customization`,
 } as const;

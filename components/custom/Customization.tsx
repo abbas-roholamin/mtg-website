@@ -9,9 +9,12 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '../ui/tabs';
 import Wrapper from '../common/Wrapper';
 import CustomizationForm from './CustomizationForm';
 import CustomizationSkeleton from './CustomizationSkeleton';
-import { fetchProduct } from '@/queries/product';
+import { fetchCustomizationProduct } from '@/queries/product';
 import { Locale } from '@/types/locale';
-import { PRODUCTS_QUERY_KEY } from '@/constants/query-keys';
+import {
+  CUSTOMIZATION_QUERY_KEY,
+  PRODUCTS_QUERY_KEY,
+} from '@/constants/query-keys';
 
 interface CustomizationProps {
   slug: string;
@@ -24,8 +27,8 @@ export default function Customization({ slug }: CustomizationProps) {
   const locale = useLocale();
   const t = useTranslations('pages');
   const { data, isPending } = useQuery({
-    queryKey: [PRODUCTS_QUERY_KEY, slug, locale],
-    queryFn: () => fetchProduct(slug, locale as Locale),
+    queryKey: [PRODUCTS_QUERY_KEY, CUSTOMIZATION_QUERY_KEY, slug, locale],
+    queryFn: () => fetchCustomizationProduct(slug, locale as Locale),
     staleTime: STALE_TIME,
     gcTime: GC_TIEM,
   });
@@ -84,14 +87,14 @@ export default function Customization({ slug }: CustomizationProps) {
           <TabsContent value="description" className="space-y-6 py-8">
             <div
               dangerouslySetInnerHTML={{ __html: product.description }}
-              className="prose !max-w-full"
+              className="prose max-w-full"
             ></div>
           </TabsContent>
 
           <TabsContent value="instructions" className="space-y-6 py-8">
             <div
               dangerouslySetInnerHTML={{ __html: product.instructions }}
-              className="prose !max-w-full"
+              className="prose max-w-full"
             ></div>
           </TabsContent>
 

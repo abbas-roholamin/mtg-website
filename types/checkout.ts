@@ -3,9 +3,8 @@ export interface Checkout {
   subtotal_amount: number;
   discount_amount: number;
   total_amount: number;
-  customization_price: number;
   images?: File[];
-  notes: string;
+  notes?: string;
 }
 
 export interface Item {
@@ -20,6 +19,8 @@ export interface Item {
   metadata: {
     product_id: number;
     product_variation_id: number;
+    customization_id?: number;
+    design?: string;
   };
   quantity: number;
 }

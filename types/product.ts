@@ -16,7 +16,7 @@ export interface Product {
   locale: Locale;
 }
 
-export interface ProductDetail {
+export interface ProductDetail<T> {
   id: number;
   slug: string;
   name: string;
@@ -26,7 +26,7 @@ export interface ProductDetail {
   thumbnail: string;
   meta_title: string;
   meta_description: string;
-  variations: Array<Variation>;
+  variations: Array<T>;
   reviews: Array<Review>;
   coupon: Coupon | null;
 }
@@ -36,8 +36,6 @@ export interface Variation {
   sku: string;
   price: number;
   formatted_price: string;
-  customization_price: number;
-  formatted_customization_price: string;
   final_amount: number | null;
   final_formatted_amount: string | null;
   stock: number;
@@ -45,6 +43,18 @@ export interface Variation {
   images: Array<string>;
   is_default: boolean;
   attributes: Array<Attribute>;
+}
+
+export interface VariationWithCustomization extends Variation {
+  customizations: Array<Customization>;
+}
+
+export interface Customization {
+  id: number;
+  character_number: number;
+  price: number;
+  formatted_price: string;
+  description: string | null;
 }
 
 export interface Attribute extends Value {
@@ -58,4 +68,7 @@ export interface Value {
 }
 
 export type ProductListResponse = ApiResponse<Product[]>;
-export type ProductResponse = ApiResponse<ProductDetail>;
+export type ProductResponse = ApiResponse<ProductDetail<Variation>>;
+export type CustomizationProductResponse = ApiResponse<
+  ProductDetail<VariationWithCustomization>
+>;

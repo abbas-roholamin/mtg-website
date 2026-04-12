@@ -189,10 +189,9 @@
       },
       "form": {
         "select": "Select",
-        "bag_color": "Bag Color",
         "design": "Design",
         "count": "Count",
-        "character_style": "Character Style",
+        "character_number": "Character Number",
         "description": "Description",
         "write_description": "Write your description here...",
         "images": "Images",
