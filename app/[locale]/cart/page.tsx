@@ -58,8 +58,6 @@ export default function CartPage() {
         subtotal_amount: subtotal,
         discount_amount: discount,
         total_amount: total,
-        customization_price: 0,
-        notes: '',
       },
       {
         onSuccess: ({ data }) => {
