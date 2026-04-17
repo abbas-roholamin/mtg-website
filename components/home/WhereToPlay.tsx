@@ -22,8 +22,12 @@ const places = [
     image: '/images/whereToPlay/airport.jpg',
   },
   {
-    name: 'cafe',
-    image: '/images/whereToPlay/cafe.jpg',
+    name: 'picnic',
+    image: '/images/whereToPlay/picnic.jpg',
+  },
+  {
+    name: 'airplane',
+    image: '/images/whereToPlay/airplane.jpg',
   },
 ];
 

@@ -22,6 +22,7 @@ import { routing } from '@/i18n/routing';
 import { fetchFaqs } from '@/queries/faq';
 import { CartProvider } from '@/context/CartContext';
 import { TooltipProvider } from '@/components/ui/tooltip';
+import WhatsAppButton from '@/components/common/WhatsAppButton';
 
 const poppins = Poppins({
   variable: '--font-poppins',
@@ -79,7 +80,10 @@ export default async function RootLayout({
                     <TooltipProvider>
                       <Banner />
                       <Header />
-                      <main className="flex-1">{children}</main>
+                      <main className="flex-1">
+                        {children}
+                        <WhatsAppButton />
+                      </main>
                       <Footer />
                     </TooltipProvider>
                   </CartProvider>

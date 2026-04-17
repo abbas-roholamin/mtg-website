@@ -9,11 +9,15 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'my-travel-game-main-yj1gwr.laravel.cloud',
+        hostname: 'dashboard.mytravelgames.com',
       },
       {
         protocol: 'http',
         hostname: '127.0.0.1',
+      },
+      {
+        protocol: 'http',
+        hostname: 'localhost',
       },
     ],
   },

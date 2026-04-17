@@ -30,7 +30,7 @@ const PlayAnywhere = () => {
     >
       <div className="sticky top-0 flex h-screen w-full items-center justify-center overflow-hidden">
         <motion.h1
-          className="text-primary font-poppins pointer-events-none z-0 text-center text-4xl font-bold select-none sm:text-6xl lg:text-7xl"
+          className="text-primary font-poppins pointer-events-none z-0 text-center text-2xl font-bold select-none sm:text-3xl lg:text-4xl"
           style={{ scale: textScale }}
         >
           <span>{t('play_anywhere')}</span>

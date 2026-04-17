@@ -36,9 +36,10 @@ export default function WhoWeAre() {
               <h1 className="font-poppins text-primary text-4xl font-bold sm:text-5xl lg:text-6xl xl:text-[80px]">
                 {t('title')}
               </h1>
-              <p className="text-base leading-relaxed text-neutral-600 sm:text-lg">
-                {t('description')}
-              </p>
+              <div
+                className="text-balance text-neutral-500"
+                dangerouslySetInnerHTML={{ __html: t('description') }}
+              />
             </div>
 
             <div>

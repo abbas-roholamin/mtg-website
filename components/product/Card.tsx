@@ -10,17 +10,17 @@ interface CardProps {
 export default function Card({ product }: CardProps) {
   return (
     <article>
-      <div className="relative mb-3 aspect-square overflow-hidden rounded-2xl bg-neutral-100">
-        <Image
-          src={product.thumbnail}
-          alt={product.name}
-          fill
-          className="object-cover"
-        />
-      </div>
-
       <Link href={`/shop/${product.slug}`}>
-        <h2 className="mb-1 text-center text-base text-neutral-950 md:text-lg">
+        <div className="relative mb-3 aspect-square overflow-hidden rounded-2xl bg-neutral-100">
+          <Image
+            src={product.thumbnail}
+            alt={product.name}
+            fill
+            className="object-cover"
+          />
+        </div>
+
+        <h2 className="mb-1 text-center text-base font-bold text-neutral-950 md:text-lg">
           {product.name}
         </h2>
       </Link>

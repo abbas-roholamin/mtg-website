@@ -24,7 +24,8 @@
   "pages": {
     "about": {
       "title": "  Your reliable partner for travel-ready classic games",
-      "description": "  We design and curate compact versions of timeless games made for life on the move. Our collections combine portability, durability, and classic design — so you can play anywhere your journey takes you.",
+      "description_short": "Crafted by Hand. Made with Love.<br/> Behind every wooden curve and every delicate hand-painted detail lies a story of love, patience, and imagination.<br/> My Travel Games was born from a desir qe to bring the warmth of artisanal craftsmanship into everyday life—reminding us that the most beautiful things are those created with both hand and heart.<br/> Our collection celebrates the joy of classic play....",
+      "description": "Crafted by Hand. Made with Love.<br/> Behind every wooden curve and every delicate hand-painted detail lies a story of love, patience, and imagination.<br/> My Travel Games was born from a desire to bring the warmth of artisanal craftsmanship into everyday life—reminding us that the most beautiful things are those created with both hand and heart.<br/> Our collection celebrates the joy of classic play.<br/> From meticulously handcrafted wooden airplanes and macramé “Precious Dolls” to portable, travel-ready editions of Backgammon, Ludo, Dominoes, Chess, and Tic-Tac-Toe—each piece is a unique work of art. We do not believe in mass-produced perfection.<br/> Instead, we carefully select the finest natural materials—sustainable wood and soft cotton rope—and shape, weave, and paint every item by hand.<br/> For us, My Travel Games is more than a brand; it is a deep passion for preserving traditional craftsmanship and the timeless joy of playing together.<br/> Our per-piece pricing reflects the individuality, artistry, and soul of each creation.<br/> “At My Travel Games, we create more than objects—we create memories. Our wish is to be your favorite handcrafted companion, traveling with you on every journey and every adventure life brings.”",
       "highlights": {
         "design": {
           "title": "Travel-Ready Design",
@@ -50,7 +51,7 @@
       "title": "Portable classic games for every adventure.",
       "description": "The best sale is a profitable sale that brings health and tranquility to the community.",
       "button": "Explore Games",
-      "play_anywhere": "The Board is the Bag",
+      "play_anywhere": "Portable Play for Every Destination.",
       "anytime": "Anytime",
       "falling": "Our collection from the world of play and joy",
       "scroll_title": "MY Travel Games",
@@ -58,7 +59,7 @@
       "play": "Play",
       "anywhere": "Anywhere",
       "any_time": "Anytime",
-      "latest_product": "Products",
+      "latest_product": "Most Loved Items",
       "latest_blog": "Blog",
       "places": {
         "features": "Game features",
@@ -77,10 +78,15 @@
           "description": "The Airport Lounge Collection, Flight delayed? Long layover? Put the phones away and make memories instead. Our travel games are the ultimate airport companions — small enough to play on a tray table and light enough to slip into your carry-on without a second thought. From the departure gate to 30,000 feet, keep the excitement alive with games that go wherever you do. Waiting for a flight has never been more enjoyable — play with friends, family, or fellow travelers and make your journey start even before takeoff.",
           "keywords": "Easy to carry, Travel-friendly, Quick rounds,Lightweight,Pass time"
         },
-        "cafe": {
-          "title": "Cafe",
-          "description": "The Café Collection, Casual Play, Social Connection, and Coffee Break Fun. Turn Coffee Time into Game Time. Relax at a café while enjoying a friendly game. Our travel board games are perfect for playing over coffee with friends or meeting new people. Compact and lightweight, they fit easily on small tables, making your coffee break more engaging and memorable. Whether it’s a quick match between sips or a longer session with friends, our games turn every café visit into a social, fun, and memorable experience.",
-          "keywords": "Casual play, Social & friendly, Small table games,Coffee break fun"
+        "picnic": {
+          "title": "picnic",
+          "description": "The Picnic Collection, Outdoor Play, Fresh Air Fun, and Social Gatherings. Turn Any Picnic into Game Time. Enjoy the outdoors while playing fun and engaging games with friends and family. Our travel board games are designed for easy setup on blankets or grass, making them perfect for parks, beaches, and nature getaways. Lightweight and portable, they’re ideal for relaxed afternoons, group bonding, and creating memorable moments under the sun. Whether it’s a quick round between snacks or a longer session in the shade, our games make every picnic more lively and enjoyable.",
+          "keywords": "Outdoor play, Social & group fun, Picnic games, Portable entertainment"
+        },
+        "airplane": {
+          "title": "Airplane",
+          "description": "The Airplane Collection, Travel Play, In-Flight Fun, and Relaxed Entertainment. Turn Your Flight into Game Time. Make the most of your journey with engaging games designed for travel. Our compact travel board games are perfect for tray tables and small spaces, making them ideal for flights of any duration. Lightweight and easy to carry, they help pass the time, reduce boredom, and create enjoyable moments while in the air. Whether it’s a quick game during a short flight or a longer session on a long-haul trip, our games make every journey more fun and memorable.",
+          "keywords": "Travel play, In-flight entertainment, Compact games, Portable fun"
         }
       }
     },
@@ -209,7 +215,7 @@
   },
   "whoWeAre": {
     "title": "Who We Are?",
-    "description": "We are passionate about reimagining timeless board game classics. Our goal is to unite the world's most beautiful board games in a modern, mobile format – without losing their original charm.",
+    "description": "Crafted by Hand. Made with Love.<br/> Behind every wooden curve and every delicate hand-painted detail lies a story of love, patience, and imagination.<br/> My Travel Games was born from a desir qe to bring the warmth of artisanal craftsmanship into everyday life—reminding us that the most beautiful things are those created with both hand and heart.<br/> Our collection celebrates the joy of classic play....",
     "button": "Read More",
     "services": {
       "title1": "Game Lovers",
@@ -333,6 +339,6 @@
     "validation_field": "Validation field"
   },
   "customization": {
-    "title": "My Custom Char"
+    "title": "My Custom Characters"
   }
 }

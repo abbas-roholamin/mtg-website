@@ -19,10 +19,14 @@ export default async function Page() {
               <h1 className="text-primary font-poppins text-3xl font-bold text-balance md:w-3/6 lg:text-4xl xl:text-5xl">
                 {t('about.title')}
               </h1>
-              <p className="text-balance text-neutral-500 md:w-2/6">
+              {/* <p className="text-balance text-neutral-500 md:w-2/6">
                 {t('about.description')}
-              </p>
+              </p> */}
             </div>
+            <div
+              className="text-balance text-neutral-900"
+              dangerouslySetInnerHTML={{ __html: t('about.description') }}
+            />
             <Highlights />
             <Image
               src="/images/a1d6eb709a9a6269d442e52b00c8229e9f049edc.jpg"

@@ -24,7 +24,7 @@
   "pages": {
     "about": {
       "title": "Ihr zuverlässiger Partner für reisefertige klassische Spiele",
-      "description": "Wir entwerfen und kuratieren kompakte Versionen zeitloser Spiele, die für das Leben unterwegs gemacht sind. Unsere Kollektionen verbinden Mobilität, Langlebigkeit und klassisches Design — damit Sie überall spielen können, wohin Ihre Reise Sie führt.",
+      "description": "Von Hand gefertigt. Mit Liebe gemacht.<br/> Hinter jeder Holzkurve und jedem fein handgemalten Detail verbirgt sich eine Geschichte von Liebe, Geduld und Fantasie.<br/> My Travel Games entstand aus dem Wunsch, die Wärme traditioneller Handwerkskunst in den Alltag zu bringen - und uns daran zu erinnern, dass die schönsten Dinge mit Hand und Herz geschaffen werden.<br/> Unsere Kollektion ist eine Feier des klassischen Spiels.<br/> Von sorgfältig handgefertigten Holzflugzeugen und Makramee \"Precious Dolls\" bis hin zu tragbaren Reiseversionen von Backgammon, Ludo, Domino, Schach und Tic-Tac-Toe - jedes Stück ist ein einzigartiges Kunstwerk. Wir glauben nicht an die Perfektion von Massenproduktion.<br/> Stattdessen wählen wir die besten natürlichen Materialien - nachhaltige Hölzer und weiche Baumwollseile - und formen, knüpfen und bemalen jedes Stück von Hand.<br/> Für uns ist My Travel Games mehr als nur eine Marke; es ist eine echte Leidenschaft für die Bewahrung traditionellen Handwerks und die Freude am gemeinsamen Spielen.<br/> Unser Stückpreis spiegelt die Individualität, Kunstfertigkeit und Seele jedes einzelnen Produkts wider.<br/> \"Bei My Travel Games schaffen wir mehr als nur Produkte - wir schaffen Erinnerungen. Unser Wunsch ist es, Ihr liebster handgefertigter Begleiter zu sein, der Sie auf jeder Reise und jedem Abenteuer begleitet.\"",
       "highlights": {
         "design": {
           "title": "Reisetaugliches Design",
@@ -58,7 +58,7 @@
       "play": "Spielen",
       "anywhere": "Überall",
       "any_time": "Jederzeit",
-      "latest_product": "Produkte",
+      "latest_product": "Beliebteste Artikel",
       "latest_blog": "Blog",
       "places": {
         "features": "Spielfunktionen",
@@ -77,10 +77,15 @@
           "description": "Die Airport Lounge Kollektion — Flug verspätet? Lange Wartezeit? Legen Sie die Telefone weg und schaffen Sie Erinnerungen. Unsere Reise-Brettspiele sind die perfekten Begleiter im Flughafen — klein genug, um auf dem Tablett zu spielen, und leicht genug, um sie ohne weiteres in Ihrem Handgepäck zu verstauen. Von der Abflughalle bis 30.000 Fuß halten die Spiele die Spannung aufrecht. Warten auf einen Flug war noch nie so angenehm — spielen Sie mit Freunden, Familie oder anderen Reisenden und beginnen Sie Ihre Reise schon vor dem Abheben.",
           "keywords": "Leicht zu tragen, Reise-freundlich, Schnelle Runden, Leicht, Zeitvertreib"
         },
-        "cafe": {
-          "title": "Café",
-          "description": "Die Café-Kollektion — Entspanntes Spielen, soziale Verbindung und Kaffeepausen-Spaß. Verwandeln Sie die Kaffeepause in Spielzeit. Entspannen Sie sich im Café bei einem freundlichen Spiel. Unsere Reise-Brettspiele eignen sich perfekt, um bei Kaffee mit Freunden zu spielen oder neue Leute kennenzulernen. Kompakt und leicht, passen sie problemlos auf kleine Tische und machen Ihren Café-Besuch unterhaltsam und unvergesslich. Ob für schnelle Spiele oder längere Sessions, unsere Spiele machen jeden Café-Besuch sozial, unterhaltsam und unvergesslich.",
-          "keywords": "Entspanntes Spiel, Sozial & freundlich, Kleine Tische, Kaffeepausen-Spaß"
+        "picnic": {
+          "title": "Picnic",
+          "description": "Die Picknick-Kollektion, Spielen im Freien, Spaß an der frischen Luft und gesellige Treffen. Verwandeln Sie jedes Picknick in Spielzeit. Genießen Sie die Natur, während Sie unterhaltsame und spannende Spiele mit Freunden und Familie spielen. Unsere Reisespiele sind für eine einfache Nutzung auf Decken oder Gras konzipiert und eignen sich perfekt für Parks, Strände und Ausflüge in die Natur. Leicht und tragbar, sind sie ideal für entspannte Nachmittage, gemeinsames Beisammensein und unvergessliche Momente unter der Sonne. Ob eine kurze Runde zwischen Snacks oder eine längere Spielsession im Schatten – unsere Spiele machen jedes Picknick lebendiger und unterhaltsamer.",
+          "keywords": "Spielen im Freien, Soziale & gemeinsame Unterhaltung, Picknickspiele, Tragbare Unterhaltung"
+        },
+        "airplane": {
+          "title": "Flugzeug",
+          "description": "Die Flugzeug-Kollektion, Spielen auf Reisen, Unterhaltung während des Flugs und entspannte Beschäftigung. Verwandeln Sie Ihren Flug in Spielzeit. Nutzen Sie Ihre Reise optimal mit unterhaltsamen Spielen, die speziell für unterwegs entwickelt wurden. Unsere kompakten Reisespiele sind perfekt für Klapptische und kleine Flächen geeignet und ideal für Flüge jeder Dauer. Leicht und einfach zu transportieren, helfen sie, die Zeit zu vertreiben, Langeweile zu reduzieren und angenehme Momente in der Luft zu schaffen. Ob eine kurze Partie auf einem Kurzflug oder eine längere Spielrunde auf einer Langstrecke – unsere Spiele machen jede Reise unterhaltsamer und unvergesslicher.",
+          "keywords": "Spielen auf Reisen, Unterhaltung im Flug, Kompakte Spiele, Tragbare Unterhaltung"
         }
       }
     },
@@ -210,7 +215,7 @@
   },
   "whoWeAre": {
     "title": "Wer Wir Sind?",
-    "description": "Wir sind leidenschaftlich daran interessiert, zeitlose klassische Brettspiele neu zu gestalten. Unser Ziel ist es, die schönsten Brettspiele der Welt in einem modernen, mobilen Format zu vereinen – ohne ihren ursprünglichen Charme zu verlieren.",
+    "description": "Von Hand gefertigt. Mit Liebe gemacht.<br/> Hinter jeder Holzkurve und jedem fein handgemalten Detail verbirgt sich eine Geschichte von Liebe, Geduld und Fantasie.<br/> My Travel Games wurde aus dem Wunsch geboren, die Wärme traditioneller Handwerkskunst in den Alltag zu bringen - und uns daran zu erinnern, dass die schönsten Dinge mit Hand und Herz geschaffen werden.<br/> Unsere Kollektion feiert die Freude am klassischen Spiel.<br/> ...",
     "button": "Mehr Lesen",
     "services": {
       "title1": "Spielbegeisterte",

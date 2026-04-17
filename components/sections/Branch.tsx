@@ -34,7 +34,7 @@ export default function Branch() {
               <h3 className="text-primary font-poppins mb-1.5 text-4xl font-bold sm:mb-2 md:mb-3 md:text-5xl lg:mb-4 lg:text-6xl">
                 {branch.country}
               </h3>
-              <p className="text-neutral-500 md:text-base lg:text-lg">
+              <p className="text-neutral-900 md:text-base lg:text-lg">
                 {t('branch.location', { country: branch.country })}
               </p>
             </div>
@@ -46,7 +46,7 @@ export default function Branch() {
                     {t('branch.address')}
                   </p>
                 </div>
-                <address className="font-normal text-neutral-700">
+                <address className="font-normal text-neutral-900">
                   {branch.address}
                 </address>
               </div>
@@ -59,7 +59,7 @@ export default function Branch() {
                 </div>
                 <ul>
                   {branch.phones.map(phone => (
-                    <li key={phone} className="font-normal text-neutral-700">
+                    <li key={phone} className="font-normal text-neutral-900">
                       <a
                         href={`tel:${phone}`}
                         rel="noreferrer"

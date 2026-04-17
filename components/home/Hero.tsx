@@ -26,7 +26,7 @@ export default function Hero() {
           </h1>
 
           <div className="flex flex-col items-center justify-between gap-6 sm:gap-8">
-            <div className="max-w-85 text-center text-lg leading-tight font-bold text-neutral-100 sm:max-w-125 sm:text-xl lg:max-w-175 lg:text-2xl xl:text-[28px]">
+            <div className="text-primary max-w-85 text-center text-lg leading-tight font-bold sm:max-w-125 sm:text-xl lg:max-w-175 lg:text-xl xl:text-3xl">
               {t('description')}
             </div>
             <Button
@@ -43,7 +43,7 @@ export default function Hero() {
         <div className="absolute inset-0">
           <video
             ref={videoRef}
-            src="/video.mp4"
+            src="/heroVideo.mp4"
             className="absolute top-0 left-0 h-full w-full object-cover"
             autoPlay
             muted

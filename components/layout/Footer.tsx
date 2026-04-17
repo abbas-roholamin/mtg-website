@@ -21,7 +21,7 @@ export default function Footer() {
               <li key={item.label}>
                 <Link
                   href={item.href}
-                  className="hover:text-primary font-normal text-neutral-950 transition-colors"
+                  className="hover:text-primary font-normal text-[color-mix(in_oklab,lab(14_0.7_-24.75)_90%,transparent)] transition-colors"
                 >
                   {n(item.label)}
                 </Link>
@@ -30,12 +30,18 @@ export default function Footer() {
           </ul>
 
           <div className="mb-5 flex flex-col items-center">
-            <Logo className="mb-8 size-24" />
+            <Image
+              src="/images/footer_log.jpeg"
+              alt="footer log"
+              width={100}
+              height={100}
+              className="mb-8 size-36"
+            />
             <ul className="mb-4 flex items-center gap-4">
               <li>
                 <a
                   href={`tel:${setting.phone}`}
-                  className="font-normal text-neutral-600 hover:underline"
+                  className="font-normal text-[color-mix(in_oklab,lab(14_0.7_-24.75)_90%,transparent)] hover:underline"
                 >
                   {setting.phone}
                 </a>
@@ -44,7 +50,7 @@ export default function Footer() {
               <li>
                 <a
                   href={`mailto:${setting.email}`}
-                  className="font-normal text-neutral-600 hover:underline"
+                  className="font-normal text-[color-mix(in_oklab,lab(14_0.7_-24.75)_90%,transparent)] hover:underline"
                 >
                   {setting.email}
                 </a>
@@ -62,17 +68,17 @@ export default function Footer() {
           <ul className="mb-6 flex items-center justify-center gap-4">
             <li>
               <a href={setting.instagram} target="_blank" rel="noreferrer">
-                <InstagramIcon className="text-neutral-500" />
+                <InstagramIcon className="text-[color-mix(in_oklab,lab(14_0.7_-24.75)_90%,transparent)]" />
               </a>
             </li>
             <li>
               <a href={setting.facebook} target="_blank" rel="noreferrer">
-                <FacebookIcon className="text-neutral-500" />{' '}
+                <FacebookIcon className="text-[color-mix(in_oklab,lab(14_0.7_-24.75)_90%,transparent)]" />{' '}
               </a>
             </li>
             <li>
               <a href={setting.linkedin} target="_blank" rel="noreferrer">
-                <LinkedinIcon className="text-neutral-500" />{' '}
+                <LinkedinIcon className="text-[color-mix(in_oklab,lab(14_0.7_-24.75)_90%,transparent)]" />{' '}
               </a>
             </li>
           </ul>
@@ -81,7 +87,7 @@ export default function Footer() {
             <li>
               <Link
                 href="/page/terms"
-                className="hover:text-primary text-sm text-neutral-500 transition-colors"
+                className="hover:text-primary text-sm text-[color-mix(in_oklab,lab(14_0.7_-24.75)_90%,transparent)] transition-colors"
               >
                 {n('terms')}
               </Link>
@@ -90,13 +96,13 @@ export default function Footer() {
             <li>
               <Link
                 href="/page/privacy-policy"
-                className="hover:text-primary text-sm text-neutral-500 transition-colors"
+                className="hover:text-primary text-sm text-[color-mix(in_oklab,lab(14_0.7_-24.75)_90%,transparent)] transition-colors"
               >
                 {n('privacy')}
               </Link>
             </li>
           </ul>
-          <p className="text-center text-sm text-neutral-500">
+          <p className="text-center text-sm text-[color-mix(in_oklab,lab(14_0.7_-24.75)_90%,transparent)]">
             © {new Date().getFullYear()} — {setting.name}
           </p>
         </div>
