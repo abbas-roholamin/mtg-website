@@ -19,7 +19,7 @@ const places = [
   },
   {
     name: 'airport',
-    image: '/images/whereToPlay/airport.jpg',
+    image: '/images/whereToPlay/air-port.jpg',
   },
   {
     name: 'picnic',
