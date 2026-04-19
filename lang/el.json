@@ -100,6 +100,8 @@
     },
     "product": {
       "title": "Προϊόν",
+      "classic_timeless_games": "Κλασικά & Διαχρονικά Παιχνίδια",
+      "Beach_memories_gifts": "Αναμνήσεις Παραλίας & Δώρα",
       "filter": {
         "search": "αναζήτηση...",
         "sort": {
