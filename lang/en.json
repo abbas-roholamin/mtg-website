@@ -101,6 +101,8 @@
     },
     "product": {
       "title": "Product",
+      "classic_timeless_games": "Classic & Timeless Games",
+      "Beach_memories_gifts": "Beach Memories & Gifts",
       "filter": {
         "search": "search...",
         "sort": {
