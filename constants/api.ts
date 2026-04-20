@@ -12,4 +12,5 @@ export const API = {
   COUPON: `${process.env.NEXT_PUBLIC_API_BASE_URL}/coupon`,
   CHECKOUT: `${process.env.NEXT_PUBLIC_API_BASE_URL}/checkout`,
   CUSTOMIZATION: `${process.env.NEXT_PUBLIC_API_BASE_URL}/customization`,
+  CATEGORY: `${process.env.NEXT_PUBLIC_API_BASE_URL}/categories`,
 } as const;

@@ -26,7 +26,7 @@ export default function Hero() {
           </h1>
 
           <div className="flex flex-col items-center justify-between gap-6 sm:gap-8">
-            <div className="text-primary max-w-85 text-center text-lg leading-tight font-bold sm:max-w-125 sm:text-xl lg:max-w-175 lg:text-xl xl:text-3xl">
+            <div className="max-w-85 text-center text-lg leading-tight font-bold text-white sm:max-w-125 sm:text-xl lg:max-w-175 lg:text-xl xl:text-3xl">
               {t('description')}
             </div>
             <Button

@@ -17,7 +17,7 @@ export function Sort() {
 
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger asChild>
+      <DropdownMenuTrigger asChild className="ml-auto">
         <Button variant="secondary"> {t('product.filter.sort.title')}</Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-48">

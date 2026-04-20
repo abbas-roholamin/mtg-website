@@ -9,3 +9,4 @@ export const PRODUCTS_QUERY_KEY = 'PRODUCTS';
 export const CUSTOMIZATION_QUERY_KEY = 'CUSTOMIZATION';
 export const VIDEOS_QUERY_KEY = 'VIDEOS';
 export const COUPON_QUERY_KEY = 'COUPON';
+export const CATEGORY_QUERY_KEY = 'CATEGORY';

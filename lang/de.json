@@ -99,9 +99,8 @@
       "title": "Galerie"
     },
     "product": {
-      "title": "Produkt",
-      "classic_timeless_games": "Klassische & Zeitlose Spiele",
-      "Beach_memories_gifts": "Strand-Erinnerungen & Geschenke",
+      "title": "Produkte",
+      "description": "Entdecken Sie unsere klassischen und zeitlosen Spiele sowie Strand-Erinnerungen & Geschenke",
       "filter": {
         "search": "suchen...",
         "sort": {
