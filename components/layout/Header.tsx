@@ -20,7 +20,7 @@ export default function Header() {
 
   return (
     <header
-      className={cn('flex h-24 w-full items-center', {
+      className={cn('mt-8 flex h-24 w-full items-center', {
         'absolute top-0 left-0 z-50 text-white lg:top-10': isHome,
       })}
     >
